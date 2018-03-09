@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionCard : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class ActionCard : Card
+{
+    public override void UseCard()
+    {
+        //effect
+        base.UseCard();
+    }
 }
