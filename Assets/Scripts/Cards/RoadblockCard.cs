@@ -6,7 +6,7 @@ public class RoadblockCard : ActionCard {
 
     private void Awake()
     {
-        m_CardData.Name = "Roadblock";
-        m_CardData.Description = "Block off a path";
+        m_CardData = CardConfig.s_ActionCards[2];
+        SetCardInfo();
     }
 }

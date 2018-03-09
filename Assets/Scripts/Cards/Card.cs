@@ -43,11 +43,10 @@ public class Card : MonoBehaviour
 
     private void Awake()
     {
-        m_CardData = new CardData(CardTypes.ACTION_CARD, "Allahu Akbar", "Blows up a path.", null);
         SetCardInfo();
     }
 
-    void SetCardInfo()
+    protected void SetCardInfo()
     {
         m_CardEditor.Name.text = m_CardData.Name;
         m_CardEditor.Description.text = m_CardData.Description;

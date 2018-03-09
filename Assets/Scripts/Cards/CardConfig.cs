@@ -15,6 +15,8 @@ public class CardConfig
 
     public static List<CardData> s_ActionCards = new List<CardData>
     {
-        new CardData(CardTypes.ACTION_CARD, "Allahu Akbar", "Blows up a path", null)
+        new CardData(CardTypes.ACTION_CARD, "Rotate Path", "Rotate a single path", null),
+        new CardData(CardTypes.ACTION_CARD, "Swap Path", "Swap the position of 2 paths that are next to each other", null),
+        new CardData(CardTypes.ACTION_CARD, "Roadblock", "Block off a single path", null)
     };
 }

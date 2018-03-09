@@ -6,7 +6,7 @@ public class SwapPathCard : ActionCard {
 
     private void Awake()
     {
-        m_CardData.Name = "Swap Path";
-        m_CardData.Description = "Swap 2 paths that are next to each other";
+        m_CardData = CardConfig.s_ActionCards[1];
+        SetCardInfo();
     }
 }

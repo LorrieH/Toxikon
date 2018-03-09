@@ -6,7 +6,7 @@ public class RotatePathCard : ActionCard {
 
     private void Awake()
     {
-        m_CardData.Name = "Rotate Path";
-        m_CardData.Description = "Rotate a path";
+        m_CardData = CardConfig.s_ActionCards[0];
+        SetCardInfo();
     }
 }
