@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ActionCard : Card
 {
+    private void Awake()
+    {
+        m_CardData.Type = CardTypes.ACTION_CARD;
+    }
     public override void UseCard()
     {
         //effect
