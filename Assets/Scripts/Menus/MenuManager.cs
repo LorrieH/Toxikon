@@ -6,11 +6,18 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager s_Instance;
 
-    private List<Menu> m_Menus = new List<Menu>();
+    [SerializeField] private List<Menu> m_Menus = new List<Menu>();
+    private Menu m_CurrentOpenMenu;
+
+    public bool IsAnyMenuOpen
+    {
+        get { return (m_CurrentOpenMenu != null) ? true : false; }
+    }
 
     private void Awake()
     {
         Init();
+        MenuManager.s_Instance.ShowMenu<SettingsMenu>();
     }
 
     private void Init()
@@ -26,5 +33,33 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void ShowMenu<T>() where T: Menu
+    {
+        
+    }
 
+    public void ShowMenu(string menuName)
+    {
+        Debug.Log("menuName parameter: " + menuName);
+        for (int i = 0; i < m_Menus.Count; i++)
+        {
+            Debug.Log("Menu name: " + m_Menus[i].name);
+            if (m_Menus[i].name == menuName)
+            {
+                Debug.Log("Opening menu: " + m_Menus[i].name);
+                ShowMenu(m_Menus[i]);
+            }
+        }
+    }
+
+    public void ShowMenu(Menu menu)
+    {
+        if (IsAnyMenuOpen)
+        {
+            m_CurrentOpenMenu.Hide();
+            m_CurrentOpenMenu = null;
+        }
+        menu.Show();
+        m_CurrentOpenMenu = menu;
+    }
 }
