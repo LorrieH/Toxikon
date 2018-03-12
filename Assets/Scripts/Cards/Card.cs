@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public enum CardTypes
 {
@@ -52,6 +53,11 @@ public class Card : MonoBehaviour
         m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.IconSmall.sprite = m_CardData.Icon;
         m_CardEditor.IconLarge.sprite = m_CardData.Icon;
+    }
+
+    public void ToggleCardSelect()
+    {
+        CardSelector.s_OnToggleCardSelect(this, this.transform);
     }
 
     public virtual void UseCard()
