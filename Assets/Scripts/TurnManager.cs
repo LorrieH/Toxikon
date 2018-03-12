@@ -19,19 +19,21 @@ public class TurnManager : MonoBehaviour
         s_OnTurnEnd += NextTurn;
     }
 
-    private void Awake()
+    private void Start()
     {
         m_Players = PlayersManager.s_Instance.Players;
     }
 
-    void SetFirstTurn()
+    public void SetFirstTurn()
     {
-        int randomPlayer = Random.Range(0, m_Players.Count - 1);
+        int randomPlayer = Random.Range(0, m_Players.Count);
         m_CurrentPlayerIndex = randomPlayer;
         m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
+
+        Debug.Log(m_CurrentPlayer);
     }
 
-    void NextTurn()
+    public void NextTurn()
     {
         if(m_CurrentPlayerIndex == m_Players.Count - 1)
         {
@@ -43,6 +45,8 @@ public class TurnManager : MonoBehaviour
             m_CurrentPlayerIndex++;
             m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
         }
+
+        Debug.Log(m_CurrentPlayer);
     }
 
     private void OnDisable()

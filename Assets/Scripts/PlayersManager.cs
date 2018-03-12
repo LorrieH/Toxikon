@@ -19,4 +19,9 @@ public class PlayersManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
+    public void AddPlayer(GameObject playerToAdd)
+    {
+        m_Players.Add(playerToAdd);
+    }
 }
