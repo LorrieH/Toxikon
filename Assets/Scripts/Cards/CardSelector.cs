@@ -10,6 +10,18 @@ public class CardSelector : MonoBehaviour {
     [SerializeField] private Transform m_CardHolder;
     [SerializeField] private Transform m_SelectedCardHolder;
     private CardData m_SelectedCard;
+    [Space(20f)]
+    [Header("Cards")]
+    [SerializeField] private List<Card> m_PlayerHandCards = new List<Card>();
+
+    private void Awake()
+    {
+        for (int i = 0; i < m_PlayerHandCards.Count; i++)
+        {
+            m_PlayerHandCards[i].CardData = CardManager.s_Instance.GetRandomCard();
+            m_PlayerHandCards[i].SetCardInfo();
+        }
+    }
 
     private void OnEnable()
     {
