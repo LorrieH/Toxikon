@@ -6,8 +6,11 @@ public class PlayersManager : MonoBehaviour
 {
     public static PlayersManager s_Instance;
 
-    private List<GameObject> m_Players = new List<GameObject>();
-    public List<GameObject> Players { get { return m_Players; } }
+    private List<GameObject> m_PlayerObjects = new List<GameObject>();
+    public List<GameObject> PlayerObjects { get { return m_PlayerObjects; } }
+
+    private List<Player> m_PlayerScripts = new List<Player>();
+    public List<Player> PlayerScripts { get { return m_PlayerScripts; } }
 
     private void Awake()
     {
@@ -22,6 +25,6 @@ public class PlayersManager : MonoBehaviour
 
     public void AddPlayer(GameObject playerToAdd)
     {
-        m_Players.Add(playerToAdd);
+        m_PlayerObjects.Add(playerToAdd);
     }
 }
