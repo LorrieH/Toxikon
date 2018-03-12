@@ -42,6 +42,8 @@ public class Card : MonoBehaviour
     public CardData CardData { get { return m_CardData; } }
     [SerializeField]protected CardEditor m_CardEditor;
 
+    private int m_IndexInHand;
+
     private void Awake()
     {
         SetCardInfo();
@@ -49,6 +51,7 @@ public class Card : MonoBehaviour
 
     protected void SetCardInfo()
     {
+        m_IndexInHand = transform.GetSiblingIndex();
         m_CardEditor.Name.text = m_CardData.Name;
         m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.IconSmall.sprite = m_CardData.Icon;
@@ -57,7 +60,8 @@ public class Card : MonoBehaviour
 
     public void ToggleCardSelect()
     {
-        CardSelector.s_OnToggleCardSelect(this, this.transform);
+        Debug.Log(m_IndexInHand);
+        CardSelector.s_OnToggleCardSelect(m_CardData, this.transform,m_IndexInHand);
     }
 
     public virtual void UseCard()

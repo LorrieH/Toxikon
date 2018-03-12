@@ -12,7 +12,10 @@ public class CardManager : MonoBehaviour
     public int MaxCardsInHand{ get { return m_MaxCardsInHand; } }
     private List<CardData> m_Cards = new List<CardData>();
 
-
+    public List<CardData> Cards
+    {
+        get { return m_Cards; }
+    }
 
     private void Awake()
     {
