@@ -8,9 +8,11 @@ public class AddPlayers : MonoBehaviour
     {
         for (int i = 0; i < amountOfPlayer; i++)
         {
-            GameObject playerToAdd = new GameObject();
-            playerToAdd.name = "Player " + (i + 1);
-            PlayersManager.s_Instance.AddPlayer(playerToAdd);
+            GameObject playerObjectToAdd = new GameObject();
+            playerObjectToAdd.AddComponent<Player>();
+            Player playerToAdd = GetComponent<Player>();
+            playerObjectToAdd.name = "Player " + (i + 1);
+            PlayersManager.s_Instance.AddPlayerObject(playerObjectToAdd);
         }
 
         Debug.Log(PlayersManager.s_Instance.Players.Count);

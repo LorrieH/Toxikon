@@ -10,9 +10,9 @@ public class TurnManager : MonoBehaviour
     public delegate void TurnAction();
     public static TurnAction s_OnTurnAction;
 
-    private List<GameObject> m_Players = new List<GameObject>();
+    private List<Player> m_Players = new List<Player>();
     private int m_CurrentPlayerIndex;
-    private GameObject m_CurrentPlayer;
+    private Player m_CurrentPlayer;
 
     private void OnEnable()
     {

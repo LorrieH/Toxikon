@@ -8,13 +8,17 @@ public class CardManager : MonoBehaviour
 {
     public static CardManager s_Instance;
 
+    [SerializeField] private Transform m_CardHolder;
+
     private readonly int m_MaxCardsInHand = 5;
     public int MaxCardsInHand{ get { return m_MaxCardsInHand; } }
-    private List<CardData> m_Cards = new List<CardData>();
+    private List<GameObject> m_Cards = new List<GameObject>();
+    private List<CardData> m_CardDatas = new List<CardData>();
+    
 
-    public List<CardData> Cards
+    public List<CardData> CardDatas
     {
-        get { return m_Cards; }
+        get { return m_CardDatas; }
     }
 
     private void Awake()
@@ -34,7 +38,7 @@ public class CardManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        m_Cards = GetAllCardsFromConfig();
+        m_CardDatas = GetAllCardsFromConfig();
         ShuffleCards();
     }
 
@@ -67,7 +71,7 @@ public class CardManager : MonoBehaviour
     public CardData GetRandomCard()
     {
         int randomIndex = UnityEngine.Random.Range(0, m_Cards.Count - 1);
-        return m_Cards[randomIndex];
+        return m_CardDatas[randomIndex];
     }
 
     public List<CardData> GetRandomHand()

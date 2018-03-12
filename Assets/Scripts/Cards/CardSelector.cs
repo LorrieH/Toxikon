@@ -7,7 +7,6 @@ public class CardSelector : MonoBehaviour {
     
     public delegate void ToggleCardSelectEvent(CardData selectedCard, Transform cardTransform,int cardInHandIndex);
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
-
     [SerializeField] private Transform m_CardHolder;
     [SerializeField] private Transform m_SelectedCardHolder;
     private CardData m_SelectedCard;
@@ -19,13 +18,14 @@ public class CardSelector : MonoBehaviour {
 
     private void ToggleCardSelect(CardData selectedCard,Transform cardTransform,int cardInHandIndex)
     {
-        for (int i = 0; i < CardManager.s_Instance.Cards.Count; i++)
+        
+        for (int i = 0; i < PlayersManager.s_Instance.Players[i].PlayerHand.Cards.Count; i++)
         {
-            if (CardManager.s_Instance.Cards[i] == selectedCard)
+            if (PlayersManager.s_Instance.Players[i].PlayerHand.Cards[i] == selectedCard)
             {
                 SelectCard(selectedCard, cardTransform,cardInHandIndex);
             }
-            else if (CardManager.s_Instance.Cards[i] != selectedCard)
+            else if (PlayersManager.s_Instance.Players[i].PlayerHand.Cards[i] != selectedCard)
             {
 
             }
@@ -52,11 +52,14 @@ public class CardSelector : MonoBehaviour {
         }
     }
 
-    private void DeselectCard(Transform cardTransform,Vector2 defaultPosition)
+    private void DeselectCard(Transform cardTransform,Vector2 defaultPosition,int cardInHandIndex)
     {
         Sequence CardDeselectSequence = DOTween.Sequence();
+
         CardDeselectSequence.Append(cardTransform.DOScale(1, 0.2f));
-        CardDeselectSequence.Append(cardTransform.DOMoveX(defaultPosition.x, 0.3f));
+        cardTransform.SetParent(m_CardHolder);
+        cardTransform.SetSiblingIndex(cardInHandIndex);
+        m_SelectedCard = null;
     }
 
     private void OnDisable()

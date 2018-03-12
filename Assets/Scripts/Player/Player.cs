@@ -40,4 +40,12 @@ public class Player : MonoBehaviour
         get { return m_PlayerHand; }
         set { m_PlayerHand = value; }
     }
+
+    private void Awake()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            m_PlayerHand.AddCardToHand();
+        }
+    }
 }
