@@ -7,7 +7,9 @@ using DG.Tweening;
 public enum CardTypes
 {
     PATH_CARD,
-    ACTION_CARD
+    ROADBLOCK_CARD,
+    SWAP_PATH_CARD,
+    ROTATE_PATH_CARD
 }
 
 [System.Serializable]
@@ -39,7 +41,7 @@ public class CardData
 public class Card : MonoBehaviour
 {
     protected CardData m_CardData;
-    public CardData CardData { get { return m_CardData; } }
+    public CardData CardData { get { return m_CardData; } set { m_CardData = value; } }
     [SerializeField]protected CardEditor m_CardEditor;
 
     private int m_IndexInHand;
@@ -49,7 +51,7 @@ public class Card : MonoBehaviour
         SetCardInfo();
     }
 
-    protected void SetCardInfo()
+    public void SetCardInfo()
     {
         m_IndexInHand = transform.GetSiblingIndex();
         m_CardEditor.Name.text = m_CardData.Name;
@@ -64,7 +66,7 @@ public class Card : MonoBehaviour
         CardSelector.s_OnToggleCardSelect(m_CardData, this.transform,m_IndexInHand);
     }
 
-    public virtual void UseCard()
+    public void UseCard()
     {
         //base of what should happen when a card gets used.
     }
