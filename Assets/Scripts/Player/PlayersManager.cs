@@ -22,6 +22,11 @@ public class PlayersManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        
+    }
+
     public void AddPlayerObject(GameObject playerObjectToAdd)
     {
         m_PlayerObjects.Add(playerObjectToAdd);

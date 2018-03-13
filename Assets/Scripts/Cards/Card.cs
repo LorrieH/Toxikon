@@ -48,7 +48,7 @@ public class Card : MonoBehaviour
 
     private void Awake()
     {
-        SetCardInfo();
+        //SetCardInfo();
     }
 
     public void SetCardInfo()

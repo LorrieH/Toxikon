@@ -31,7 +31,8 @@ public class CardSelector : MonoBehaviour {
 
     private void ToggleCardSelect(CardData selectedCard,Transform cardTransform,int cardInHandIndex)
     {
-        
+        SelectCard(selectedCard, cardTransform, cardInHandIndex);
+        return;
         for (int i = 0; i < PlayersManager.s_Instance.Players[i].PlayerHand.Cards.Count; i++)
         {
             if (PlayersManager.s_Instance.Players[i].PlayerHand.Cards[i] == selectedCard)
