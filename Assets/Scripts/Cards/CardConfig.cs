@@ -6,10 +6,6 @@ public class CardConfig
 {
     public static List<CardData> s_PathCards = new List<CardData>
     {
-        new CardData(CardTypes.PATH_CARD, "Straight Path", "Miss me with that gay shit", null),
-        new CardData(CardTypes.PATH_CARD, "Straight Path", "Miss me with that gay shit", null),
-        new CardData(CardTypes.PATH_CARD, "Straight Path", "Miss me with that gay shit", null),
-        new CardData(CardTypes.PATH_CARD, "Straight Path", "Miss me with that gay shit", null),
         new CardData(CardTypes.PATH_CARD, "Straight Path", "Miss me with that gay shit", null)
     };
 

@@ -8,11 +8,8 @@ public class CardManager : MonoBehaviour
 {
     public static CardManager s_Instance;
 
-    [SerializeField] private Transform m_CardHolder;
-
     private readonly int m_MaxCardsInHand = 5;
     public int MaxCardsInHand{ get { return m_MaxCardsInHand; } }
-    private List<GameObject> m_Cards = new List<GameObject>();
     private List<CardData> m_CardDatas = new List<CardData>();
     
 
@@ -53,30 +50,34 @@ public class CardManager : MonoBehaviour
 
     private void ShuffleCards()
     {
-        m_Cards.OrderBy(a => Guid.NewGuid()).ToList();
+        m_CardDatas.OrderBy(a => Guid.NewGuid()).ToList();
     }
 
     public CardData GetRandomPathCard()
     {
-        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_PathCards.Count - 1);
+        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_PathCards.Count);
         return CardConfig.s_PathCards[randomIndex];
     }
 
     public CardData GetRandomActionCard()
     {
-        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_ActionCards.Count - 1);
+        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_ActionCards.Count);
         return CardConfig.s_ActionCards[randomIndex];
     }
 
     public CardData GetRandomCard()
     {
-        int randomIndex = UnityEngine.Random.Range(0, m_Cards.Count - 1);
-        return m_CardDatas[randomIndex];
+        return m_CardDatas[GetRandomCardIndex()];
     }
 
     public List<CardData> GetRandomHand()
     {
         //TODO: Return random hand
         return null;
+    }
+
+    public int GetRandomCardIndex()
+    {
+        return UnityEngine.Random.Range(0, m_CardDatas.Count);
     }
 }
