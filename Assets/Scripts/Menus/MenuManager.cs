@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct MenuNames
+{
+    public const string SETTINGS_MENU = "Settings Menu";
+}
+
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager s_Instance;
@@ -17,7 +22,6 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         Init();
-        MenuManager.s_Instance.ShowMenu<SettingsMenu>();
     }
 
     private void Init()
@@ -33,22 +37,12 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void ShowMenu<T>() where T: Menu
-    {
-        
-    }
-
     public void ShowMenu(string menuName)
     {
-        Debug.Log("menuName parameter: " + menuName);
         for (int i = 0; i < m_Menus.Count; i++)
         {
-            Debug.Log("Menu name: " + m_Menus[i].name);
             if (m_Menus[i].name == menuName)
-            {
-                Debug.Log("Opening menu: " + m_Menus[i].name);
                 ShowMenu(m_Menus[i]);
-            }
         }
     }
 

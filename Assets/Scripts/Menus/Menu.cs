@@ -9,7 +9,6 @@ public class Menu : MonoBehaviour
 
     public virtual void Show()
     {
-        Debug.Log("Show!! " + name);
         m_IsMenuOpen = true;
         gameObject.SetActive(true);
     }
