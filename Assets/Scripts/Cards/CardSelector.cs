@@ -33,13 +33,13 @@ public class CardSelector : MonoBehaviour {
     {
         SelectCard(selectedCard, cardTransform, cardInHandIndex);
         return;
-        for (int i = 0; i < PlayersManager.s_Instance.Players[i].PlayerHand.Cards.Count; i++)
+        for (int i = 0; i < PlayersManager.s_Instance.PlayerScripts[i].PlayerHand.Cards.Count; i++)
         {
-            if (PlayersManager.s_Instance.Players[i].PlayerHand.Cards[i] == selectedCard)
+            if (PlayersManager.s_Instance.PlayerScripts[i].PlayerHand.Cards[i] == selectedCard)
             {
                 SelectCard(selectedCard, cardTransform,cardInHandIndex);
             }
-            else if (PlayersManager.s_Instance.Players[i].PlayerHand.Cards[i] != selectedCard)
+            else if (PlayersManager.s_Instance.PlayerScripts[i].PlayerHand.Cards[i] != selectedCard)
             {
 
             }
