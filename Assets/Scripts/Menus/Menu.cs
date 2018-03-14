@@ -17,5 +17,7 @@ public class Menu : MonoBehaviour
     {
         m_IsMenuOpen = false;
         gameObject.SetActive(false);
+
+        if (MenuManager.s_OnMenuClosed != null) MenuManager.s_OnMenuClosed(this);
     }
 }

@@ -5,11 +5,18 @@ using UnityEngine;
 public struct MenuNames
 {
     public const string SETTINGS_MENU = "Settings Menu";
+    public const string VICTORY_POPUP = "Victory Popup";
 }
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager s_Instance;
+
+    public delegate void MenuOpened(Menu menu);
+    public static MenuOpened s_OnMenuOpened;
+
+    public delegate void MenuClosed(Menu menu);
+    public static MenuClosed s_OnMenuClosed;
 
     [SerializeField] private List<Menu> m_Menus = new List<Menu>();
     private Menu m_CurrentOpenMenu;
@@ -55,5 +62,7 @@ public class MenuManager : MonoBehaviour
         }
         menu.Show();
         m_CurrentOpenMenu = menu;
+
+        if (s_OnMenuOpened != null) s_OnMenuOpened(menu);
     }
 }
