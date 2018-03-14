@@ -31,13 +31,13 @@ public class CardSelector : MonoBehaviour {
 
     private void Awake()
     {
+        Init();
+
         for (int i = 0; i < m_PlayerHandCards.Count; i++)
         {
             m_PlayerHandCards[i].CardData = CardManager.s_Instance.GetRandomCard();
             m_PlayerHandCards[i].SetCardInfo();
         }
-
-        Init();
     }
 
     private void OnEnable()

@@ -87,11 +87,5 @@ public class Card : MonoBehaviour
     public void UseCard()
     {
         //what should happen when a card gets used.
-        switch (CardData.Type)
-        {
-            case CardTypes.PATH_CARD:
-
-                break;
-        }
     }
 }

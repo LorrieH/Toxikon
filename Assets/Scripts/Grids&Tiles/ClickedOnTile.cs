@@ -18,6 +18,8 @@ public class ClickedOnTile : MonoBehaviour {
 
     void OnMouseDown()
     {
+        if (CardSelector.s_Instance.SelectedCard == null) return;
+
         switch (CardSelector.s_Instance.SelectedCard.Type) {
 
             case CardTypes.PATH_CARD:

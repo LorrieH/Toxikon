@@ -43,9 +43,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            m_PlayerHand.AddCardToHand();
-        }
+
     }
 }
