@@ -53,7 +53,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(string soundName)
     {
-        SetMixerValue(SoundMixerKeys.MUSIC, 0.15f);
         PlaySound((SoundNames)System.Enum.Parse(typeof(SoundNames), soundName));
     }
 
