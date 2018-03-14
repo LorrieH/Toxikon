@@ -10,6 +10,7 @@ public class CardSelector : MonoBehaviour {
     [SerializeField] private Transform m_CardHolder;
     [SerializeField] private Transform m_SelectedCardHolder;
     private CardData m_SelectedCard;
+    private bool m_CanSelectCard = true;
 
     [Space(20f)]
     [Header("Cards")]
@@ -37,38 +38,32 @@ public class CardSelector : MonoBehaviour {
 
     private void SelectCard(CardData selectedCard, Transform cardTransform, int cardInHandIndex)
     {
+        if (m_CanSelectCard)
+        {
+            //Returns all cards back to the hand first
+            for (int i = 0; i < m_PlayerHandCards.Count; i++)
+            {
+                Sequence CardDeselectSequence = DOTween.Sequence();
+
+                CardDeselectSequence.Append(m_PlayerHandCards[i].transform.DOScale(1, 0.2f));
+                m_PlayerHandCards[i].transform.SetParent(m_CardHolder);
+                m_PlayerHandCards[i].transform.SetSiblingIndex(cardInHandIndex);
+                m_SelectedCard = null;
+            }
+
         
-        //Returns all cards back to the hand first
-        for (int i = 0; i < m_PlayerHandCards.Count; i++)
-        {
-            Sequence CardDeselectSequence = DOTween.Sequence();
-
-            CardDeselectSequence.Append(m_PlayerHandCards[i].transform.DOScale(1, 0.2f));
-            m_PlayerHandCards[i].transform.SetParent(m_CardHolder);
-            m_PlayerHandCards[i].transform.SetSiblingIndex(cardInHandIndex);
-            m_SelectedCard = null;
-
-        }
-
-        if (m_SelectedCard != selectedCard)
-        {
-            Sequence CardSelectSequence = DOTween.Sequence();
-            cardTransform.SetParent(m_SelectedCardHolder);
-            CardSelectSequence.Append(cardTransform.DOMove(m_SelectedCardHolder.position, 0.3f));
-            CardSelectSequence.Append(cardTransform.DOScale(1.3f, 0.2f));
-            m_SelectedCard = selectedCard;
-        }
-        else if (m_SelectedCard == selectedCard)
-        {
-            Sequence CardDeselectSequence = DOTween.Sequence();
-
-            CardDeselectSequence.Append(cardTransform.DOScale(1, 0.2f));
-            cardTransform.SetParent(m_CardHolder);
-            cardTransform.SetSiblingIndex(cardInHandIndex);
-            m_SelectedCard = null;
+            StartCoroutine(CardSelectDelay(0.5f));
+            if (m_SelectedCard != selectedCard)
+            {
+                //If the selected card was not the selected card already, move to selected position and select it
+                Sequence CardSelectSequence = DOTween.Sequence();
+                cardTransform.SetParent(m_SelectedCardHolder);
+                CardSelectSequence.Append(cardTransform.DOMove(m_SelectedCardHolder.position, 0.3f));
+                CardSelectSequence.Append(cardTransform.DOScale(1.3f, 0.2f));
+                m_SelectedCard = selectedCard;
+            }
         }
     }
-
 
     private void DeselectCard(Transform cardTransform,Vector2 defaultPosition,int cardInHandIndex)
     {
@@ -78,6 +73,14 @@ public class CardSelector : MonoBehaviour {
         cardTransform.SetParent(m_CardHolder);
         cardTransform.SetSiblingIndex(cardInHandIndex);
         m_SelectedCard = null;
+    }
+
+    IEnumerator CardSelectDelay(float countDown)
+    {
+        m_CanSelectCard = false;
+        yield return new WaitForSeconds(countDown);
+        m_CanSelectCard = true;
+
     }
 
     private void OnDisable()

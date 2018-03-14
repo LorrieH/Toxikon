@@ -69,13 +69,9 @@ public class Card : MonoBehaviour
 
     private int m_IndexInHand;
 
-    private void Awake()
-    {
-        //SetCardInfo();
-    }
-
     public void SetCardInfo()
     {
+        //Shows the cards info
         m_IndexInHand = transform.GetSiblingIndex();
         m_CardEditor.Name.text = m_CardData.Name;
         m_CardEditor.Description.text = m_CardData.Description;
@@ -85,12 +81,11 @@ public class Card : MonoBehaviour
 
     public void ToggleCardSelect()
     {
-        Debug.Log(m_IndexInHand);
         CardSelector.s_OnToggleCardSelect(m_CardData, this.transform,m_IndexInHand);
     }
 
     public void UseCard()
     {
-        //base of what should happen when a card gets used.
+        //what should happen when a card gets used.
     }
 }
