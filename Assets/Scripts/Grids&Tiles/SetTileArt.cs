@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SetTileArt : MonoBehaviour {
+    [SerializeField] private Sprite m_testTex;
+    [SerializeField] private TileArtClass[] m_TileArt;
+    /*
+    //single openings leading nowhere
+    [SerializeField] private Texture m_Up;
+    [SerializeField] private Texture m_Right;
+    [SerializeField] private Texture m_Down;
+    [SerializeField] private Texture m_Left;
 
     //corners with middle part open
     [SerializeField]private Texture m_CornerRightUp;
@@ -47,10 +55,20 @@ public class SetTileArt : MonoBehaviour {
 
     //an empty Tile
     [SerializeField]private Texture m_Empty;
+    */
 
     // Use this for initialization
     void Start()
     {
+        TileArtLib.s_TestTex = m_testTex;
+        TileArtLib.s_TileArtArray = m_TileArt;
+        /*
+        //single openings leading nowhere
+        TileArtLib.s_Up     = m_Up;
+        TileArtLib.s_Right  = m_Right;
+        TileArtLib.s_Down   = m_Down;
+        TileArtLib.s_Left   = m_Left;
+
         //corners with middle part open
         TileArtLib.s_CornerRightUp      = m_CornerRightUp;
         TileArtLib.s_CornerleftUp       = m_CornerleftUp;
@@ -94,5 +112,6 @@ public class SetTileArt : MonoBehaviour {
 
         //an empty Tile
         TileArtLib.s_Empty = m_Empty;
+        */
     }
 }

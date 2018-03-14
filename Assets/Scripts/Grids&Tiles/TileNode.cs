@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class TileNode
 {
-
     #region variables
     //path openings
-    public bool Up      { get; set; }
-    public bool Down    { get; set; }
-    public bool Left    { get; set; }
-    public bool Right   { get; set; }
-    public bool Middle  { get; set; }
+    public TileBools Bools { get; set; }
 
     public bool IsFilled        { get; set; }
     public bool CanBeFilled     { get; set; }
@@ -23,6 +18,9 @@ public class TileNode
     public byte TurnsRight  { get; set; }
 
     public Vector2 GridPos  { get; set; }
+
+    public Sprite TileTexture { get; set; }
+    public GameObject TileObject { get; set; }
 
     public TileNode RoadParent              { get; set; }
     public Neighbours AllNeighbours         { get; set; }
@@ -40,30 +38,30 @@ public class TileNode
         tempNeighbour.right = null;
         tempNeighbour.down = null;
         tempNeighbour.left = null;
-        if (Up)
+        if (Bools.Up)
         {
-            if (AllNeighbours.up.IsFilled && AllNeighbours.up.Down && !AllNeighbours.up.IsEdgeStone)
+            if (AllNeighbours.up.IsFilled && AllNeighbours.up.Bools.Down && !AllNeighbours.up.IsEdgeStone)
             {
                 tempNeighbour.up = AllNeighbours.up;
             }
         }
-        if (Right)
+        if (Bools.Right)
         {
-            if (AllNeighbours.right.IsFilled && AllNeighbours.right.Left && !AllNeighbours.right.IsEdgeStone)
+            if (AllNeighbours.right.IsFilled && AllNeighbours.right.Bools.Left && !AllNeighbours.right.IsEdgeStone)
             {
                 tempNeighbour.right = AllNeighbours.right;
             }
         }
-        if (Down)
+        if (Bools.Down)
         {
-            if (AllNeighbours.down.IsFilled && AllNeighbours.down.Up && !AllNeighbours.down.IsEdgeStone)
+            if (AllNeighbours.down.IsFilled && AllNeighbours.down.Bools.Up && !AllNeighbours.down.IsEdgeStone)
             {
                 tempNeighbour.down = AllNeighbours.down;
             }
         }
-        if (Left)
+        if (Bools.Left)
         {
-            if (AllNeighbours.left.IsFilled && AllNeighbours.left.Right && !AllNeighbours.right.IsEdgeStone)
+            if (AllNeighbours.left.IsFilled && AllNeighbours.left.Bools.Right && !AllNeighbours.right.IsEdgeStone)
             {
                 tempNeighbour.left = AllNeighbours.left;
             }
@@ -71,15 +69,21 @@ public class TileNode
         AccesableNeighbours = tempNeighbour;
     }
 
-    public void SetNeighbours(TileNode up, TileNode right, TileNode down, TileNode left)
+    public void UpdateArt()
     {
-        Neighbours tempNeighbour;
-        tempNeighbour.up = up;
-        tempNeighbour.right = right;
-        tempNeighbour.down = down;
-        tempNeighbour.left = left;
-
-        AllNeighbours = tempNeighbour;
+        if (!IsEdgeStone)
+        {
+            for (int i = 0; i < TileArtLib.s_TileArtArray.Length; i++)
+            {
+                if(TileArtLib.s_TileArtArray[i].bools == Bools)
+                {
+                    Debug.Log("set a texture");
+                    TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
+                    TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
+                    break;
+                }
+            }
+        }
     }
     #endregion
 
@@ -88,7 +92,7 @@ public class TileNode
     /// this returns a true or false according to if the tile will connect to its neighbours
     /// </summary>
     /// <returns></returns>
-    public bool CheckPlacement(TileNode CardValues)
+    public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft)
     {
         bool canConnectUp = false;
         bool canConnectRight = false;
@@ -100,11 +104,11 @@ public class TileNode
         {
             canConnectUp = true;
         }
-        else if (CardValues.Up && AllNeighbours.up.Down)
+        else if (CardUp && AllNeighbours.up.Bools.Down)
         {
             canConnectUp = true;
         }
-        else if (!CardValues.Up && !AllNeighbours.up.Down)
+        else if (!CardUp && !AllNeighbours.up.Bools.Down)
         {
             canConnectUp = true;
         }
@@ -114,11 +118,11 @@ public class TileNode
         {
             canConnectRight = true;
         }
-        else if (CardValues.Right && AllNeighbours.right.Left)
+        else if (CardRight && AllNeighbours.right.Bools.Left)
         {
             canConnectRight = true;
         }
-        else if (!CardValues.Right && !AllNeighbours.right.Left)
+        else if (!CardRight && !AllNeighbours.right.Bools.Left)
         {
             canConnectRight = true;
         }
@@ -128,11 +132,11 @@ public class TileNode
         {
             canConnectDown = true;
         }
-        else if (CardValues.Down && AllNeighbours.down.Up)
+        else if (CardDown && AllNeighbours.down.Bools.Up)
         {
             canConnectDown = true;
         }
-        else if (!CardValues.Down && !AllNeighbours.down.Up)
+        else if (!CardDown && !AllNeighbours.down.Bools.Up)
         {
             canConnectDown = true;
         }
@@ -142,16 +146,15 @@ public class TileNode
         {
             canConnectLeft = true;
         }
-        else if (CardValues.Left && AllNeighbours.left.Right)
+        else if (CardLeft && AllNeighbours.left.Bools.Right)
         {
             canConnectLeft = true;
         }
-        else if (!CardValues.Left && !AllNeighbours.left.Right)
+        else if (!CardLeft && !AllNeighbours.left.Bools.Right)
         {
             canConnectLeft = true;
         }
-
-        return (canConnectUp == canConnectRight == canConnectDown == canConnectLeft == true);
+        return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft);
     }
     #endregion
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class TileArtLib
 {
+    public static Sprite s_TestTex;
+    public static TileArtClass[] s_TileArtArray;
+    /*
     //corners with middle part open
     public static Texture s_CornerRightUp;
     public static Texture s_CornerleftUp;
@@ -42,9 +45,43 @@ public static class TileArtLib
     public static Texture s_RightLeftClosed;
     public static Texture s_UpDownClosed;
 
+    //single openings leading nowhere
+    public static Texture s_Up;
+    public static Texture s_Right;
+    public static Texture s_Down;
+    public static Texture s_Left;
+
     //Just a filled tile
     public static Texture s_Filled;
 
     //an empty Tile
     public static Texture s_Empty;
+    */
+}
+
+[System.Serializable]
+public class TileArtClass
+{
+    public TileBools bools;
+    public Sprite TileArt;
+}
+
+[System.Serializable]
+public struct TileBools
+{
+    public bool Up;
+    public bool Right;
+    public bool Down;
+    public bool Left;
+    public bool Middle;
+
+    public static bool operator ==(TileBools c1, TileBools c2)
+    {
+        return c1.Equals(c2);
+    }
+
+    public static bool operator !=(TileBools c1, TileBools c2)
+    {
+        return !c1.Equals(c2);
+    }
 }
