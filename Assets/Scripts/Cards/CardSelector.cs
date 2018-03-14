@@ -65,16 +65,6 @@ public class CardSelector : MonoBehaviour {
         }
     }
 
-    private void DeselectCard(Transform cardTransform,Vector2 defaultPosition,int cardInHandIndex)
-    {
-        Sequence CardDeselectSequence = DOTween.Sequence();
-
-        CardDeselectSequence.Append(cardTransform.DOScale(1, 0.2f));
-        cardTransform.SetParent(m_CardHolder);
-        cardTransform.SetSiblingIndex(cardInHandIndex);
-        m_SelectedCard = null;
-    }
-
     IEnumerator CardSelectDelay(float countDown)
     {
         m_CanSelectCard = false;
