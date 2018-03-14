@@ -51,8 +51,6 @@ public class TurnManager : MonoBehaviour
         int randomPlayer = Random.Range(0, m_Players.Count);
         m_CurrentPlayerIndex = randomPlayer;
         m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
-
-        Debug.Log(m_CurrentPlayer);
     }
 
     public void NextTurn()
@@ -69,8 +67,6 @@ public class TurnManager : MonoBehaviour
         }
 
         s_OnTurnStart();
-
-        Debug.Log(m_CurrentPlayer);
     }
 
     private void OnDisable()
