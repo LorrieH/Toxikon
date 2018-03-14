@@ -193,7 +193,7 @@
             Straight Quaternion plugin. Instead of using Vector3 values accepts Quaternion values directly.
             <para>Beware: doesn't work with LoopType.Incremental (neither directly nor if inside a LoopType.Incremental Sequence).</para>
             <para>To use it, call DOTween.To with the plugin parameter overload, passing it <c>PureQuaternionPlugin.Plug()</c> as first parameter
-            (do not use any of the other public PureQuaternionPlugin methods):</para>
+            (do not use any of the other [SerializeField]private PureQuaternionPlugin methods):</para>
             <code>DOTween.To(PureQuaternionPlugin.Plug(), ()=> myQuaternionProperty, x=> myQuaternionProperty = x, myQuaternionEndValue, duration);</code>
             </summary>
         </member>
