@@ -13,17 +13,30 @@ public class ClickedOnTile : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        TestPlacer = GameObject.Find("testCard").GetComponent<TestPlaceCard>();
 	}
 
     void OnMouseDown()
     {
-        if(Grid.PlaceNewCard(m_TilePosX, m_TilePosY, TestPlacer.Up, TestPlacer.Right, TestPlacer.Down, TestPlacer.Left, TestPlacer.Middle))
+        switch (CardSelector.s_Instance.SelectedCard.Type) {
+
+            case CardTypes.PATH_CARD:
+                PathCardData pathData = CardSelector.s_Instance.SelectedCard.PathData;
+                Grid.PlaceNewCard(m_TilePosX, m_TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle);
+                break;
+            case CardTypes.ROTATE_PATH_CARD:
+
+                break;
+            case CardTypes.SWAP_PATH_CARD:
+                break;
+        }
+        /*(if(Grid.PlaceNewCard(m_TilePosX, m_TilePosY, TestPlacer.Up, TestPlacer.Right, TestPlacer.Down, TestPlacer.Left, TestPlacer.Middle))
         {
             Debug.Log("placed");
         }
         else
         {
             Debug.Log("cant be placed here");
-        }
+        }*/
     }
 }

@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e18940c00d02d6f43941def933f22fa4
+  - enabled: 1
     path: Assets/Scenes/CharacterSelect.unity
     guid: dcd3a424c069fe543be843dbf490838b
   - enabled: 1
-    path: Assets/Scenes/Lorenzo.unity
-    guid: e67c25172978cba49a1ee8b48ac1e9b3
+    path: Assets/Scenes/GameScene.unity
+    guid: e8bcb6844faa27c4e98ef4c3904d8380

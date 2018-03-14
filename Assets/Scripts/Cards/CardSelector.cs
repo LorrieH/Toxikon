@@ -7,14 +7,27 @@ public class CardSelector : MonoBehaviour {
 
     public delegate void ToggleCardSelectEvent(CardData selectedCard, Transform cardTransform, int cardInHandIndex);
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
+
+    public static CardSelector s_Instance;
     [SerializeField] private Transform m_CardHolder;
     [SerializeField] private Transform m_SelectedCardHolder;
     private CardData m_SelectedCard;
     private bool m_CanSelectCard = true;
 
+    public CardData SelectedCard { get { return m_SelectedCard; } }
+
     [Space(20f)]
     [Header("Cards")]
     [SerializeField] private List<Card> m_PlayerHandCards = new List<Card>();
+
+
+    private void Init()
+    {
+        if (s_Instance == null)
+            s_Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Awake()
     {
@@ -23,6 +36,8 @@ public class CardSelector : MonoBehaviour {
             m_PlayerHandCards[i].CardData = CardManager.s_Instance.GetRandomCard();
             m_PlayerHandCards[i].SetCardInfo();
         }
+
+        Init();
     }
 
     private void OnEnable()

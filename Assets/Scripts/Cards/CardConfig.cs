@@ -6,8 +6,8 @@ public class CardConfig
 {
     public static List<CardData> s_PathCards = new List<CardData>
     {
-        new CardData(CardTypes.PATH_CARD, "Straight Horizontal Path", "Miss me with that gay shit", null, null, new PathCardData(false, false, true, true, true)),
-        new CardData(CardTypes.PATH_CARD, "Straight Vertical Path", "Miss me with that gay shit", null, null, new PathCardData(true, true, false, false, true)),
+        new CardData(CardTypes.PATH_CARD, "Straight Horizontal Path", "Straight Horizontal Path", null, null, new PathCardData(false, false, true, true, true)),
+        new CardData(CardTypes.PATH_CARD, "Straight Vertical Path", "Straight Vertical Path", null, null, new PathCardData(true, true, false, false, true)),
     };
 
     public static List<CardData> s_ActionCards = new List<CardData>

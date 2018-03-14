@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     public virtual void Show()
     {
         m_IsMenuOpen = true;
+        SoundManager.s_Instance.PlaySound(SoundNames.BUTTON_CLICK);
         gameObject.SetActive(true);
     }
 
