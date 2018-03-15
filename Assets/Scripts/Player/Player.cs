@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct PlayerData
+{
+    public string Name;
+    public Sprite Avatar;
+    public string AvatarImageName;
+    public PlayerHand Hand;
+}
+
 public class PlayerHand
 {
     public List<CardData> Cards;
@@ -34,15 +42,22 @@ public class PlayerHand
 
 public class Player : MonoBehaviour
 {
-    private PlayerHand m_PlayerHand;
-    public PlayerHand PlayerHand
-    {
-        get { return m_PlayerHand; }
-        set { m_PlayerHand = value; }
-    }
+    private PlayerData m_PlayerData;
+    public PlayerData PlayerData{ get { return m_PlayerData; } set { m_PlayerData = value; } }
+    public PlayerHand PlayerHand { get { return m_PlayerData.Hand; } set { m_PlayerData.Hand = value; } }
 
     private void Awake()
     {
 
+    }
+
+    public void SetName(string name)
+    {
+        m_PlayerData.Name = name;
+    }
+
+    public void SetCharacter(Sprite avatar)
+    {
+        m_PlayerData.Avatar = avatar;
     }
 }

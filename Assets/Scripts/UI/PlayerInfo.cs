@@ -15,9 +15,10 @@ public class PlayerInfo : MonoBehaviour
     
     void SetPlayerInfo()
     {
-        PlayerCharacter pc = TurnManager.s_Instance.CurrentPlayer.GetComponent<PlayerCharacter>();
-        m_PlayerName.text = pc.CharacterName;
-        m_PlayerImage.sprite = pc.CharacterSprite;
+        PlayerData playerData = TurnManager.s_Instance.CurrentPlayer.PlayerData;
+
+        m_PlayerName.text = playerData.Name;
+        m_PlayerImage.sprite = playerData.Avatar;
     }
 
     private void OnDisable()

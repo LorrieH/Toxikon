@@ -15,9 +15,6 @@ public class TurnManager : MonoBehaviour
     public delegate void TurnAction();
     public static TurnAction s_OnTurnAction;
 
-    private List<Player> m_Players = new List<Player>();
-    public List<Player> Players { get { return m_Players; } }
-
     private Player m_CurrentPlayer;
     public Player CurrentPlayer { get { return m_CurrentPlayer; } }
 
@@ -41,29 +38,28 @@ public class TurnManager : MonoBehaviour
 
     private void Start()
     {
-        m_Players = PlayersManager.s_Instance.PlayerScripts;
         SetFirstTurn();
         s_OnTurnStart();
     }
 
     public void SetFirstTurn()
     {
-        int randomPlayer = Random.Range(0, m_Players.Count);
+        int randomPlayer = Random.Range(0, PlayersManager.s_Instance.Players.Count);
         m_CurrentPlayerIndex = randomPlayer;
-        m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
+        m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
     }
 
     public void NextTurn()
     {
-        if(m_CurrentPlayerIndex == m_Players.Count - 1)
+        if(m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
         {
             m_CurrentPlayerIndex = 0;
-            m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
+            m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
         else
         {
             m_CurrentPlayerIndex++;
-            m_CurrentPlayer = m_Players[m_CurrentPlayerIndex];
+            m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
 
         s_OnTurnStart();
