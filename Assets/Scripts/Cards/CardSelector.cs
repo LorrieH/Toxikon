@@ -32,6 +32,15 @@ public class CardSelector : MonoBehaviour {
     private void Awake()
     {
         Init();
+    }
+
+    private void Start()
+    {
+        if(CardManager.s_Instance == null)
+        {
+            Debug.LogError("CardManager is null, could not get random card data");
+            return;
+        }
 
         for (int i = 0; i < m_PlayerHandCards.Count; i++)
         {

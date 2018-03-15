@@ -72,8 +72,12 @@ public class CardManager : MonoBehaviour
 
     public List<CardData> GetRandomHand()
     {
-        //TODO: Return random hand
-        return null;
+        List<CardData> tempCardData = new List<CardData>();
+
+        for (int i = 0; i < m_MaxCardsInHand; i++)
+            tempCardData.Add(GetRandomCard());
+
+        return tempCardData;
     }
 
     public int GetRandomCardIndex()
