@@ -664,8 +664,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_GridXsize: 9
   s_GridYsize: 9
-  nodeObjectPrefab: {fileID: 0}
-  testnodeObjectPrefab: {fileID: 0}
+  nodeObjectPrefab: {fileID: 1082471511549046, guid: 884e11e2cc02ed94aa04ff35c75b84cf,
+    type: 2}
+  testnodeObjectPrefab: {fileID: 1595249154080802, guid: a079077ca944d724188f9f7f5b9ab5f9,
+    type: 2}
   ObjectLayers:
   - {fileID: 1006858328727844}
   - {fileID: 1806304279191748}
@@ -695,84 +697,91 @@ MonoBehaviour:
       Down: 1
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 27a1670a0283c254bb7a521d7f666fe8, type: 3}
-  - bools:
-      Up: 0
-      Right: 0
-      Down: 1
-      Left: 0
-      Middle: 0
-    TileArt: {fileID: 21300000, guid: 6cb68e6e75a75d04088789f1d825ce05, type: 3}
-  - bools:
-      Up: 1
-      Right: 0
-      Down: 0
-      Left: 0
-      Middle: 0
-    TileArt: {fileID: 21300000, guid: 735737b31fb1e664d820d947afb47846, type: 3}
-  - bools:
-      Up: 0
-      Right: 1
-      Down: 0
-      Left: 0
-      Middle: 0
-    TileArt: {fileID: 21300000, guid: 616dd3ed85c448c42b6b42c84f249991, type: 3}
-  - bools:
-      Up: 0
-      Right: 0
-      Down: 0
-      Left: 1
-      Middle: 0
-    TileArt: {fileID: 21300000, guid: dfdcc5b384acda94ba20b7b4e6bd8f8e, type: 3}
-  - bools:
-      Up: 0
-      Right: 0
-      Down: 1
-      Left: 1
-      Middle: 1
-    TileArt: {fileID: 21300000, guid: 2d17833504ccb2d408e602ed267fd5a3, type: 3}
+    TileArt: {fileID: 21300000, guid: 60d3107a42423394c827216397a596e9, type: 3}
   - bools:
       Up: 0
       Right: 1
       Down: 1
+      Left: 1
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: 6a48c917fe0da2f42b97a9e4e0af9746, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 0
+      Left: 1
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: d1f2f77a2e60e5d4fa3cadd3478aa57c, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 1
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: be088b5e0a395404fb16b2983ff81ea5, type: 3}
+    TileArt: {fileID: 21300000, guid: 4736c55b42dd3704eadfb066c6597da4, type: 3}
+  - bools:
+      Up: 1
+      Right: 0
+      Down: 1
+      Left: 1
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: 9ac17b2682ab462499475b54ec9d8b2b, type: 3}
+  - bools:
+      Up: 0
+      Right: 0
+      Down: 1
+      Left: 1
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: e1b55872641f5d9409968af1a36876ca, type: 3}
+  - bools:
+      Up: 0
+      Right: 0
+      Down: 1
+      Left: 1
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: e1b55872641f5d9409968af1a36876ca, type: 3}
+  - bools:
+      Up: 0
+      Right: 1
+      Down: 1
+      Left: 0
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: 94b4102fab34ed64f828a22ef2452d36, type: 3}
   - bools:
       Up: 1
       Right: 1
       Down: 0
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 3fe634ceb94194242a734f754e6e34bf, type: 3}
+    TileArt: {fileID: 21300000, guid: af3edd0a67f3f6e4e88ff1101a78241f, type: 3}
   - bools:
       Up: 1
       Right: 0
       Down: 0
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 5b365a2ace89133448eed016441652c7, type: 3}
+    TileArt: {fileID: 21300000, guid: 56c7923a8c81f964fba9c9e7fb9d7afc, type: 3}
   - bools:
       Up: 1
       Right: 0
       Down: 1
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 200a4d2e3ab1ca14fa85e2c7d03ea271, type: 3}
+    TileArt: {fileID: 21300000, guid: 7bff701bf5f56154c980b7f70234bb10, type: 3}
   - bools:
       Up: 0
       Right: 1
       Down: 0
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 1d29f441ce3176146bddbdfdd1d38c45, type: 3}
+    TileArt: {fileID: 21300000, guid: b736438154e20da41b5ab627e970a519, type: 3}
   - bools:
       Up: 0
       Right: 0
       Down: 0
       Left: 0
       Middle: 0
-    TileArt: {fileID: 21300000, guid: 3814a0d7a3fd80448985795431a2babb, type: 3}
+    TileArt: {fileID: 21300000, guid: c02693d439469144fb638406af2bde30, type: 3}
 --- !u!114 &114223389728071426
 MonoBehaviour:
   m_ObjectHideFlags: 1
