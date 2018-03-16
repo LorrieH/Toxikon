@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1434294021
 Prefab:
@@ -717,6 +717,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_NodeObjectPrefab
+      value: 
+      objectReference: {fileID: 1082471511549046, guid: 299e26e24016f61488d25e00e728d035,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}
   m_IsPrefabParent: 0
