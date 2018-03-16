@@ -82,8 +82,8 @@ public class CardSelector : MonoBehaviour {
                 //If the selected card was not the selected card already, move to selected position and select it
                 Sequence CardSelectSequence = DOTween.Sequence();
                 cardTransform.SetParent(m_SelectedCardHolder);
-                CardSelectSequence.Append(cardTransform.DOMove(m_SelectedCardHolder.position, 0.3f));
-                CardSelectSequence.Append(cardTransform.DOScale(1.3f, 0.2f));
+                cardTransform.DOMove(m_SelectedCardHolder.position, 0.5f);
+                cardTransform.DOScale(1.3f, 0.4f);
                 m_SelectedCard = selectedCard;
             }
         }

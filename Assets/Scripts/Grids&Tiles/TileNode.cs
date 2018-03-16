@@ -79,7 +79,8 @@ public class TileNode
                 {
                     Debug.Log("set a texture");
                     TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
-                    TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
+                    SpriteRenderer tileRenderer = TileObject.GetComponent<SpriteRenderer>();
+                    tileRenderer.sprite = TileTexture;
                     break;
                 }
             }

@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class TileGrid : MonoBehaviour {
 
-    [SerializeField] private int s_GridXsize = 10;
-    [SerializeField] private int s_GridYsize = 10;
+    [SerializeField] private int m_GridXsize = 10;
+    [SerializeField] private int m_GridYsize = 10;
 
-    [SerializeField] GameObject nodeObjectPrefab;
-    [SerializeField] GameObject testnodeObjectPrefab;
+    [SerializeField] private GameObject m_NodeObjectPrefab;
 
-    [SerializeField] GameObject[] ObjectLayers;
+    [SerializeField] private GameObject[] m_ObjectLayers;
 
-    private TileNode[,] s_NodeGrid;
-
-    // Use this for initialization
+    private TileNode[,] m_NodeGrid;
+    
     void Start () {
         InstantiateNewGrid();
         SetNeighboursOfNode();
@@ -22,27 +20,25 @@ public class TileGrid : MonoBehaviour {
 
     public void InstantiateNewGrid()
     {
-        s_NodeGrid = new TileNode[s_GridXsize+2, s_GridYsize+2];
-        for (int i = 0; i < s_GridXsize+2; i++)
+        m_NodeGrid = new TileNode[m_GridXsize+2, m_GridYsize+2];
+        for (int i = 0; i < m_GridXsize+2; i++)
         {
-            for (int j = 0; j < s_GridYsize + 2; j++)
+            for (int j = 0; j < m_GridYsize + 2; j++)
             {
                 TileNode newNode = new TileNode();
                 TileBools bools = new TileBools();
                 newNode.IsFilled = false;
-                if (i == 0 || i == s_GridXsize + 1 || j == 0 || j == s_GridYsize + 1)
+                if (i == 0 || i == m_GridXsize + 1 || j == 0 || j == m_GridYsize + 1)
                 {
                     newNode.IsEdgeStone = true;
-                    GameObject tileObj = Instantiate(testnodeObjectPrefab, new Vector3(i, j, 0), Quaternion.identity);
-                    newNode.TileObject = tileObj;
                 }
                 else
                 {
-                    GameObject tileObj = Instantiate(nodeObjectPrefab, new Vector3(i, j, ObjectLayers[j - 1].transform.position.z), Quaternion.identity, ObjectLayers[j - 1].transform);
+                    GameObject tileObj = Instantiate(m_NodeObjectPrefab, new Vector3(i, j, m_ObjectLayers[j - 1].transform.position.z), Quaternion.identity, m_ObjectLayers[j - 1].transform);
                     ClickedOnTile TileClicker = tileObj.GetComponent<ClickedOnTile>();
                     TileClicker.Grid = this;
-                    TileClicker.m_TilePosX = i;
-                    TileClicker.m_TilePosY = j;
+                    TileClicker.TilePosX = i;
+                    TileClicker.TilePosY = j;
                     newNode.TileObject = tileObj;
                 }
                 if (i == 1 && j == 1)
@@ -53,7 +49,7 @@ public class TileGrid : MonoBehaviour {
                     bools.Middle = true;
                     newNode.IsFilled = true;
                 }
-                else if (i == s_GridXsize && j == 1)
+                else if (i == m_GridXsize && j == 1)
                 {
                     newNode.IsFilled = true;
                     bools.Left = true;
@@ -61,7 +57,7 @@ public class TileGrid : MonoBehaviour {
                     bools.Middle = true;
                     newNode.IsFilled = true;
                 }
-                else if (i == 1 && j == s_GridYsize)
+                else if (i == 1 && j == m_GridYsize)
                 {
                     newNode.IsFilled = true;
                     bools.Right = true;
@@ -69,7 +65,7 @@ public class TileGrid : MonoBehaviour {
                     bools.Middle = true;
                     newNode.IsFilled = true;
                 }
-                else if (i == s_GridXsize && j == s_GridYsize)
+                else if (i == m_GridXsize && j == m_GridYsize)
                 {
                     newNode.IsFilled = true;
                     bools.Left = true;
@@ -89,31 +85,31 @@ public class TileGrid : MonoBehaviour {
                 }
                 newNode.Bools = bools;
                 newNode.UpdateArt();
-                s_NodeGrid[i, j] = newNode;
+                m_NodeGrid[i, j] = newNode;
             }
         }
     }
 
     public void SetNeighboursOfNode()
     {
-        if (s_NodeGrid == null)
+        if (m_NodeGrid == null)
         {
             throw new System.ArgumentException("The NodeGrid cannot be null", "original");
         }
         else
         {
-            for (int i = 0; i < s_GridXsize + 2; i++)
+            for (int i = 0; i < m_GridXsize + 2; i++)
             {
-                for (int j = 0; j < s_GridYsize + 2; j++)
+                for (int j = 0; j < m_GridYsize + 2; j++)
                 {
-                    if(!s_NodeGrid[i, j].IsEdgeStone)
+                    if(!m_NodeGrid[i, j].IsEdgeStone)
                     {
                         Neighbours neighbours = new Neighbours();
-                        neighbours.up = s_NodeGrid[i, j + 1];
-                        neighbours.down = s_NodeGrid[i, j - 1];
-                        neighbours.right = s_NodeGrid[i + 1, j];
-                        neighbours.left = s_NodeGrid[i - 1, j];
-                        s_NodeGrid[i, j].AllNeighbours = neighbours;
+                        neighbours.up = m_NodeGrid[i, j + 1];
+                        neighbours.down = m_NodeGrid[i, j - 1];
+                        neighbours.right = m_NodeGrid[i + 1, j];
+                        neighbours.left = m_NodeGrid[i - 1, j];
+                        m_NodeGrid[i, j].AllNeighbours = neighbours;
                     }
                 }
             }
@@ -122,7 +118,7 @@ public class TileGrid : MonoBehaviour {
 
     public bool PlaceNewCard(int x, int y, bool UpCard, bool RightCard, bool DownCard, bool LeftCard, bool MiddleCard)
     {
-        if(s_NodeGrid[x,y].CheckPlacement(UpCard,RightCard,DownCard,LeftCard) && !s_NodeGrid[x, y].IsFilled)
+        if(m_NodeGrid[x,y].CheckPlacement(UpCard,RightCard,DownCard,LeftCard) && !m_NodeGrid[x, y].IsFilled)
         {
             TileBools bools = new TileBools();
             bools.Up = UpCard;
@@ -130,9 +126,9 @@ public class TileGrid : MonoBehaviour {
             bools.Down = DownCard;
             bools.Left = LeftCard;
             bools.Middle = MiddleCard;
-            s_NodeGrid[x, y].Bools = bools;
-            s_NodeGrid[x, y].IsFilled = true;
-            s_NodeGrid[x, y].UpdateArt();
+            m_NodeGrid[x, y].Bools = bools;
+            m_NodeGrid[x, y].IsFilled = true;
+            m_NodeGrid[x, y].UpdateArt();
             return true;
         }
         else
