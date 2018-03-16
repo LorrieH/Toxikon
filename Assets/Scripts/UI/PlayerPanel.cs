@@ -16,7 +16,7 @@ public class PlayerPanel : MonoBehaviour
 
     private void Awake()
     {
-        m_InputField.onValueChanged.AddListener(delegate { OnInputFieldValueChanged(); });
+        //m_InputField.onEndEdit.AddListener(delegate { OnInputFieldValueChanged(); });
         m_Toggle.onValueChanged.AddListener(delegate { OnToggleValueChanged(); });
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.GetRandomCharacter();
@@ -24,12 +24,15 @@ public class PlayerPanel : MonoBehaviour
 
     private void OnToggleValueChanged()
     {
+        m_PlayerData.Name = m_PlayerName.text;
+        Debug.Log(m_PlayerAvatar.sprite.name);
+        m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
         PlayerSelection.s_Instance.ChangeAmountOfChecks(m_Toggle.isOn ? 1 : -1);
     }
 
-    private void OnInputFieldValueChanged()
+    /*private void OnInputFieldValueChanged()
     {
         m_PlayerData.Name = m_InputField.text;
         m_PlayerName.text = m_PlayerData.Name;
-    }
+    }*/
 }

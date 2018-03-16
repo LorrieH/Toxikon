@@ -50,14 +50,4 @@ public class Player : MonoBehaviour
     {
 
     }
-
-    public void SetName(string name)
-    {
-        m_PlayerData.Name = name;
-    }
-
-    public void SetCharacter(Sprite avatar)
-    {
-        m_PlayerData.Avatar = avatar;
-    }
 }

@@ -17,8 +17,10 @@ public class PlayerInfo : MonoBehaviour
     {
         PlayerData playerData = TurnManager.s_Instance.CurrentPlayer.PlayerData;
 
+        string spritePath = "Characters/" + playerData.AvatarImageName;
+
         m_PlayerName.text = playerData.Name;
-        m_PlayerImage.sprite = playerData.Avatar;
+        m_PlayerImage.sprite = Resources.Load<Sprite>(spritePath);
     }
 
     private void OnDisable()
