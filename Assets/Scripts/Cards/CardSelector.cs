@@ -32,10 +32,17 @@ public class CardSelector : MonoBehaviour {
     private void Awake()
     {
         Init();
+        TurnManager.s_OnTurnStart += ShowCurrentPlayerHand;
+    }
+
+    private void OnDestroy()
+    {
+        TurnManager.s_OnTurnStart -= ShowCurrentPlayerHand;
     }
 
     private void Start()
     {
+        /*
         if(CardManager.s_Instance == null)
         {
             Debug.LogError("CardManager is null, could not get random card data");
@@ -47,6 +54,7 @@ public class CardSelector : MonoBehaviour {
             m_PlayerHandCards[i].CardData = CardManager.s_Instance.GetRandomCard();
             m_PlayerHandCards[i].SetCardInfo();
         }
+        */
     }
 
     private void OnEnable()
@@ -95,6 +103,15 @@ public class CardSelector : MonoBehaviour {
         yield return new WaitForSeconds(countDown);
         m_CanSelectCard = true;
 
+    }
+
+    private void ShowCurrentPlayerHand()
+    {
+        for (int i = 0; i < m_PlayerHandCards.Count; i++)
+        {
+            m_PlayerHandCards[i].CardData = TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[i];
+            m_PlayerHandCards[i].SetCardInfo();
+        }
     }
 
     private void OnDisable()

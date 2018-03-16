@@ -6,6 +6,9 @@ public class TurnManager : MonoBehaviour
 {
     public static TurnManager s_Instance;
 
+    public delegate void FirstTurnStart();
+    public static FirstTurnStart s_OnFirstTurnStart;
+
     public delegate void TurnEnd();
     public static TurnEnd s_OnTurnEnd;
 
@@ -39,7 +42,8 @@ public class TurnManager : MonoBehaviour
     private void Start()
     {
         SetFirstTurn();
-        s_OnTurnStart();
+        if(s_OnFirstTurnStart != null) s_OnFirstTurnStart();
+        if(s_OnTurnStart != null) s_OnTurnStart();
     }
 
     public void SetFirstTurn()
