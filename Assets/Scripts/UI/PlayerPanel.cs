@@ -25,7 +25,6 @@ public class PlayerPanel : MonoBehaviour
     private void OnToggleValueChanged()
     {
         m_PlayerData.Name = m_PlayerName.text;
-        Debug.Log(m_PlayerAvatar.sprite.name);
         m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
         PlayerSelection.s_Instance.ChangeAmountOfChecks(m_Toggle.isOn ? 1 : -1);
     }
