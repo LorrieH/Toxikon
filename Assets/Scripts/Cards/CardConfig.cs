@@ -6,17 +6,17 @@ public class CardConfig
 {
     public static List<CardData> s_PathCards = new List<CardData>
     {
-        new CardData(CardTypes.PATH_CARD, "Crossroad", "Creates a Crossroad Path", null, null, new PathCardData(true,true,true,true,true)),
-        new CardData(CardTypes.PATH_CARD, "Straight Horizontal", "Straight Horizontal Path", null, null, new PathCardData(false, false, true, true, true)),
-        new CardData(CardTypes.PATH_CARD, "Straight Vertical", "Straight Vertical Path", null, null, new PathCardData(true, true, false, false, true)),
-        new CardData(CardTypes.PATH_CARD, "Corner Left Up", "Creates a Left Up Corner Path", null, null, new PathCardData(true, false, true, false, true)),
-        new CardData(CardTypes.PATH_CARD, "Corner Left Down", "Creates a Left Down Corner Path", null, null, new PathCardData(false, true, true, false, true)),
-        new CardData(CardTypes.PATH_CARD, "Corner Right Up", "Creates a Right  Up Corner Path", null, null, new PathCardData(true, false, false, true, true)),
-        new CardData(CardTypes.PATH_CARD, "Corner Right Down", "Creates a Right Up Corner Path", null, null, new PathCardData(false, true, false, true, true)),
-        new CardData(CardTypes.PATH_CARD, "T-Split Up", "Creates a T Split Up Path", null, null, new PathCardData(true,false,true,true,true)),
-        new CardData(CardTypes.PATH_CARD, "T-Split Down", "Creates a T Split Down Path", null, null, new PathCardData(false,true,true,true,true)),
-        new CardData(CardTypes.PATH_CARD, "T-Split Left", "Creates a T Split Left Path", null, null, new PathCardData(true,true,true,false,true)),
-        new CardData(CardTypes.PATH_CARD, "T-Split Right", "Creates a T Split Right Path", null, null, new PathCardData(true,true,false,true,true)),
+        new CardData(CardTypes.PATH_CARD, "Crossroad", "",CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CROSSROAD), new PathCardData(true,true,true,true,true)),
+        new CardData(CardTypes.PATH_CARD, "Straight Horizontal", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.STRAIGHT_HORIZONTAL), new PathCardData(false, false, true, true, true)),
+        new CardData(CardTypes.PATH_CARD, "Straight Vertical", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.STRAIGHT_VERTICAL), new PathCardData(true, true, false, false, true)),
+        new CardData(CardTypes.PATH_CARD, "Corner Up Left", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CORNER_UP_LEFT), new PathCardData(true, false, true, false, true)),
+        new CardData(CardTypes.PATH_CARD, "Corner Down Left", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CORNER_DOWN_LEFT), new PathCardData(false, true, true, false, true)),
+        new CardData(CardTypes.PATH_CARD, "Corner Right Up", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CORNER_UP_RIGHT), new PathCardData(true, false, false, true, true)),
+        new CardData(CardTypes.PATH_CARD, "Corner Right Down", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CORNER_DOWN_RIGHT), new PathCardData(false, true, false, true, true)),
+        new CardData(CardTypes.PATH_CARD, "T-Split Up", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_UP), new PathCardData(true,false,true,true,true)),
+        new CardData(CardTypes.PATH_CARD, "T-Split Down", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_DOWN), new PathCardData(false,true,true,true,true)),
+        new CardData(CardTypes.PATH_CARD, "T-Split Left", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_LEFT), new PathCardData(true,true,true,false,true)),
+        new CardData(CardTypes.PATH_CARD, "T-Split Right", "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_RIGHT), new PathCardData(true,true,false,true,true))
     };
 
     public static List<CardData> s_ActionCards = new List<CardData>

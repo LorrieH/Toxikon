@@ -9,17 +9,18 @@ public class CardSelector : MonoBehaviour {
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
 
     public static CardSelector s_Instance;
+
     [SerializeField] private Transform m_CardHolder;
     [SerializeField] private Transform m_SelectedCardHolder;
-    private CardData m_SelectedCard;
-    private bool m_CanSelectCard = true;
-
-    public CardData SelectedCard { get { return m_SelectedCard; } }
 
     [Space(20f)]
     [Header("Cards")]
     [SerializeField] private List<Card> m_PlayerHandCards = new List<Card>();
 
+    private CardData m_SelectedCard;
+    private bool m_CanSelectCard = true;
+
+    public CardData SelectedCard { get { return m_SelectedCard; } }
 
     private void Init()
     {
@@ -38,23 +39,6 @@ public class CardSelector : MonoBehaviour {
     private void OnDestroy()
     {
         TurnManager.s_OnTurnStart -= ShowCurrentPlayerHand;
-    }
-
-    private void Start()
-    {
-        /*
-        if(CardManager.s_Instance == null)
-        {
-            Debug.LogError("CardManager is null, could not get random card data");
-            return;
-        }
-
-        for (int i = 0; i < m_PlayerHandCards.Count; i++)
-        {
-            m_PlayerHandCards[i].CardData = CardManager.s_Instance.GetRandomCard();
-            m_PlayerHandCards[i].SetCardInfo();
-        }
-        */
     }
 
     private void OnEnable()
@@ -82,7 +66,6 @@ public class CardSelector : MonoBehaviour {
                 m_PlayerHandCards[i].transform.SetSiblingIndex(cardInHandIndex);
                 m_SelectedCard = null;
             }
-
         
             StartCoroutine(CardSelectDelay(0.5f));
             if (m_SelectedCard != selectedCard)
@@ -102,11 +85,11 @@ public class CardSelector : MonoBehaviour {
         m_CanSelectCard = false;
         yield return new WaitForSeconds(countDown);
         m_CanSelectCard = true;
-
     }
 
     private void ShowCurrentPlayerHand()
     {
+        Debug.Log(m_PlayerHandCards.Count + " Cards in hand");
         for (int i = 0; i < m_PlayerHandCards.Count; i++)
         {
             m_PlayerHandCards[i].CardData = TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[i];

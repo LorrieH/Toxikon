@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public enum CardTypes
 {
@@ -17,8 +14,7 @@ public struct CardEditor
 {
     public Text Name;
     public Text Description;
-    public Image IconSmall;
-    public Image IconLarge;
+    public Image CardImage;
 }
 
 [System.Serializable]
@@ -43,21 +39,19 @@ public class PathCardData
 [System.Serializable]
 public class CardData
 {
-    public CardData(CardTypes Type, string Name, string Description, Sprite SmallIcon, Sprite LargeIcon, PathCardData PathData)
+    public CardData(CardTypes Type, string Name, string Description, Sprite CardSprite, PathCardData PathData)
     {
         this.Type = Type;
         this.Name = Name;
         this.Description = Description;
-        this.SmallIcon = SmallIcon;
-        this.LargeIcon = LargeIcon;
+        this.CardSprite = CardSprite;
         this.PathData = PathData;
     }
 
     public CardTypes Type;
     public string Name;
     public string Description;
-    public Sprite SmallIcon;
-    public Sprite LargeIcon;
+    public Sprite CardSprite;
     public PathCardData PathData;
 }
 
@@ -75,8 +69,7 @@ public class Card : MonoBehaviour
         m_IndexInHand = transform.GetSiblingIndex();
         m_CardEditor.Name.text = m_CardData.Name;
         m_CardEditor.Description.text = m_CardData.Description;
-        m_CardEditor.IconSmall.sprite = m_CardData.SmallIcon;
-        m_CardEditor.IconLarge.sprite = m_CardData.LargeIcon;
+        m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
     }
 
     public void ToggleCardSelect()
