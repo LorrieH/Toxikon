@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerSelection : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerSelection : MonoBehaviour
     [SerializeField]private List<Sprite> m_PossibleCharacterSprites = new List<Sprite>();
     [SerializeField] private Button m_StartButton;
     public static PlayerSelection s_Instance;
+    private Sequence m_ScalePlayerPanel;
 
     private int m_PlayersReady;
 
@@ -42,7 +44,7 @@ public class PlayerSelection : MonoBehaviour
         }
 
         ResetReadyPlayerCount();
-        HandlePanels();
+        TransitionInPlayerPanels();
     }
 
     private void ResetReadyPlayerCount()
@@ -50,11 +52,31 @@ public class PlayerSelection : MonoBehaviour
         m_PlayersReady = 0;
     }
 
-    private void HandlePanels()
+    private bool PlayersReady()
     {
-        for (int i = 0; i < PlayersManager.s_Instance.Players.Count; i++)
+        if (m_PlayersReady == PlayersManager.s_Instance.Players.Count -1){ return true; }
+        else { return false; }
+    }
+
+    private void TransitionInPlayerPanels()
+    {
+        m_ScalePlayerPanel = DOTween.Sequence();
+
+        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+        RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
+
+        m_ScalePlayerPanel.AppendInterval(0.1f);
+        m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));
+    }
+
+    public void TransitionOutPlayerPanels()
+    {
+        if (!PlayersReady())
         {
-            m_PlayerPanels[i].gameObject.SetActive(true);
+            m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+            RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
+
+            rt.DOAnchorPosX(-1920, 1f).SetEase(Ease.InBack).OnComplete(TransitionInPlayerPanels);
         }
     }
 
@@ -73,7 +95,10 @@ public class PlayerSelection : MonoBehaviour
         m_PlayersReady += amount;
 
         if (m_PlayersReady >= PlayersManager.s_Instance.Players.Count)
+        {
+            m_StartButton.gameObject.SetActive(true);
             m_StartButton.interactable = true;
+        }
         else
             m_StartButton.interactable = false;
     }
