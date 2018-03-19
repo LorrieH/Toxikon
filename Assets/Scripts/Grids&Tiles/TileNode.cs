@@ -13,14 +13,17 @@ public class TileNode
     public bool IsDestructable  { get; set; }
     public bool IsEdgeStone     { get; set; }
     public bool IsChecked       { get; set; }
+    public bool IsEndpoint      { get; set; }
+    public bool IsStartPoint    { get; set; }
+
 
     //rotation with increments op 90 degrees
     public byte TurnsRight  { get; set; }
 
     public Vector2 GridPos  { get; set; }
 
-    public Sprite TileTexture { get; set; }
-    public GameObject TileObject { get; set; }
+    public Sprite TileTexture       { get; set; }
+    public GameObject TileObject    { get; set; }
 
     public TileNode RoadParent              { get; set; }
     public Neighbours AllNeighbours         { get; set; }

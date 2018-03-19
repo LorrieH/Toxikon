@@ -58,7 +58,7 @@ public class SetTileArt : MonoBehaviour {
     */
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         TileArtLib.s_TestTex = m_testTex;
         TileArtLib.s_TileArtArray = m_TileArt;
