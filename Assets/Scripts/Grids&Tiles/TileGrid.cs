@@ -175,17 +175,18 @@ public class TileGrid : MonoBehaviour {
 
         for (int i = 0; i < amountOfPlayers; i++)
         {
-            List<TileNode> checkedNodes = new List<TileNode>();
-            List<TileNode> checkNodes = new List<TileNode>();
+            List<TileNode> checkedNodes     = new List<TileNode>();
+            List<TileNode> checkNodes       = new List<TileNode>();
+
             checkNodes.Add(m_PlayerStartNodes[currentRound]);
             checkedNodes.Add(m_PlayerStartNodes[currentRound]);
-            goNext = true;
 
+            goNext = true;
             int infiniteLoopPrevention0 = 0;
 
             while (goNext == true && infiniteLoopPrevention0 < 10000)
             {
-                if(checkNodes.Count > 0)
+                if(checkNodes.Count >= 1)
                 {
                     for (int j = 0; j < checkNodes.Count; j++)
                     {
@@ -219,28 +220,28 @@ public class TileGrid : MonoBehaviour {
                         }
                         else
                         {
-                            if (currentNode.AccesableNeighbours.up != null && !currentNode.AccesableNeighbours.up.IsChecked)
+                            if (currentNode.AccesableNeighbours.up != null && currentNode.AccesableNeighbours.up.IsFilled && !currentNode.AccesableNeighbours.up.IsChecked)
                             {
                                 checkNodes.Add(currentNode.AccesableNeighbours.up);
                                 checkedNodes.Add(currentNode.AccesableNeighbours.up);
                                 currentNode.AccesableNeighbours.up.RoadParent = currentNode;
                                 currentNode.AccesableNeighbours.up.IsChecked = true;
                             }
-                            if (currentNode.AccesableNeighbours.right != null && !currentNode.AccesableNeighbours.right.IsChecked)
+                            if (currentNode.AccesableNeighbours.right != null && currentNode.AccesableNeighbours.right.IsFilled && !currentNode.AccesableNeighbours.right.IsChecked)
                             {
                                 checkNodes.Add(currentNode.AccesableNeighbours.right);
                                 checkedNodes.Add(currentNode.AccesableNeighbours.right);
                                 currentNode.AccesableNeighbours.right.RoadParent = currentNode;
                                 currentNode.AccesableNeighbours.right.IsChecked = true;
                             }
-                            if (currentNode.AccesableNeighbours.down != null && !currentNode.AccesableNeighbours.down.IsChecked)
+                            if (currentNode.AccesableNeighbours.down != null && currentNode.AccesableNeighbours.down.IsFilled && !currentNode.AccesableNeighbours.down.IsChecked)
                             {
                                 checkNodes.Add(currentNode.AccesableNeighbours.down);
                                 checkedNodes.Add(currentNode.AccesableNeighbours.down);
                                 currentNode.AccesableNeighbours.down.RoadParent = currentNode;
                                 currentNode.AccesableNeighbours.down.IsChecked = true;
                             }
-                            if (currentNode.AccesableNeighbours.left != null && !currentNode.AccesableNeighbours.left.IsChecked)
+                            if (currentNode.AccesableNeighbours.left != null && currentNode.AccesableNeighbours.left.IsFilled && !currentNode.AccesableNeighbours.left.IsChecked)
                             {
                                 checkNodes.Add(currentNode.AccesableNeighbours.left);
                                 checkedNodes.Add(currentNode.AccesableNeighbours.left);

@@ -216,11 +216,6 @@ Transform:
   m_Father: {fileID: 891134351}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &573637995 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1595249154080802, guid: a079077ca944d724188f9f7f5b9ab5f9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1230095133}
 --- !u!1 &752483116
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,11 +303,6 @@ Transform:
   m_Father: {fileID: 891134351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &851850293 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1082471511549046, guid: 884e11e2cc02ed94aa04ff35c75b84cf,
-    type: 2}
-  m_PrefabInternal: {fileID: 973148599}
 --- !u!1 &872359555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,10 +994,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d938e3741674f5479a6a622f449a8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_GridXsize: 9
-  s_GridYsize: 9
-  nodeObjectPrefab: {fileID: 851850293}
-  testnodeObjectPrefab: {fileID: 573637995}
+  m_GridXsize: 10
+  m_GridYsize: 10
+  nodeObjectPrefab: {fileID: 1082471511549046, guid: 884e11e2cc02ed94aa04ff35c75b84cf,
+    type: 2}
+  testnodeObjectPrefab: {fileID: 1595249154080802, guid: a079077ca944d724188f9f7f5b9ab5f9,
+    type: 2}
   ObjectLayers:
   - {fileID: 820876892}
   - {fileID: 1181878630}
