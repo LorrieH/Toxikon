@@ -14,11 +14,12 @@ public class ClickedOnTile : MonoBehaviour {
     {
         if (CardSelector.s_Instance.SelectedCard == null) return;
 
-        switch (CardSelector.s_Instance.SelectedCard.Type) {
+        switch (CardSelector.s_Instance.SelectedCard.CardData.Type) {
 
             case CardTypes.PATH_CARD:
-                PathCardData pathData = CardSelector.s_Instance.SelectedCard.PathData;
+                PathCardData pathData = CardSelector.s_Instance.SelectedCard.CardData.PathData;
                 Grid.PlaceNewCard(TilePosX, TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle);
+                CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
                 break;
             case CardTypes.ROTATE_PATH_CARD:
 

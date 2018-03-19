@@ -66,6 +66,7 @@ public class TurnManager : MonoBehaviour
             m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
 
+        CardPositionHolder.s_OnDrawCard();
         s_OnTurnStart();
     }
 
