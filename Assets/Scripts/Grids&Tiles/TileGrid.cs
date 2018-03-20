@@ -19,7 +19,6 @@ public class TileGrid : MonoBehaviour {
 
 
     private TileNode[] m_PlayerStartNodes;
-
     private TileNode[] m_NodeRoad;
 
 #region startUp
@@ -28,6 +27,7 @@ public class TileGrid : MonoBehaviour {
         Init();
     }
 
+    //make instance
     private void Init()
     {
         if (s_Instance == null)
@@ -59,9 +59,11 @@ public class TileGrid : MonoBehaviour {
                 TileNode newNode = new TileNode();
                 TileBools bools = new TileBools();
                 newNode.IsFilled = false;
+                newNode.IsDestructable = true;
                 if (i == 0 || i == m_GridXsize + 1 || j == 0 || j == m_GridYsize + 1)
                 {
                     newNode.IsEdgeStone = true;
+                    newNode.IsDestructable = false;
                     GameObject tileObj = Instantiate(testnodeObjectPrefab, new Vector3(i + i * 0.2f, j + j * 0.2f, 0), Quaternion.identity);
                     newNode.TileObject = tileObj;
                 }
@@ -77,6 +79,7 @@ public class TileGrid : MonoBehaviour {
                 if (i == 1 && j == 1)
                 {
                     newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
                     bools.Right = true;
                     bools.Up = true;
                     bools.Middle = true;
@@ -87,6 +90,7 @@ public class TileGrid : MonoBehaviour {
                 else if (i == m_GridXsize && j == 1)
                 {
                     newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Up = true;
                     bools.Middle = true;
@@ -97,6 +101,7 @@ public class TileGrid : MonoBehaviour {
                 else if (i == 1 && j == m_GridYsize)
                 {
                     newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
                     bools.Right = true;
                     bools.Down = true;
                     bools.Middle = true;
@@ -107,6 +112,7 @@ public class TileGrid : MonoBehaviour {
                 else if (i == m_GridXsize && j == m_GridYsize)
                 {
                     newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Down = true;
                     bools.Middle = true;
@@ -117,6 +123,7 @@ public class TileGrid : MonoBehaviour {
                 else if (i == 5 && j == 5)
                 {
                     newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Up = true;
                     bools.Middle = true;
@@ -199,7 +206,7 @@ public class TileGrid : MonoBehaviour {
 
     public bool DestroyNode(int x, int y)
     {
-        if (!m_NodeGrid[x, y].IsEdgeStone && m_NodeGrid[x, y].IsFilled)
+        if (!m_NodeGrid[x, y].IsEdgeStone && m_NodeGrid[x, y].IsFilled && m_NodeGrid[x,y].IsDestructable)
         {
             TileBools bools = new TileBools();
             bools.Up = false;

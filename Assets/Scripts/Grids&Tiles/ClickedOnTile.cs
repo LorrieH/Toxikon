@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ClickedOnTile : MonoBehaviour {
 
+    //click
+
     public TileGrid Grid { get; set; }
     public TestPlaceCard TestPlacer;
 
