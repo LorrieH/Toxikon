@@ -24,10 +24,13 @@ public class PlayerPanel : MonoBehaviour
 
     private void OnToggleValueChanged()
     {
-        m_PlayerData.Name = m_PlayerName.text;
-        m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
-        PlayerSelection.s_Instance.TransitionOutPlayerPanels();
-        PlayerSelection.s_Instance.ChangeAmountOfChecks(m_Toggle.isOn ? 1 : -1);
+        if (PlayerSelection.s_Instance.CanToggle)
+        {
+            m_PlayerData.Name = m_PlayerName.text;
+            m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
+            PlayerSelection.s_Instance.TransitionOutPlayerPanels();
+            PlayerSelection.s_Instance.ChangeAmountOfChecks(m_Toggle.isOn ? 1 : -1);
+        }
     }
 
     private void OnInputFieldValueChanged()

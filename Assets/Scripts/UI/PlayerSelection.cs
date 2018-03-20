@@ -14,6 +14,9 @@ public class PlayerSelection : MonoBehaviour
     public static PlayerSelection s_Instance;
     private Sequence m_ScalePlayerPanel;
 
+    private bool m_CanToggle;
+    public bool CanToggle { get { return m_CanToggle; } set { m_CanToggle = value; } }
+
     private int m_PlayersReady;
 
     private void Awake()
@@ -68,12 +71,15 @@ public class PlayerSelection : MonoBehaviour
 
         m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
 
+        m_CanToggle = true;
         m_ScalePlayerPanel.AppendInterval(0.1f);
         m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));
     }
 
     public void TransitionOutPlayerPanels()
     {
+        m_CanToggle = false;
+
         if (!PlayersReady())
         {
             m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
