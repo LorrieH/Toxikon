@@ -9,8 +9,7 @@ public class CardSelector : MonoBehaviour {
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
 
     public static CardSelector s_Instance;
-
-    //[SerializeField] private Transform m_CardHolder;
+    
     [SerializeField] private Transform m_SelectedCardHolder;
 
     [Space(20f)]

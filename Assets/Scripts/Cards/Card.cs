@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public enum CardTypes
 {
     PATH_CARD,
-    ROADBLOCK_CARD,
+    DESTROY_PATH_CARD,
     SWAP_PATH_CARD,
     ROTATE_PATH_CARD,
     DESTROY_CARD
