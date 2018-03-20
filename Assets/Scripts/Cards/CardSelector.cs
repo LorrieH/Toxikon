@@ -72,7 +72,6 @@ public class CardSelector : MonoBehaviour {
                 selectedCard.transform.SetSiblingIndex(6); //Puts the selected card on top of the layering hierarchy
                 selectedCard.transform.DOScale(1.3f, 0.4f);
                 m_SelectedCard = selectedCard;
-                Debug.Log(m_SelectedCard.CardData.Name);
             }
         }
     }

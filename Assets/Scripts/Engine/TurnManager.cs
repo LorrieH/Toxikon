@@ -55,7 +55,7 @@ public class TurnManager : MonoBehaviour
 
     public void NextTurn()
     {
-        if(m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
+        if (m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
         {
             m_CurrentPlayerIndex = 0;
             m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
@@ -65,9 +65,8 @@ public class TurnManager : MonoBehaviour
             m_CurrentPlayerIndex++;
             m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
-
-        CardPositionHolder.s_OnDrawCard();
         s_OnTurnStart();
+        CardPositionHolder.s_OnDrawCard();
     }
 
     private void OnDisable()
