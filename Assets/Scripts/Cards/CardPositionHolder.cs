@@ -16,7 +16,7 @@ public class CardPositionHolder : MonoBehaviour {
     [SerializeField]private List<Vector2> m_CardDefaultPositions;
     [SerializeField] private Transform m_CardDeckPosition;
 
-    public List<Vector2> CardDefaultPositions { get { return CardDefaultPositions; }}
+    public List<Vector2> CardDefaultPositions { get { return m_CardDefaultPositions; } }
 
     private Card m_SelectedCard;
     private int m_IndexInHandPosition;
