@@ -1,0 +1,104 @@
+
+TileDestroy.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Octopus_DestroyTile0001
+  rotate: false
+  xy: 2, 306
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0002
+  rotate: false
+  xy: 2, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0003
+  rotate: false
+  xy: 154, 306
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0004
+  rotate: false
+  xy: 2, 2
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0005
+  rotate: false
+  xy: 154, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0006
+  rotate: false
+  xy: 306, 306
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0007
+  rotate: false
+  xy: 154, 2
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0008
+  rotate: false
+  xy: 306, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0009
+  rotate: false
+  xy: 458, 306
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0010
+  rotate: false
+  xy: 458, 306
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0011
+  rotate: false
+  xy: 306, 2
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0012
+  rotate: false
+  xy: 458, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0013
+  rotate: false
+  xy: 458, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Octopus_DestroyTile0014
+  rotate: false
+  xy: 458, 154
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: skeleton_Atlas
+  m_Name: Octopus_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: be67b2e0d74f91443a0666bf66c79bd6, type: 3}
+  atlasFile: {fileID: 4900000, guid: 266b85c3bfa500b4bbb244d1fe6bc4a7, type: 3}
   materials:
-  - {fileID: 2100000, guid: f6aaf0e4369575a46a85f7e25790571f, type: 2}
+  - {fileID: 2100000, guid: 85e45128c942c9c4fad02cfc6980d63f, type: 2}

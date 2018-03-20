@@ -1,0 +1,66 @@
+{
+"skeleton": { "hash": "pOwZVN56OawqKFM4nqeW1SokoF0", "spine": "3.6.52", "width": 150, "height": 150, "images": "" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Octopus_DestroyTile0001", "bone": "root", "attachment": "Octopus_DestroyTile0014" }
+],
+"skins": {
+	"default": {
+		"Octopus_DestroyTile0001": {
+			"Octopus_DestroyTile0001": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0002": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0003": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0004": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0005": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0006": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0007": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0008": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0009": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0010": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0011": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0012": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0013": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile0014": { "width": 150, "height": 150 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"Octopus_DestroyTile0001": {
+				"color": [
+					{ "time": 0.4333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5667, "color": "ffffffff" },
+					{ "time": 0.8667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Octopus_DestroyTile0001" },
+					{ "time": 0.0333, "name": "Octopus_DestroyTile0002" },
+					{ "time": 0.0667, "name": "Octopus_DestroyTile0003" },
+					{ "time": 0.1333, "name": "Octopus_DestroyTile0004" },
+					{ "time": 0.1667, "name": "Octopus_DestroyTile0005" },
+					{ "time": 0.2, "name": "Octopus_DestroyTile0006" },
+					{ "time": 0.2667, "name": "Octopus_DestroyTile0007" },
+					{ "time": 0.3, "name": "Octopus_DestroyTile0008" },
+					{ "time": 0.3333, "name": "Octopus_DestroyTile0009" },
+					{ "time": 0.3667, "name": "Octopus_DestroyTile0010" },
+					{ "time": 0.4333, "name": "Octopus_DestroyTile0011" },
+					{ "time": 0.5667, "name": "Octopus_DestroyTile0011" },
+					{ "time": 0.8667, "name": "Octopus_DestroyTile0011" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 0.4333, "x": 1, "y": 1 },
+					{ "time": 0.4667, "x": 1.069, "y": 1.069 },
+					{ "time": 0.5667, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

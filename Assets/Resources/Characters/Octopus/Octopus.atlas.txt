@@ -1,0 +1,153 @@
+
+Octopus.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head
+  rotate: false
+  xy: 2, 114
+  size: 134, 136
+  orig: 134, 136
+  offset: 0, 0
+  index: -1
+L_Eye
+  rotate: false
+  xy: 954, 205
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+L_Eye_Pupil
+  rotate: false
+  xy: 2, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+R_Eye_Pupil
+  rotate: false
+  xy: 2, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+L_Teeth
+  rotate: false
+  xy: 648, 132
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0001
+  rotate: false
+  xy: 2, 12
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0002
+  rotate: false
+  xy: 138, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0003
+  rotate: false
+  xy: 240, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0004
+  rotate: false
+  xy: 342, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0005
+  rotate: false
+  xy: 444, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0006
+  rotate: false
+  xy: 546, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0007
+  rotate: false
+  xy: 648, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0008
+  rotate: false
+  xy: 750, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0009
+  rotate: false
+  xy: 852, 150
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0010
+  rotate: false
+  xy: 138, 48
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0011
+  rotate: false
+  xy: 240, 48
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0012
+  rotate: false
+  xy: 342, 48
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0013
+  rotate: false
+  xy: 444, 48
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Octopus_Tentacle0014
+  rotate: false
+  xy: 546, 48
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+R_Eye
+  rotate: false
+  xy: 104, 73
+  size: 29, 39
+  orig: 29, 39
+  offset: 0, 0
+  index: -1
+R_Teeth
+  rotate: false
+  xy: 954, 186
+  size: 13, 17
+  orig: 13, 17
+  offset: 0, 0
+  index: -1
