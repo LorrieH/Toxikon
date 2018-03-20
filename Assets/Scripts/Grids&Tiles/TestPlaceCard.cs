@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestPlaceCard : MonoBehaviour {
+public class TestPlaceCard : MonoBehaviour
+{
 
+    //debug class
 
     public Vector2 selectOne;
     public Vector2 selectTwo;
@@ -17,5 +19,5 @@ public class TestPlaceCard : MonoBehaviour {
     public bool Right;
     public bool Down;
     public bool Left;
-    public bool Middle;    
+    public bool Middle;
 }
