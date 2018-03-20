@@ -13,17 +13,14 @@ public class TileNode
     public bool IsDestructable  { get; set; }
     public bool IsEdgeStone     { get; set; }
     public bool IsChecked       { get; set; }
-    public bool IsEndpoint      { get; set; }
-    public bool IsStartPoint    { get; set; }
-
 
     //rotation with increments op 90 degrees
     public byte TurnsRight  { get; set; }
 
     public Vector2 GridPos  { get; set; }
 
-    public Sprite TileTexture       { get; set; }
-    public GameObject TileObject    { get; set; }
+    public Sprite TileTexture { get; set; }
+    public GameObject TileObject { get; set; }
 
     public TileNode RoadParent              { get; set; }
     public Neighbours AllNeighbours         { get; set; }
@@ -36,14 +33,16 @@ public class TileNode
     /// </summary>
     public void SetAccesableNeighbours()
     {
-        Neighbours tempNeighbour = new Neighbours();
+        Neighbours tempNeighbour;
+        tempNeighbour.up = null;
+        tempNeighbour.right = null;
+        tempNeighbour.down = null;
+        tempNeighbour.left = null;
         if (Bools.Up)
         {
             if (AllNeighbours.up.IsFilled && AllNeighbours.up.Bools.Down && !AllNeighbours.up.IsEdgeStone)
             {
                 tempNeighbour.up = AllNeighbours.up;
-                //....
-
             }
         }
         if (Bools.Right)
@@ -74,35 +73,17 @@ public class TileNode
     {
         if (!IsEdgeStone)
         {
-            if (IsFilled)
+            for (int i = 0; i < TileArtLib.s_TileArtArray.Length; i++)
             {
-                for (int i = 0; i < TileArtLib.s_TileArtArray.Length; i++)
+                if(TileArtLib.s_TileArtArray[i].bools == Bools)
                 {
-                    if (TileArtLib.s_TileArtArray[i].bools == Bools)
-                    {
-                        Debug.Log("set a texture");
-                        TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
-                        TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
-                        break;
-                    }
+                    Debug.Log("set a texture");
+                    TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
+                    SpriteRenderer tileRenderer = TileObject.GetComponent<SpriteRenderer>();
+                    tileRenderer.sprite = TileTexture;
+                    break;
                 }
             }
-            else
-            {
-                TileObject.GetComponent<SpriteRenderer>().sprite = TileArtLib.s_EmptyTex;
-            }
-        }
-        if(IsEndpoint)
-        {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.red;
-        }
-        else if(IsStartPoint)
-        {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-        else if(IsChecked)
-        {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
     #endregion
@@ -114,10 +95,10 @@ public class TileNode
     /// <returns></returns>
     public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft)
     {
-        bool canConnectUp    = false;
+        bool canConnectUp = false;
         bool canConnectRight = false;
-        bool canConnectDown  = false;
-        bool canConnectLeft  = false;
+        bool canConnectDown = false;
+        bool canConnectLeft = false;
 
         //is up compatible
         if (!AllNeighbours.up.IsFilled)
