@@ -18,8 +18,10 @@ public class ClickedOnTile : MonoBehaviour {
 
             case CardTypes.PATH_CARD:
                 PathCardData pathData = CardSelector.s_Instance.SelectedCard.CardData.PathData;
-                Grid.PlaceNewCard(TilePosX, TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle);
-                CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+                if (Grid.PlaceNewCard(TilePosX, TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle))
+                {
+                    CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+                }
                 break;
             case CardTypes.ROTATE_PATH_CARD:
 

@@ -52,7 +52,6 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        Debug.Log("Init. index" + m_IndexInHandPosition);
         TurnManager.s_OnTurnEnd();
     }
 
@@ -69,7 +68,6 @@ public class CardPositionHolder : MonoBehaviour {
         m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f);
         m_SelectedCard.transform.DOScale(1, 0.5f);
         yield return new WaitForSeconds(0.5f);
-        Debug.Log(m_IndexInHandPosition);
         m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition);
     }
 
