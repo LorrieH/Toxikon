@@ -62,8 +62,11 @@ public class PlayerSelection : MonoBehaviour
     {
         m_ScalePlayerPanel = DOTween.Sequence();
 
-        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
         RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
+
+        rt.anchoredPosition = new Vector2(1920, 0);
+
+        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
 
         m_ScalePlayerPanel.AppendInterval(0.1f);
         m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));
