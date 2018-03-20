@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114847799107778080}
   - component: {fileID: 212615293870066640}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: Tile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1082471511549046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.4122, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.39755154, y: -5.989979, z: 0}
+  m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb6bf25b08433b4cb4dc92b6bc6370b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestPlacer: {fileID: 0}
 --- !u!212 &212615293870066640
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,13 +113,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 0.99264705, g: 0.99264705, b: 0.99264705, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3814a0d7a3fd80448985795431a2babb, type: 3}
+  m_Color: {r: 0.85448045, g: 0.89705884, b: 0.12532441, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
