@@ -52,11 +52,7 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        //card.CardData = CardManager.s_Instance.GetRandomCard();
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardManager.s_Instance.GetRandomCard();
-        //m_SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
-        //m_SelectedCard.SetCardInfo();
-        Debug.Log(m_SelectedCard.CardData.Name);
         TurnManager.s_OnTurnEnd();
     }
 
