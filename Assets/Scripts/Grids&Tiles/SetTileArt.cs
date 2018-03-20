@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SetTileArt : MonoBehaviour {
-    [SerializeField] private Sprite m_testTex;
+    [SerializeField] private Sprite m_EmptyTex;
     [SerializeField] private TileArtClass[] m_TileArt;
+
+    [SerializeField] private GameObject[] m_Bridges;
+
     /*
     //single openings leading nowhere
     [SerializeField] private Texture m_Up;
@@ -60,8 +63,10 @@ public class SetTileArt : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        TileArtLib.s_TestTex = m_testTex;
+        TileArtLib.s_EmptyTex = m_EmptyTex;
         TileArtLib.s_TileArtArray = m_TileArt;
+
+        TileArtLib.s_Bridges = m_Bridges;
         /*
         //single openings leading nowhere
         TileArtLib.s_Up     = m_Up;

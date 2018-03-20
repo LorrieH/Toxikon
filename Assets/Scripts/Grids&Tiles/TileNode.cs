@@ -36,16 +36,14 @@ public class TileNode
     /// </summary>
     public void SetAccesableNeighbours()
     {
-        Neighbours tempNeighbour;
-        tempNeighbour.up = null;
-        tempNeighbour.right = null;
-        tempNeighbour.down = null;
-        tempNeighbour.left = null;
+        Neighbours tempNeighbour = new Neighbours();
         if (Bools.Up)
         {
             if (AllNeighbours.up.IsFilled && AllNeighbours.up.Bools.Down && !AllNeighbours.up.IsEdgeStone)
             {
                 tempNeighbour.up = AllNeighbours.up;
+                //....
+
             }
         }
         if (Bools.Right)
@@ -76,16 +74,35 @@ public class TileNode
     {
         if (!IsEdgeStone)
         {
-            for (int i = 0; i < TileArtLib.s_TileArtArray.Length; i++)
+            if (IsFilled)
             {
-                if(TileArtLib.s_TileArtArray[i].bools == Bools)
+                for (int i = 0; i < TileArtLib.s_TileArtArray.Length; i++)
                 {
-                    Debug.Log("set a texture");
-                    TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
-                    TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
-                    break;
+                    if (TileArtLib.s_TileArtArray[i].bools == Bools)
+                    {
+                        Debug.Log("set a texture");
+                        TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
+                        TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
+                        break;
+                    }
                 }
             }
+            else
+            {
+                TileObject.GetComponent<SpriteRenderer>().sprite = TileArtLib.s_EmptyTex;
+            }
+        }
+        if(IsEndpoint)
+        {
+            TileObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        else if(IsStartPoint)
+        {
+            TileObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+        else if(IsChecked)
+        {
+            TileObject.GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
     #endregion
@@ -97,10 +114,10 @@ public class TileNode
     /// <returns></returns>
     public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft)
     {
-        bool canConnectUp = false;
+        bool canConnectUp    = false;
         bool canConnectRight = false;
-        bool canConnectDown = false;
-        bool canConnectLeft = false;
+        bool canConnectDown  = false;
+        bool canConnectLeft  = false;
 
         //is up compatible
         if (!AllNeighbours.up.IsFilled)
