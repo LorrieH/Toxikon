@@ -15,6 +15,7 @@ public class CardPositionHolder : MonoBehaviour {
     [SerializeField] private List<Transform> m_CardPositions;
     [SerializeField]private List<Vector2> m_CardDefaultPositions;
     [SerializeField] private Transform m_CardDeckPosition;
+    [SerializeField] private Transform m_ShowDrawnCardPosition;
 
     public List<Vector2> CardDefaultPositions { get { return m_CardDefaultPositions; } }
 
@@ -48,12 +49,14 @@ public class CardPositionHolder : MonoBehaviour {
     public void DiscardCard(Card card)
     {
         card.gameObject.SetActive(false);
+        CardSelector.s_Instance.SelectedCard = null;
         card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardManager.s_Instance.GetRandomCard();
-        TurnManager.s_OnTurnEnd();
+        DrawCard();
+        //TurnManager.s_OnTurnEnd();
     }
 
     public void DrawCard()
@@ -63,12 +66,18 @@ public class CardPositionHolder : MonoBehaviour {
 
     IEnumerator DrawCardRoutine()
     {
+        CardSelector.s_Instance.CanSelectCard = false;
         yield return new WaitForSeconds(0.5f);
         m_SelectedCard.gameObject.SetActive(true);
+        m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f);
+        m_SelectedCard.transform.DOScale(1.5f, 0.5f);
+        yield return new WaitForSeconds(1.2f);
         m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f);
         m_SelectedCard.transform.DOScale(1, 0.5f);
         yield return new WaitForSeconds(0.5f);
         m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition);
+        TurnManager.s_OnTurnEnd();
+
     }
 
     private void OnDisable()

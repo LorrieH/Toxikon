@@ -18,6 +18,8 @@ public class TurnManager : MonoBehaviour
     public delegate void TurnAction();
     public static TurnAction s_OnTurnAction;
 
+    [SerializeField] private GameObject m_TurnEndNotification;
+
     private Player m_CurrentPlayer;
     public Player CurrentPlayer { get { return m_CurrentPlayer; } }
 
@@ -25,7 +27,8 @@ public class TurnManager : MonoBehaviour
 
     private void OnEnable()
     {
-        s_OnTurnEnd += NextTurn;
+        //s_OnTurnEnd += NextTurn;
+        s_OnTurnEnd += FinishTurn;
     }
 
     private void Awake()
@@ -53,6 +56,11 @@ public class TurnManager : MonoBehaviour
         m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
     }
 
+    void FinishTurn()
+    {
+        m_TurnEndNotification.SetActive(true);
+    }
+
     public void NextTurn()
     {
         if (m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
@@ -66,11 +74,13 @@ public class TurnManager : MonoBehaviour
             m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
         s_OnTurnStart();
-        CardPositionHolder.s_OnDrawCard();
+        CardSelector.s_Instance.CanSelectCard = true;
+        //CardPositionHolder.s_OnDrawCard();
     }
 
     private void OnDisable()
     {
-        s_OnTurnEnd -= NextTurn;
+        //s_OnTurnEnd -= NextTurn;
+        s_OnTurnEnd -= FinishTurn;
     }
 }

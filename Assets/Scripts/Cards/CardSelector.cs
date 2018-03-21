@@ -21,7 +21,14 @@ public class CardSelector : MonoBehaviour
     private Card m_SelectedCard;
     private bool m_CanSelectCard = true;
 
-    public Card SelectedCard { get { return m_SelectedCard; } }
+    public Card SelectedCard {
+        get { return m_SelectedCard; }
+        set { m_SelectedCard = value; }
+    }
+    public bool CanSelectCard {
+        get { return m_CanSelectCard; }
+        set { m_CanSelectCard = value; }
+    }
 
     private void Init()
     {
