@@ -8,14 +8,19 @@ public class PlayerSelection : MonoBehaviour
 {
     [Header("Panels")]
     [SerializeField] private List<PlayerPanel> m_PlayerPanels = new List<PlayerPanel>();
-    [Header("Sprites (Remove soon)")]
-    [SerializeField]private List<Sprite> m_PossibleCharacterSprites = new List<Sprite>();
     [SerializeField] private Button m_StartButton;
     public static PlayerSelection s_Instance;
     private Sequence m_ScalePlayerPanel;
 
-    private bool m_CanToggle;
-    public bool CanToggle { get { return m_CanToggle; } set { m_CanToggle = value; } }
+    private bool m_CanEdit;
+    public bool CanEdit { get { return m_CanEdit; } set { m_CanEdit = value; } }
+
+    [SerializeField]private List<Sprite> m_AvailableSprites = new List<Sprite>();
+    public List<Sprite> AvailableSprites
+    {
+        get { return m_AvailableSprites; }
+        set { m_AvailableSprites = value; }
+    }
 
     private int m_PlayersReady;
 
@@ -71,14 +76,14 @@ public class PlayerSelection : MonoBehaviour
 
         m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
 
-        m_CanToggle = true;
+        m_CanEdit = true;
         m_ScalePlayerPanel.AppendInterval(0.1f);
         m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));
     }
 
     public void TransitionOutPlayerPanels()
     {
-        m_CanToggle = false;
+        m_CanEdit = false;
 
         if (!PlayersReady())
         {
@@ -87,16 +92,6 @@ public class PlayerSelection : MonoBehaviour
 
             rt.DOAnchorPosX(-1920, 1f).SetEase(Ease.InBack).OnComplete(TransitionInPlayerPanels);
         }
-    }
-
-    public Sprite GetRandomCharacter()
-    {
-        Sprite character;
-        int randomSprite = Random.Range(0, m_PossibleCharacterSprites.Count);
-        character = m_PossibleCharacterSprites[randomSprite];
-        m_PossibleCharacterSprites.RemoveAt(randomSprite);
-
-        return character;
     }
 
     public void ChangeAmountOfChecks(int amount)
