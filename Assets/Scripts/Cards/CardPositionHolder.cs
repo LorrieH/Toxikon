@@ -56,7 +56,6 @@ public class CardPositionHolder : MonoBehaviour {
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardManager.s_Instance.GetRandomCard();
         DrawCard();
-        //TurnManager.s_OnTurnEnd();
     }
 
     public void DrawCard()
