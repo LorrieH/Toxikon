@@ -64,12 +64,11 @@ public class CardSelector : MonoBehaviour {
                 m_SelectedCard = null;
             }
         
-            StartCoroutine(CardSelectDelay(0.5f));
+            StartCoroutine(CardSelectDelay(0.2f));
             if (m_SelectedCard != selectedCard)
             {
                 //If the selected card was not the selected card already, move to selected position and select it
-                Sequence CardSelectSequence = DOTween.Sequence();
-                selectedCard.transform.DOMove(m_SelectedCardHolder.position, 0.5f);
+                selectedCard.transform.DOMove(m_SelectedCardHolder.position, 0.3f);
                 selectedCard.transform.SetSiblingIndex(6); //Puts the selected card on top of the layering hierarchy
                 selectedCard.transform.DOScale(1.3f, 0.4f);
                 m_SelectedCard = selectedCard;
