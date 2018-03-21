@@ -1,63 +1,84 @@
 {
-"skeleton": { "hash": "pOwZVN56OawqKFM4nqeW1SokoF0", "spine": "3.6.52", "width": 150, "height": 150, "images": "" },
+"skeleton": { "hash": "Y2RDNOU9uP0/6CsM7AmBEzDjyRk", "spine": "3.6.52", "width": 150, "height": 150, "images": "" },
 "bones": [
 	{ "name": "root" }
 ],
 "slots": [
-	{ "name": "Octopus_DestroyTile0001", "bone": "root", "attachment": "Octopus_DestroyTile0014" }
+	{ "name": "Octopus_DestroyTile00010001", "bone": "root", "attachment": "Octopus_DestroyTile00010023" }
 ],
 "skins": {
 	"default": {
-		"Octopus_DestroyTile0001": {
-			"Octopus_DestroyTile0001": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0002": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0003": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0004": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0005": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0006": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0007": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0008": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0009": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0010": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0011": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0012": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0013": { "width": 150, "height": 150 },
-			"Octopus_DestroyTile0014": { "width": 150, "height": 150 }
+		"Octopus_DestroyTile00010001": {
+			"Octopus_DestroyTile00010001": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010002": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010003": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010004": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010005": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010006": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010007": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010008": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010009": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010010": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010011": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010012": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010013": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010014": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010015": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010016": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010017": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010018": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010019": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010020": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010021": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010022": { "width": 150, "height": 150 },
+			"Octopus_DestroyTile00010023": { "width": 150, "height": 150 }
 		}
 	}
 },
 "animations": {
 	"animation": {
 		"slots": {
-			"Octopus_DestroyTile0001": {
+			"Octopus_DestroyTile00010001": {
 				"color": [
-					{ "time": 0.4333, "color": "ffffffff", "curve": "stepped" },
-					{ "time": 0.5667, "color": "ffffffff" },
-					{ "time": 0.8667, "color": "ffffff00" }
+					{ "time": 0.8333, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "time": 0, "name": "Octopus_DestroyTile0001" },
-					{ "time": 0.0333, "name": "Octopus_DestroyTile0002" },
-					{ "time": 0.0667, "name": "Octopus_DestroyTile0003" },
-					{ "time": 0.1333, "name": "Octopus_DestroyTile0004" },
-					{ "time": 0.1667, "name": "Octopus_DestroyTile0005" },
-					{ "time": 0.2, "name": "Octopus_DestroyTile0006" },
-					{ "time": 0.2667, "name": "Octopus_DestroyTile0007" },
-					{ "time": 0.3, "name": "Octopus_DestroyTile0008" },
-					{ "time": 0.3333, "name": "Octopus_DestroyTile0009" },
-					{ "time": 0.3667, "name": "Octopus_DestroyTile0010" },
-					{ "time": 0.4333, "name": "Octopus_DestroyTile0011" },
-					{ "time": 0.5667, "name": "Octopus_DestroyTile0011" },
-					{ "time": 0.8667, "name": "Octopus_DestroyTile0011" }
+					{ "time": 0, "name": "Octopus_DestroyTile00010001" },
+					{ "time": 0.0333, "name": "Octopus_DestroyTile00010002" },
+					{ "time": 0.0667, "name": "Octopus_DestroyTile00010003" },
+					{ "time": 0.1, "name": "Octopus_DestroyTile00010004" },
+					{ "time": 0.1333, "name": "Octopus_DestroyTile00010005" },
+					{ "time": 0.1667, "name": "Octopus_DestroyTile00010006" },
+					{ "time": 0.2, "name": "Octopus_DestroyTile00010007" },
+					{ "time": 0.2333, "name": "Octopus_DestroyTile00010008" },
+					{ "time": 0.2667, "name": "Octopus_DestroyTile00010009" },
+					{ "time": 0.3, "name": "Octopus_DestroyTile00010010" },
+					{ "time": 0.3333, "name": "Octopus_DestroyTile00010011" },
+					{ "time": 0.3667, "name": "Octopus_DestroyTile00010012" },
+					{ "time": 0.4, "name": "Octopus_DestroyTile00010013" },
+					{ "time": 0.4333, "name": "Octopus_DestroyTile00010014" },
+					{ "time": 0.4667, "name": "Octopus_DestroyTile00010015" },
+					{ "time": 0.5, "name": "Octopus_DestroyTile00010016" },
+					{ "time": 0.5333, "name": "Octopus_DestroyTile00010017" },
+					{ "time": 0.5667, "name": "Octopus_DestroyTile00010018" },
+					{ "time": 0.6, "name": "Octopus_DestroyTile00010019" },
+					{ "time": 0.6333, "name": "Octopus_DestroyTile00010020" },
+					{ "time": 0.6667, "name": "Octopus_DestroyTile00010021" },
+					{ "time": 0.7, "name": "Octopus_DestroyTile00010022" },
+					{ "time": 0.7333, "name": "Octopus_DestroyTile00010023" },
+					{ "time": 0.8333, "name": "Octopus_DestroyTile00010023" },
+					{ "time": 1, "name": "Octopus_DestroyTile00010023" }
 				]
 			}
 		},
 		"bones": {
 			"root": {
 				"scale": [
-					{ "time": 0.4333, "x": 1, "y": 1 },
-					{ "time": 0.4667, "x": 1.069, "y": 1.069 },
-					{ "time": 0.5667, "x": 1, "y": 1 }
+					{ "time": 0, "x": 0.933, "y": 0.933 },
+					{ "time": 0.7, "x": 1, "y": 1 },
+					{ "time": 0.7333, "x": 0.937, "y": 0.937 },
+					{ "time": 0.7667, "x": 1, "y": 1 }
 				]
 			}
 		}

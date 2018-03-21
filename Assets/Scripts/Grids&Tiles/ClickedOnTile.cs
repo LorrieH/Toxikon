@@ -28,11 +28,13 @@ public class ClickedOnTile : MonoBehaviour
             case CardTypes.SWAP_PATH_CARD:
                 break;
             case CardTypes.DESTROY_CARD:
+                /*
                 if(TileGrid.s_Instance.DestroyNode(TilePosX, TilePosY))
                 {
                     Debug.Log("Succesfully destroyed node");
                     CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
-                }
+                }*/
+                ActionFXManager.s_Instance.BreakTile(TilePosX, TilePosY);
                 break;
         }
     }

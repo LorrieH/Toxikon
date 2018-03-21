@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Octopus_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 7549e222233e539468757173c3cb60da, type: 2}
+  - {fileID: 11400000, guid: a630e4ea85c21aa4b8a2d5fb3a1f8286, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 23c178fe661a86d4598ec7800711ac3b, type: 3}
   fromAnimation: []

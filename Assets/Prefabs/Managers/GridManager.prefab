@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9453bd9c9102249b8b570b1fad5c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EmptyTex: {fileID: 21300000, guid: e06141d2ca7f81141aeab3c5bf9dbb31, type: 3}
+  m_EmptyTex: {fileID: 21300000, guid: d447eaefbc167c24499809c4d61cebdc, type: 3}
   m_TileArt:
   - bools:
       Up: 1
@@ -60,91 +60,182 @@ MonoBehaviour:
       Down: 1
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 60d3107a42423394c827216397a596e9, type: 3}
+    TileArt: {fileID: 21300000, guid: b208951d43e2d6a438800dbf90619ecc, type: 3}
   - bools:
       Up: 0
       Right: 1
       Down: 1
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 6a48c917fe0da2f42b97a9e4e0af9746, type: 3}
+    TileArt: {fileID: 21300000, guid: c0ab4a4154283d1478e137879e042c5e, type: 3}
   - bools:
       Up: 1
       Right: 1
       Down: 0
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: d1f2f77a2e60e5d4fa3cadd3478aa57c, type: 3}
+    TileArt: {fileID: 21300000, guid: fa2244554a4997e4881e902ae6ad7add, type: 3}
   - bools:
       Up: 1
       Right: 1
       Down: 1
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 4736c55b42dd3704eadfb066c6597da4, type: 3}
+    TileArt: {fileID: 21300000, guid: 010d2c3212330fe418c831fb0ae6a220, type: 3}
   - bools:
       Up: 1
       Right: 0
       Down: 1
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 9ac17b2682ab462499475b54ec9d8b2b, type: 3}
+    TileArt: {fileID: 21300000, guid: 0b0603dda565a7240922e0489e78c34d, type: 3}
   - bools:
       Up: 0
       Right: 0
       Down: 1
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: e1b55872641f5d9409968af1a36876ca, type: 3}
-  - bools:
-      Up: 0
-      Right: 0
-      Down: 1
-      Left: 1
-      Middle: 1
-    TileArt: {fileID: 21300000, guid: e1b55872641f5d9409968af1a36876ca, type: 3}
+    TileArt: {fileID: 21300000, guid: 7192277c9ed157546935a330ae10e531, type: 3}
   - bools:
       Up: 0
       Right: 1
       Down: 1
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 94b4102fab34ed64f828a22ef2452d36, type: 3}
-  - bools:
-      Up: 1
-      Right: 1
-      Down: 0
-      Left: 0
-      Middle: 1
-    TileArt: {fileID: 21300000, guid: af3edd0a67f3f6e4e88ff1101a78241f, type: 3}
+    TileArt: {fileID: 21300000, guid: 02024437367264f46abb75f8cc6c70c8, type: 3}
   - bools:
       Up: 1
       Right: 0
       Down: 0
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 56c7923a8c81f964fba9c9e7fb9d7afc, type: 3}
+    TileArt: {fileID: 21300000, guid: cedde91ee5774f84fa68f3981a81ace4, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 0
+      Left: 0
+      Middle: 1
+    TileArt: {fileID: 21300000, guid: 87bafe2db4af6d544b4b17e7207a22f6, type: 3}
   - bools:
       Up: 1
       Right: 0
       Down: 1
       Left: 0
       Middle: 1
-    TileArt: {fileID: 21300000, guid: 7bff701bf5f56154c980b7f70234bb10, type: 3}
+    TileArt: {fileID: 21300000, guid: 0f9e81e62938fb24685b059743ad1d16, type: 3}
   - bools:
       Up: 0
       Right: 1
       Down: 0
       Left: 1
       Middle: 1
-    TileArt: {fileID: 21300000, guid: b736438154e20da41b5ab627e970a519, type: 3}
+    TileArt: {fileID: 21300000, guid: 0c50dae78425b434aa1db5722720ade5, type: 3}
   - bools:
       Up: 0
       Right: 0
       Down: 0
       Left: 0
       Middle: 0
-    TileArt: {fileID: 21300000, guid: e06141d2ca7f81141aeab3c5bf9dbb31, type: 3}
+    TileArt: {fileID: 21300000, guid: 07cf3a75e024339419580aa5fb29ad4a, type: 3}
+  - bools:
+      Up: 0
+      Right: 0
+      Down: 1
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 4342663afc4d5b44181601a0a10ffcb9, type: 3}
+  - bools:
+      Up: 0
+      Right: 0
+      Down: 0
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: f452373bbc6254f48a5b6eb66c361984, type: 3}
+  - bools:
+      Up: 0
+      Right: 1
+      Down: 0
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 4e3d13b3a308b0640ae68966adaaa7e2, type: 3}
+  - bools:
+      Up: 1
+      Right: 0
+      Down: 0
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 26293a0bfabcbc64f9b5366519515f90, type: 3}
+  - bools:
+      Up: 0
+      Right: 0
+      Down: 1
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 584d1d13cf32f5c409083e46b6f70b72, type: 3}
+  - bools:
+      Up: 0
+      Right: 1
+      Down: 0
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 63220ec5af3b7b34ea252b1a7f6883df, type: 3}
+  - bools:
+      Up: 0
+      Right: 1
+      Down: 1
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: d678030a43ae0814aa038880fb8c044b, type: 3}
+  - bools:
+      Up: 1
+      Right: 0
+      Down: 1
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 82416c6bdfca1e3488072c8e122d14f2, type: 3}
+  - bools:
+      Up: 1
+      Right: 0
+      Down: 0
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: f136904079c617842993f0ad5e3140dc, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 0
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 782737ea5aa92c642b86c2417ae2ef20, type: 3}
+  - bools:
+      Up: 0
+      Right: 1
+      Down: 1
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 479b09a37f0d6c54683ab434ceefdbc6, type: 3}
+  - bools:
+      Up: 1
+      Right: 0
+      Down: 1
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: fbeccac11e2906649ba30a2ed7a9b98b, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 1
+      Left: 0
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: acc8aa7bc6d87e8448bce7254ac75f8f, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 0
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 09ae62f7ad96a9244bbaf397b8e47b77, type: 3}
   m_Bridges:
   - {fileID: 1201930979594568, guid: 142013d1cbf4272438be2ea2a9f3a00f, type: 2}
   - {fileID: 1302407838442952, guid: 7488e479df2524144aa2fe38a7a9a4c6, type: 2}
