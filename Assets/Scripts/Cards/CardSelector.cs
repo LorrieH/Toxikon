@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class CardSelector : MonoBehaviour {
+public class CardSelector : MonoBehaviour
+{
 
     public delegate void ToggleCardSelectEvent(Card selectedCard, int cardInHandIndex);
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
 
     public static CardSelector s_Instance;
-    
+
     [SerializeField] private Transform m_SelectedCardHolder;
 
     [Space(20f)]
     [Header("Cards")]
-    [SerializeField] private List<Card> m_PlayerHandCards = new List<Card>();
-    
+    [SerializeField]
+    private List<Card> m_PlayerHandCards = new List<Card>();
+
     private Card m_SelectedCard;
     private bool m_CanSelectCard = true;
 
@@ -58,20 +60,14 @@ public class CardSelector : MonoBehaviour {
             //Returns all cards back to the hand first
             for (int i = 0; i < m_PlayerHandCards.Count; i++)
             {
-                m_PlayerHandCards[i].transform.DOMove(CardPositionHolder.s_Instance.CardDefaultPositions[m_PlayerHandCards[i].IndexInHand],0.2f).SetEase(Ease.OutExpo);
+                m_PlayerHandCards[i].transform.DOMove(CardPositionHolder.s_Instance.CardDefaultPositions[m_PlayerHandCards[i].IndexInHand], 0.2f).SetEase(Ease.OutExpo);
                 m_PlayerHandCards[i].transform.SetSiblingIndex(m_PlayerHandCards[i].IndexInHand);
                 m_PlayerHandCards[i].transform.DOScale(1, 0.2f);
             }
-        
+
             StartCoroutine(CardSelectDelay(0.2f));
-<<<<<<< HEAD
-            if (m_SelectedCard != selectedCard)
-            {
-                //If the selected card was not the selected card already, move to selected position and select it
-                selectedCard.transform.DOMove(m_SelectedCardHolder.position, 0.3f);
-=======
-            
-            if(m_SelectedCard == selectedCard)
+
+            if (m_SelectedCard == selectedCard)
             {
                 selectedCard.transform.DOMove(CardPositionHolder.s_Instance.CardDefaultPositions[selectedCard.IndexInHand], 0.2f).SetEase(Ease.OutExpo);
                 selectedCard.transform.SetSiblingIndex(selectedCard.IndexInHand);
@@ -84,7 +80,6 @@ public class CardSelector : MonoBehaviour {
                 Sequence CardSelectSequence = DOTween.Sequence();
                 CardSelectSequence.Append(selectedCard.transform.DOMove(m_SelectedCardHolder.position, 0.35f));
                 CardSelectSequence.Join(selectedCard.transform.DOScale(1.3f, 0.4f));
->>>>>>> Added a bit more responsiveness to card selection
                 selectedCard.transform.SetSiblingIndex(6); //Puts the selected card on top of the layering hierarchy
                 m_SelectedCard = selectedCard;
             }
