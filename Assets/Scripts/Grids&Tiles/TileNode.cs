@@ -42,8 +42,6 @@ public class TileNode
             if (AllNeighbours.up.IsFilled && AllNeighbours.up.Bools.Down && !AllNeighbours.up.IsEdgeStone)
             {
                 tempNeighbour.up = AllNeighbours.up;
-                //....
-
             }
         }
         if (Bools.Right)
@@ -104,6 +102,38 @@ public class TileNode
         {
             TileObject.GetComponent<SpriteRenderer>().color = Color.blue;
         }
+    }
+
+    public void getChecked(TileGrid T, TileNode parent)
+    {
+        SetAccesableNeighbours();
+        RoadParent = parent;
+        IsChecked = true;
+        T.CheckedNodes.Add(this);
+        if(IsEndpoint)
+        {
+            T.RoadCompleted = true;
+        }
+        else
+        {
+            if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked)
+            {
+                AccesableNeighbours.up.getChecked(T, this);
+            }
+            if (AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked)
+            {
+                AccesableNeighbours.right.getChecked(T, this);
+            }
+            if (AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked)
+            {
+                AccesableNeighbours.down.getChecked(T, this);
+            }
+            if (AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked)
+            {
+                AccesableNeighbours.left.getChecked(T, this);
+            }
+        }
+        UpdateArt();
     }
     #endregion
 

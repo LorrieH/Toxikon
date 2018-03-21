@@ -19,7 +19,15 @@ public class ClickedOnTile : MonoBehaviour
                 PathCardData pathData = CardSelector.s_Instance.SelectedCard.CardData.PathData;
                 if (TileGrid.s_Instance.PlaceNewCard(TilePosX, TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle))
                 {
-                    CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+                    if (TileGrid.s_Instance.CompleteRoad(1))
+                    {
+                        Debug.Log("i found da wea");
+                    }
+                    else
+                    {
+                        Debug.Log("no wea");
+                    }
+                    CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);                    
                 }
                 break;
             case CardTypes.ROTATE_PATH_CARD:
@@ -31,6 +39,14 @@ public class ClickedOnTile : MonoBehaviour
                 if(TileGrid.s_Instance.DestroyNode(TilePosX, TilePosY))
                 {
                     Debug.Log("Succesfully destroyed node");
+                    if(TileGrid.s_Instance.CompleteRoad(1))
+                    {
+                        Debug.Log("i found da wea");
+                    }
+                    else
+                    {
+                        Debug.Log("no wea");
+                    }
                     CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
                 }
                 break;
