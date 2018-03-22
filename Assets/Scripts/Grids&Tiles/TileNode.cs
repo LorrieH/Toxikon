@@ -175,6 +175,7 @@ public class TileNode
         bool canConnectRight = false;
         bool canConnectDown = false;
         bool canConnectLeft = false;
+        bool hasFilledNeighbour = false;
 
         //is up compatible
         if (!AllNeighbours.up.IsFilled)
@@ -184,10 +185,12 @@ public class TileNode
         else if (CardUp && AllNeighbours.up.Bools.Down)
         {
             canConnectUp = true;
+            hasFilledNeighbour = true;
         }
         else if (!CardUp && !AllNeighbours.up.Bools.Down)
         {
             canConnectUp = true;
+            hasFilledNeighbour = true;
         }
 
         //is right compatible
@@ -198,10 +201,12 @@ public class TileNode
         else if (CardRight && AllNeighbours.right.Bools.Left)
         {
             canConnectRight = true;
+            hasFilledNeighbour = true;
         }
         else if (!CardRight && !AllNeighbours.right.Bools.Left)
         {
             canConnectRight = true;
+            hasFilledNeighbour = true;
         }
 
         //is down compatible
@@ -212,10 +217,12 @@ public class TileNode
         else if (CardDown && AllNeighbours.down.Bools.Up)
         {
             canConnectDown = true;
+            hasFilledNeighbour = true;
         }
         else if (!CardDown && !AllNeighbours.down.Bools.Up)
         {
             canConnectDown = true;
+            hasFilledNeighbour = true;
         }
 
         //is left compatible
@@ -226,12 +233,14 @@ public class TileNode
         else if (CardLeft && AllNeighbours.left.Bools.Right)
         {
             canConnectLeft = true;
+            hasFilledNeighbour = true;
         }
         else if (!CardLeft && !AllNeighbours.left.Bools.Right)
         {
             canConnectLeft = true;
+            hasFilledNeighbour = true;
         }
-        return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft);
+        return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft && hasFilledNeighbour);
     }
     #endregion
 }

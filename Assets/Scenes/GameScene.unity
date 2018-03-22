@@ -2685,6 +2685,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.size
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 4781943033727606, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2716,6 +2721,32 @@ Prefab:
     - target: {fileID: 4781943033727606, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.data[26].bools.Up
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.data[26].bools.Right
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.data[26].bools.Left
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.data[26].TileArt
+      value: 
+      objectReference: {fileID: 21300000, guid: 066c6ef2ced9b3c42971fc173a001b6a,
+        type: 3}
+    - target: {fileID: 114602566185749502, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: m_TileArt.Array.data[26].bools.Down
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}

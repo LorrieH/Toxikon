@@ -67,7 +67,6 @@ public class TileGrid : MonoBehaviour
                 {
                     newNode.IsEdgeStone = true;
                     newNode.IsDestructable = false;
-                    //GameObject tileObj = Instantiate(new GameObject(), new Vector3(i, j, 0), Quaternion.identity);
                     newNode.TileObject = null;
                 }
                 else
@@ -84,7 +83,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsDestructable = false;
                     bools.Right = true;
                     bools.Up = true;
-                    bools.Middle = true;
+                    bools.Middle = false;
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[2] = newNode;
@@ -95,7 +94,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Up = true;
-                    bools.Middle = true;
+                    bools.Middle = false;
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[1] = newNode;
@@ -107,7 +106,7 @@ public class TileGrid : MonoBehaviour
                     bools.Right = true;
                     bools.Down = true;
                     bools.Middle = true;
-                    newNode.IsFilled = true;
+                    bools.Middle = false;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[0] = newNode;
                 }
@@ -117,7 +116,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Down = true;
-                    bools.Middle = true;
+                    bools.Middle = false;
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[3] = newNode;
@@ -128,7 +127,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsDestructable = false;
                     bools.Left = true;
                     bools.Up = true;
-                    bools.Middle = true;
+                    bools.Middle = false;
                     bools.Down = true;
                     bools.Right = true;
                     newNode.IsFilled = true;
