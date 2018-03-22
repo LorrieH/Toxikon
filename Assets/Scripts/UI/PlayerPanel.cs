@@ -32,7 +32,7 @@ public class PlayerPanel : MonoBehaviour
     public void PreviousSprite()
     {
         m_SpriteNumber--;
-        if (m_SpriteNumber <= 0)
+        if (m_SpriteNumber < 0)
             m_SpriteNumber = PlayerSelection.s_Instance.AvailableSprites.Count - 1;
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
