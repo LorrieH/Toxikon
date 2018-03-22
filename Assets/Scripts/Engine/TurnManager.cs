@@ -24,10 +24,14 @@ public class TurnManager : MonoBehaviour
     public Player CurrentPlayer { get { return m_CurrentPlayer; } }
 
     private int m_CurrentPlayerIndex;
+    public int CurrentPlayerIndex
+    {
+        get { return m_CurrentPlayerIndex; }
+        set { m_CurrentPlayerIndex = value; }
+    }
 
     private void OnEnable()
     {
-        //s_OnTurnEnd += NextTurn;
         s_OnTurnEnd += FinishTurn;
     }
 
@@ -75,12 +79,10 @@ public class TurnManager : MonoBehaviour
         }
         s_OnTurnStart();
         CardSelector.s_Instance.CanSelectCard = true;
-        //CardPositionHolder.s_OnDrawCard();
     }
 
     private void OnDisable()
     {
-        //s_OnTurnEnd -= NextTurn;
         s_OnTurnEnd -= FinishTurn;
     }
 }

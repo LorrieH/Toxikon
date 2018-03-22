@@ -2562,6 +2562,7 @@ GameObject:
   - component: {fileID: 1840026508}
   - component: {fileID: 1840026510}
   - component: {fileID: 1840026509}
+  - component: {fileID: 1840026511}
   m_Layer: 5
   m_Name: ConfirmNextTurnPanel
   m_TagString: Untagged
@@ -2622,6 +2623,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840026507}
+--- !u!114 &1840026511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840026507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fe05a8e2a7d164cbfb1e2325b031d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextPlayerImage: {fileID: 0}
+  _nextPlayerTurnText: {fileID: 1004338145}
 --- !u!1001 &1843757486
 Prefab:
   m_ObjectHideFlags: 0
