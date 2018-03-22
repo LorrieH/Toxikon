@@ -5,42 +5,49 @@ using UnityEngine.UI;
 
 public class PlayerPanel : MonoBehaviour
 {
-    private PlayerData m_PlayerData;
-    public PlayerData PlayerData { get { return m_PlayerData; } set { m_PlayerData = value; } }
-    private int m_SpriteNumber;
+   
     [SerializeField] private Text m_PlayerName;
     [SerializeField] private Image m_PlayerAvatar;
     private Color m_PlayerColor;
     [Space(15f)]
     [SerializeField] private InputField m_InputField;
 
+    private PlayerData m_PlayerData;
+    private int m_ColorNumber;
+
+    public PlayerData PlayerData
+    {
+        get { return m_PlayerData; }
+        set { m_PlayerData = value; }
+    }
+
     private void Awake()
     {
         m_InputField.onEndEdit.AddListener(delegate { OnInputFieldValueChanged(); });
-        m_SpriteNumber = 0;
-        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
-        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
+        m_ColorNumber = 0;
+        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
     }
 
     public void NextSprite()
     {
-        m_SpriteNumber++;
-        if(m_SpriteNumber >= PlayerSelection.s_Instance.AvailableSprites.Count)
-            m_SpriteNumber = 0;
+        m_ColorNumber++;
+        if(m_ColorNumber >= PlayerSelection.s_Instance.AvailableSprites.Count)
+            m_ColorNumber = 0;
 
-        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
-        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
+        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
 
     }
 
     public void PreviousSprite()
     {
-        m_SpriteNumber--;
-        if (m_SpriteNumber < 0)
-            m_SpriteNumber = PlayerSelection.s_Instance.AvailableSprites.Count - 1;
+        m_ColorNumber--;
+        if (m_ColorNumber < 0)
+            m_ColorNumber = PlayerSelection.s_Instance.AvailableSprites.Count - 1;
 
-        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
-        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
+        m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
     }
 
     public void ConfirmInfo()
@@ -55,8 +62,8 @@ public class PlayerPanel : MonoBehaviour
 
     private void RemoveAvailableSprite()
     {
-        PlayerSelection.s_Instance.AvailableSprites.RemoveAt(m_SpriteNumber);
-        PlayerSelection.s_Instance.AvailableColors.RemoveAt(m_SpriteNumber);
+        PlayerSelection.s_Instance.AvailableSprites.RemoveAt(m_ColorNumber);
+        PlayerSelection.s_Instance.AvailableColors.RemoveAt(m_ColorNumber);
     }
 
     private void OnInputFieldValueChanged()
