@@ -6,7 +6,8 @@ public enum AnimationType
 {
     BREAK_TILE,
     OCTOPUS,
-    ROTATE_TILE
+    ROTATE_TILE,
+    CRAB
 }
 
 [System.Serializable]
@@ -35,10 +36,42 @@ public class ActionFXManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void MoveTile(TileNode tile1, TileNode tile2)
+    private void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            MoveTile(RandomGridPos(), RandomGridPos(), RandomGridPos(), RandomGridPos());
+        }
     }
+
+    private int RandomGridPos()
+    {
+        return UnityEngine.Random.Range(1, 10);
+    }
+
+    public void MoveTile(int movingX, int movingY, int targetX, int targetY)
+    {
+        StartCoroutine(MoveTileAnimation(new Vector2(movingX, movingY), new Vector2(targetX, targetY)));
+    }
+
+    private IEnumerator MoveTileAnimation(Vector2 movingTilePosition, Vector2 targetTilePosition)
+    {
+        CrabAnimation crab = GetAnimationByType(AnimationType.CRAB) as CrabAnimation;
+
+        crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
+        yield return new WaitForSeconds(2f);
+        crab.transform.position = movingTilePosition;
+        crab.SetAnimation(CrabAnimation.States.TileTop.ToString(), false);
+        crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
+        yield return new WaitForSeconds(1.3f);
+        crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
+        yield return new WaitForSeconds(2f);
+        crab.transform.position = crab.RandomPosition;
+        crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
+        crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
+    }
+
+    #region Break Tile
 
     public void BreakTile(TileNode tile)
     {
@@ -52,8 +85,8 @@ public class ActionFXManager : MonoBehaviour
 
     private IEnumerator BreakTileAnimation(Vector2 tilePosition)
     {
-        SpineAnimation tileBreak = GetAnimationByType(AnimationType.BREAK_TILE);
-        SpineAnimation octopus = GetAnimationByType(AnimationType.OCTOPUS);
+        TileBreakAnimation tileBreak = GetAnimationByType(AnimationType.BREAK_TILE) as TileBreakAnimation;
+        OctopusAnimation octopus = GetAnimationByType(AnimationType.OCTOPUS) as OctopusAnimation;
 
         octopus.SetAnimation(OctopusAnimation.States.Down.ToString(), false);
         yield return new WaitForSeconds(2f);
@@ -71,8 +104,9 @@ public class ActionFXManager : MonoBehaviour
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
         CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
-
     }
+
+    #endregion
 
     public void RotateTile(TileNode tile)
     {

@@ -21,7 +21,8 @@ public class CardConfig
 
     public static List<CardData> s_ActionCards = new List<CardData>
     {
-        new CardData(CardTypes.DESTROY_CARD, "Destroy a Path", "", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.DESTROY_PATH), null)
+        new CardData(CardTypes.DESTROY_PATH_CARD, "Destroy a Path", "", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.DESTROY_PATH), null),
+        //new CardData(CardTypes.MOVE_PATH_CARD, "Move a Path", "", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.)
         //new CardData(CardTypes.ROTATE_PATH_CARD, "Rotate Path", "Rotate a single path", null, null, null),
         //new CardData(CardTypes.SWAP_PATH_CARD, "Swap Path", "Swap the position of 2 paths that are next to each other", null, null, null),
         //new CardData(CardTypes.ROADBLOCK_CARD, "Roadblock", "Block off a single path", null, null, null)

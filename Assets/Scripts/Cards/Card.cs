@@ -7,7 +7,7 @@ public enum CardTypes
     DESTROY_PATH_CARD,
     SWAP_PATH_CARD,
     ROTATE_PATH_CARD,
-    DESTROY_CARD
+    MOVE_PATH_CARD
 }
 
 [System.Serializable]

@@ -1,0 +1,104 @@
+
+Crab.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_feet_back
+  rotate: true
+  xy: 78, 2
+  size: 17, 29
+  orig: 17, 29
+  offset: 0, 0
+  index: -1
+L_feet_front
+  rotate: true
+  xy: 227, 30
+  size: 17, 30
+  orig: 17, 30
+  offset: 0, 0
+  index: -1
+L_tooth
+  rotate: false
+  xy: 2, 7
+  size: 24, 34
+  orig: 24, 34
+  offset: 0, 0
+  index: -1
+R_feet_back
+  rotate: false
+  xy: 52, 15
+  size: 24, 26
+  orig: 24, 26
+  offset: 0, 0
+  index: -1
+R_feet_front
+  rotate: true
+  xy: 78, 21
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+R_tooth
+  rotate: false
+  xy: 28, 8
+  size: 22, 33
+  orig: 22, 33
+  offset: 0, 0
+  index: -1
+TILE_Blank
+  rotate: false
+  xy: 125, 26
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 227, 49
+  size: 91, 77
+  orig: 91, 77
+  offset: 0, 0
+  index: -1
+body_underwater
+  rotate: false
+  xy: 320, 49
+  size: 91, 77
+  orig: 91, 77
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 28, 2
+  size: 4, 7
+  orig: 4, 7
+  offset: 0, 0
+  index: -1
+eye_closed
+  rotate: false
+  xy: 413, 69
+  size: 46, 57
+  orig: 46, 57
+  offset: 0, 0
+  index: -1
+eye_open
+  rotate: false
+  xy: 461, 69
+  size: 46, 57
+  orig: 46, 57
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 413, 47
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+rocks
+  rotate: false
+  xy: 2, 43
+  size: 121, 83
+  orig: 121, 83
+  offset: 0, 0
+  index: -1

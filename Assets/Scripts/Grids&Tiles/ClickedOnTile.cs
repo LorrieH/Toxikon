@@ -25,9 +25,10 @@ public class ClickedOnTile : MonoBehaviour
             case CardTypes.ROTATE_PATH_CARD:
 
                 break;
-            case CardTypes.SWAP_PATH_CARD:
+            case CardTypes.MOVE_PATH_CARD:
+
                 break;
-            case CardTypes.DESTROY_CARD:
+            case CardTypes.DESTROY_PATH_CARD:
                 /*
                 if(TileGrid.s_Instance.DestroyNode(TilePosX, TilePosY))
                 {
