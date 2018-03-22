@@ -121,7 +121,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[3] = newNode;
                 }
-                else if (i == 5 && j == 5)
+                else if (i == (m_GridXSize+1)/2 && j == (m_GridYSize+1)/2)
                 {
                     newNode.IsFilled = true;
                     newNode.IsDestructable = false;
