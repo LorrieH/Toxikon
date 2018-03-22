@@ -76,7 +76,6 @@ public class Card : MonoBehaviour
     {
         //Shows the cards info
         m_CardEditor.Name.text = m_CardData.Name;
-        //m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
         Debug.Log(TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor);
         m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;

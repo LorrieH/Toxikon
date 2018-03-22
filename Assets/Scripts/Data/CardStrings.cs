@@ -21,6 +21,6 @@
     //Action cards
     public const string DESTROY_PATH = "CARD_Destroy_Path";
     public const string ROTATE_PATH = "CARD_Rotate_Path";
-    public const string SWAP_PATH = "CARD_Swap_Path";
+    public const string MOVE_PATH = "CARD_Move_Path";
     #endregion
 }
