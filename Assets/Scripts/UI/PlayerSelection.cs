@@ -68,7 +68,9 @@ public class PlayerSelection : MonoBehaviour
 
     private void TransitionInPlayerPanels()
     {
-        m_ScalePlayerPanel = DOTween.Sequence();
+        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+
+        /*m_ScalePlayerPanel = DOTween.Sequence();
 
         RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
 
@@ -78,12 +80,14 @@ public class PlayerSelection : MonoBehaviour
 
         m_CanEdit = true;
         m_ScalePlayerPanel.AppendInterval(0.1f);
-        m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));
+        m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));*/
     }
 
     public void TransitionOutPlayerPanels()
     {
-        m_CanEdit = false;
+        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+
+        /*m_CanEdit = false;
 
         if (!PlayersReady())
         {
@@ -91,7 +95,7 @@ public class PlayerSelection : MonoBehaviour
             RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
 
             rt.DOAnchorPosX(-1920, 1f).SetEase(Ease.InBack).OnComplete(TransitionInPlayerPanels);
-        }
+        }*/
     }
 
     public void ChangeAmountOfChecks(int amount)
