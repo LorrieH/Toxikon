@@ -52,7 +52,7 @@ public class PlayerSelection : MonoBehaviour
         }
 
         ResetReadyPlayerCount();
-        TransitionInPlayerPanels();
+        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
     }
 
     private void ResetReadyPlayerCount()
@@ -68,7 +68,7 @@ public class PlayerSelection : MonoBehaviour
 
     private void TransitionInPlayerPanels()
     {
-        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+        //m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
 
         /*m_ScalePlayerPanel = DOTween.Sequence();
 
@@ -85,7 +85,7 @@ public class PlayerSelection : MonoBehaviour
 
     public void TransitionOutPlayerPanels()
     {
-        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+        //m_PlayerPanels[m_PlayersReady].gameObject.SetActive(false);
 
         /*m_CanEdit = false;
 
@@ -98,9 +98,9 @@ public class PlayerSelection : MonoBehaviour
         }*/
     }
 
-    public void ChangeAmountOfChecks(int amount)
+    public void ChangeAmountOfChecks()
     {
-        m_PlayersReady += amount;
+        m_PlayersReady++;
 
         if (m_PlayersReady >= PlayersManager.s_Instance.Players.Count)
         {
@@ -108,7 +108,10 @@ public class PlayerSelection : MonoBehaviour
             m_StartButton.interactable = true;
         }
         else
-            m_StartButton.interactable = false;
+        {
+            m_PlayerPanels[m_PlayersReady - 1].gameObject.SetActive(false);
+            m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+        }
     }
 
     public void OnClickStartGame()

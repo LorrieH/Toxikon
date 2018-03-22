@@ -12,12 +12,10 @@ public class PlayerPanel : MonoBehaviour
     [SerializeField] private Image m_PlayerAvatar;
     [Space(15f)]
     [SerializeField] private InputField m_InputField;
-    [SerializeField] private Toggle m_Toggle;
 
     private void Awake()
     {
         m_InputField.onEndEdit.AddListener(delegate { OnInputFieldValueChanged(); });
-        m_Toggle.onValueChanged.AddListener(delegate { OnToggleValueChanged(); });
         m_SpriteNumber = 0;
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
     }
@@ -40,16 +38,13 @@ public class PlayerPanel : MonoBehaviour
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
     }
 
-    private void OnToggleValueChanged()
+    public void ConfirmInfo()
     {
-        if (PlayerSelection.s_Instance.CanEdit)
-        {
-            m_PlayerData.Name = m_PlayerName.text;
-            m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
-            RemoveAvailableSprite();
-            PlayerSelection.s_Instance.TransitionOutPlayerPanels();
-            PlayerSelection.s_Instance.ChangeAmountOfChecks(m_Toggle.isOn ? 1 : -1);
-        }
+        m_PlayerData.Name = m_PlayerName.text;
+        m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
+        RemoveAvailableSprite();
+        PlayerSelection.s_Instance.TransitionOutPlayerPanels();
+        PlayerSelection.s_Instance.ChangeAmountOfChecks();
     }
 
     private void RemoveAvailableSprite()

@@ -21,6 +21,7 @@ public class PlayerInfo : MonoBehaviour
 
         m_PlayerName.text = playerData.Name;
         m_PlayerImage.sprite = Resources.Load<Sprite>(spritePath);
+        m_PlayerImage.SetNativeSize();
     }
 
     private void OnDisable()
