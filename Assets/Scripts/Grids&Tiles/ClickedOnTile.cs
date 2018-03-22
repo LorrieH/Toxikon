@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ClickedOnTile : MonoBehaviour
 {
+    public delegate void TileClicked(Vector2 tilePosition);
+    public static TileClicked s_OnTileClicked;
+
 
     public int TilePosX { get; set; }
     public int TilePosY { get; set; }
@@ -13,7 +16,11 @@ public class ClickedOnTile : MonoBehaviour
     {
         if (CardSelector.s_Instance.SelectedCard == null) return;
 
-        switch (CardSelector.s_Instance.SelectedCard.CardData.Type) {
+        if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));
+
+        /*
+        switch (CardSelector.s_Instance.SelectedCard.CardData.Type)
+        {
 
             case CardTypes.PATH_CARD:
                 PathCardData pathData = CardSelector.s_Instance.SelectedCard.CardData.PathData;
@@ -37,7 +44,7 @@ public class ClickedOnTile : MonoBehaviour
 
                 break;
             case CardTypes.DESTROY_PATH_CARD:
-                /*
+               
                 if(TileGrid.s_Instance.DestroyNode(TilePosX, TilePosY))
                 {
                     Debug.Log("Succesfully destroyed node");
@@ -50,10 +57,10 @@ public class ClickedOnTile : MonoBehaviour
                         Debug.Log("no wea");
                     }
                     CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
-                }*/
+                }
                 ActionFXManager.s_Instance.BreakTile(TilePosX, TilePosY);
                 break;
-        }
+        }*/
     }
 }
 

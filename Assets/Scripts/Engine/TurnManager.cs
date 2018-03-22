@@ -18,6 +18,10 @@ public class TurnManager : MonoBehaviour
     public delegate void TurnAction();
     public static TurnAction s_OnTurnAction;
 
+    public delegate void GameEnd(Player playerThatWon);
+    public static GameEnd s_OnGameEnd;
+
+
     [SerializeField] private GameObject m_TurnEndNotification;
 
     private Player m_CurrentPlayer;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +23,8 @@ public class ActionFXManager : MonoBehaviour
     public static ActionFXManager s_Instance;
     [SerializeField] private List<ActionData> m_Actions = new List<ActionData>();
     public List<ActionData> Actions { get { return m_Actions; } set { m_Actions = value; } }
+
+    public static Action s_OnBreakTileAnimationCompleted;
 
     private void Awake()
     {
@@ -103,7 +106,7 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+        if(s_OnBreakTileAnimationCompleted != null) s_OnBreakTileAnimationCompleted();
     }
 
     #endregion

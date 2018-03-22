@@ -31,10 +31,7 @@ public class CardPositionHolder : MonoBehaviour {
     private void Awake()
     {
         if (s_Instance == null)
-        {
             s_Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
         else
             Destroy(gameObject);
     }

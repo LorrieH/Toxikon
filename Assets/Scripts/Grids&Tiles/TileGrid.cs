@@ -318,7 +318,7 @@ public class TileGrid : MonoBehaviour
     {
         NodeRoad = new List<TileNode>();
         CheckedNodes = new List<TileNode>();
-        m_PlayerStartNodes[startPlayer-1].GetChecked(this, null);
+        m_PlayerStartNodes[startPlayer].GetChecked(this, null);
         
         for (int i = 0; i < CheckedNodes.Count; i++)
         {
