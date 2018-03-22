@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9453bd9c9102249b8b570b1fad5c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EmptyTex: {fileID: 21300000, guid: d447eaefbc167c24499809c4d61cebdc, type: 3}
+  m_EmptyTex: {fileID: 0}
   m_TileArt:
   - bools:
       Up: 1
@@ -236,6 +236,13 @@ MonoBehaviour:
       Left: 1
       Middle: 0
     TileArt: {fileID: 21300000, guid: 09ae62f7ad96a9244bbaf397b8e47b77, type: 3}
+  - bools:
+      Up: 1
+      Right: 1
+      Down: 1
+      Left: 1
+      Middle: 0
+    TileArt: {fileID: 21300000, guid: 066c6ef2ced9b3c42971fc173a001b6a, type: 3}
   m_Bridges:
   - {fileID: 1201930979594568, guid: 142013d1cbf4272438be2ea2a9f3a00f, type: 2}
   - {fileID: 1302407838442952, guid: 7488e479df2524144aa2fe38a7a9a4c6, type: 2}
