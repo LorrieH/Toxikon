@@ -15,6 +15,7 @@ public struct CardEditor
 {
     public Text Name;
     public Text Description;
+    public Image CardBackground;
     public Image CardImage;
 }
 
@@ -61,6 +62,7 @@ public class Card : MonoBehaviour
     protected CardData m_CardData;
     public CardData CardData { get { return m_CardData; } set { m_CardData = value; } }
     [SerializeField]protected CardEditor m_CardEditor;
+    public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
     private int m_IndexInHand;
     public int IndexInHand { get { return m_IndexInHand; } }
@@ -74,8 +76,10 @@ public class Card : MonoBehaviour
     {
         //Shows the cards info
         m_CardEditor.Name.text = m_CardData.Name;
-        m_CardEditor.Description.text = m_CardData.Description;
+        //m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
+        Debug.Log(TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor);
+        m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;
     }
 
     public void ToggleCardSelect()

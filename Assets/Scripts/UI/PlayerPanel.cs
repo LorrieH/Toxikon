@@ -10,6 +10,7 @@ public class PlayerPanel : MonoBehaviour
     private int m_SpriteNumber;
     [SerializeField] private Text m_PlayerName;
     [SerializeField] private Image m_PlayerAvatar;
+    private Color m_PlayerColor;
     [Space(15f)]
     [SerializeField] private InputField m_InputField;
 
@@ -18,6 +19,7 @@ public class PlayerPanel : MonoBehaviour
         m_InputField.onEndEdit.AddListener(delegate { OnInputFieldValueChanged(); });
         m_SpriteNumber = 0;
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
     }
 
     public void NextSprite()
@@ -27,6 +29,8 @@ public class PlayerPanel : MonoBehaviour
             m_SpriteNumber = 0;
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
+
     }
 
     public void PreviousSprite()
@@ -36,12 +40,14 @@ public class PlayerPanel : MonoBehaviour
             m_SpriteNumber = PlayerSelection.s_Instance.AvailableSprites.Count - 1;
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_SpriteNumber];
+        m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_SpriteNumber];
     }
 
     public void ConfirmInfo()
     {
         m_PlayerData.Name = m_PlayerName.text;
         m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
+        m_PlayerData.PlayerColor = m_PlayerColor;
         RemoveAvailableSprite();
         PlayerSelection.s_Instance.TransitionOutPlayerPanels();
         PlayerSelection.s_Instance.ChangeAmountOfChecks();
@@ -50,6 +56,7 @@ public class PlayerPanel : MonoBehaviour
     private void RemoveAvailableSprite()
     {
         PlayerSelection.s_Instance.AvailableSprites.RemoveAt(m_SpriteNumber);
+        PlayerSelection.s_Instance.AvailableColors.RemoveAt(m_SpriteNumber);
     }
 
     private void OnInputFieldValueChanged()

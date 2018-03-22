@@ -5,15 +5,23 @@ public class NextTurnNotification : MonoBehaviour {
 
     [SerializeField] private Image _nextPlayerImage;
     [SerializeField] private Text _nextPlayerTurnText;
+    private PlayerData m_NextPlayer;
 	
 	void OnEnable () {
-        if (TurnManager.s_Instance.CurrentPlayerIndex < PlayersManager.s_Instance.Players.Count)
+        if(TurnManager.s_Instance.CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
         {
-            _nextPlayerTurnText.text = PlayersManager.s_Instance.Players[TurnManager.s_Instance.CurrentPlayerIndex + 1].PlayerData.Name;
+            ShowNextPlayer(PlayersManager.s_Instance.Players[0].PlayerData);
         }
         else
         {
-            _nextPlayerTurnText.text = PlayersManager.s_Instance.Players[0].PlayerData.Name;
+            ShowNextPlayer(PlayersManager.s_Instance.Players[TurnManager.s_Instance.CurrentPlayerIndex + 1].PlayerData);
         }
 	}
+
+    void ShowNextPlayer(PlayerData nextPlayer)
+    {
+        Sprite spriteToLoad = Resources.Load<Sprite>("Characters/" + nextPlayer.AvatarImageName);
+        _nextPlayerImage.sprite = Resources.Load<Sprite>("Characters/" + nextPlayer.AvatarImageName);
+        _nextPlayerTurnText.text = nextPlayer.Name + "'s turn is up next!";
+    }
 }

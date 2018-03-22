@@ -47,10 +47,8 @@ public class CardPositionHolder : MonoBehaviour {
     {
         CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
         card.gameObject.SetActive(false);
-        //TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardManager.s_Instance.GetRandomCard();
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         card.SetCardInfo();
-        //CardSelector.s_Instance.SelectedCard = null;
         card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
@@ -69,7 +67,6 @@ public class CardPositionHolder : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         m_SelectedCard.gameObject.SetActive(true);
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
-        //CardSelector.s_Instance.SelectedCard.SetCardInfo();
         CardSelector.s_Instance.SelectedCard = null;
         m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f);
         m_SelectedCard.transform.DOScale(1.5f, 0.5f);
@@ -79,7 +76,6 @@ public class CardPositionHolder : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition);
         TurnManager.s_OnTurnEnd();
-
     }
 
     private void OnDisable()
