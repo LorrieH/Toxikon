@@ -17,7 +17,7 @@ public class TileGrid : MonoBehaviour
 
 
     private TileNode[] m_PlayerStartNodes;
-    private TileNode[] m_NodeRoad;
+    public List<TileNode> NodeRoad { get; set; }
 
     public List<TileNode> CheckedNodes { get; set; }
     public bool RoadCompleted { get; set; }
@@ -290,15 +290,22 @@ public class TileGrid : MonoBehaviour
 
     public bool CompleteRoad(int startPlayer)
     {
+        NodeRoad = new List<TileNode>();
         CheckedNodes = new List<TileNode>();
-        m_PlayerStartNodes[2].getChecked(this, null);
-
+        m_PlayerStartNodes[startPlayer-1].GetChecked(this, null);
+        
         for (int i = 0; i < CheckedNodes.Count; i++)
         {
             CheckedNodes[i].IsChecked = false;
+            CheckedNodes[i].UpdateArt();
         }
 
         return RoadCompleted;
     }
     #endregion
+}
+
+public struct Bridges
+{
+
 }

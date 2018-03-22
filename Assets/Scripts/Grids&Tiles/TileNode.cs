@@ -15,6 +15,9 @@ public class TileNode
     public bool IsChecked { get; set; }
     public bool IsEndpoint { get; set; }
     public bool IsStartPoint { get; set; }
+    public bool IsInRoad { get; set; }
+
+    public bool DebugModus { get; set; }
 
 
     //rotation with increments op 90 degrees
@@ -78,7 +81,7 @@ public class TileNode
                 {
                     if (TileArtLib.s_TileArtArray[i].bools == Bools)
                     {
-                        Debug.Log("set a texture");
+                        ///Debug.Log("set a texture");
                         TileTexture = TileArtLib.s_TileArtArray[i].TileArt;
                         TileObject.GetComponent<SpriteRenderer>().sprite = TileTexture;
                         break;
@@ -90,47 +93,71 @@ public class TileNode
                 TileObject.GetComponent<SpriteRenderer>().sprite = TileArtLib.s_EmptyTex;
             }
         }
-        if (IsEndpoint)
+        if (DebugModus)
         {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.red;
-        }
-        else if (IsStartPoint)
-        {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-        else if (IsChecked)
-        {
-            TileObject.GetComponent<SpriteRenderer>().color = Color.blue;
+            if (IsEndpoint)
+            {
+                TileObject.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else if (IsStartPoint)
+            {
+                TileObject.GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            else if (IsInRoad)
+            {
+                TileObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            }
+            else if (IsChecked)
+            {
+                TileObject.GetComponent<SpriteRenderer>().color = Color.blue;
+            }
         }
     }
 
-    public void getChecked(TileGrid T, TileNode parent)
+    public void AddToRoad(TileGrid T)
+    {
+        if(!IsStartPoint)
+        {
+            IsInRoad = true;
+            T.NodeRoad.Add(RoadParent);
+            RoadParent.AddToRoad(T);
+            UpdateArt();
+        }
+    }
+
+    public void GetChecked(TileGrid T, TileNode parent)
     {
         SetAccesableNeighbours();
         RoadParent = parent;
         IsChecked = true;
         T.CheckedNodes.Add(this);
-        if(IsEndpoint)
+        if (!T.RoadCompleted)
         {
-            T.RoadCompleted = true;
-        }
-        else
-        {
-            if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked)
+            if (IsEndpoint)
             {
-                AccesableNeighbours.up.getChecked(T, this);
+                T.NodeRoad.Add(this);
+                IsInRoad = true;
+                AddToRoad(T);
+                T.RoadCompleted = true;
             }
-            if (AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked)
+            else
             {
-                AccesableNeighbours.right.getChecked(T, this);
-            }
-            if (AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked)
-            {
-                AccesableNeighbours.down.getChecked(T, this);
-            }
-            if (AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked)
-            {
-                AccesableNeighbours.left.getChecked(T, this);
+                if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked)
+                {
+                    AccesableNeighbours.up.GetChecked(T, this);
+                }
+                if (AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked)
+                {
+                    AccesableNeighbours.right.GetChecked(T, this);
+                }
+                if (AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked)
+                {
+                    AccesableNeighbours.down.GetChecked(T, this);
+                }
+                if (AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked)
+                {
+                    AccesableNeighbours.left.GetChecked(T, this);
+                }
             }
         }
         UpdateArt();
