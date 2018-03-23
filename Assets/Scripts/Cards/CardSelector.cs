@@ -21,6 +21,8 @@ public class CardSelector : MonoBehaviour
     private Card m_SelectedCard;
     private bool m_CanSelectCard = true;
 
+    public List<Card> PlayerHandCards { get { return m_PlayerHandCards; }}
+
     public Card SelectedCard {
         get { return m_SelectedCard; }
         set { m_SelectedCard = value; }

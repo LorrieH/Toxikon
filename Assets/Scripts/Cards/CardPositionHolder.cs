@@ -16,6 +16,7 @@ public class CardPositionHolder : MonoBehaviour {
     [SerializeField]private List<Vector2> m_CardDefaultPositions;
     [SerializeField] private Transform m_CardDeckPosition;
     [SerializeField] private Transform m_ShowDrawnCardPosition;
+    [SerializeField] private Transform m_OutOfScreenPosition;
 
     public List<Vector2> CardDefaultPositions { get { return m_CardDefaultPositions; } }
 
@@ -62,20 +63,43 @@ public class CardPositionHolder : MonoBehaviour {
     }
 
     IEnumerator DrawCardRoutine()
-    {
+    {        
         CardSelector.s_Instance.CanSelectCard = false;
-        yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.gameObject.SetActive(true);
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
+        yield return new WaitForSeconds(0.5f);
+        m_SelectedCard.gameObject.SetActive(true);
+        
         m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f);
         m_SelectedCard.transform.DOScale(1.5f, 0.5f);
         yield return new WaitForSeconds(1.2f);
-        m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f);
+        m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f); //Moves card to the position of the card that was discarded
         m_SelectedCard.transform.DOScale(1, 0.5f);
         yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition);
+        m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition); //Sets the appropriate layer for the card and places it correctly in the players hand
+        yield return new WaitForSeconds(0.2f);
+        Sequence removeHandSequence = DOTween.Sequence();
+        //Lets the cards in the players hand drop out of the screen (Starting from the bottom)
+        int CardToRemove = CardSelector.s_Instance.PlayerHandCards.Count -1;
+        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
+        {            
+            removeHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DOMove(m_OutOfScreenPosition.position,0.25f));
+            if (CardToRemove > 0)
+            {
+                CardToRemove--;
+            }
+        }
+        yield return new WaitForSeconds(1f);
         TurnManager.s_OnTurnEnd();
+    }
+
+    public void ReturnCardsToScreen()
+    {
+        Sequence showHandSequence = DOTween.Sequence();
+        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
+        {
+            showHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[i].transform.DOMove(m_CardDefaultPositions[CardSelector.s_Instance.PlayerHandCards[i].IndexInHand],0.25f));
+        }
     }
 
     private void OnDisable()
