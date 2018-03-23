@@ -331,7 +331,7 @@ public class TileGrid : MonoBehaviour
     #endregion
 }
 
-public class Bridges
+public struct Bridges
 {
     public GameObject bridgeUp;
     public GameObject bridgeRight;
