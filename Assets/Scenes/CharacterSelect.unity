@@ -6041,6 +6041,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bf104751ae32fee45a72347a22e223b8, type: 3}
   - {fileID: 21300000, guid: e6c2e4b150eb0b94f89843626d313cf1, type: 3}
   - {fileID: 21300000, guid: a923201cb67262f4893b62c3540bf50a, type: 3}
+  m_AvailableColors:
+  - {r: 0.2509804, g: 0.32941177, b: 0.654902, a: 1}
+  - {r: 0.654902, g: 0.2509804, b: 0.47843137, a: 1}
+  - {r: 0.81960785, g: 0.24705882, b: 0.24705882, a: 1}
+  - {r: 1, g: 0.6, b: 0, a: 1}
 --- !u!1 &1768759357
 GameObject:
   m_ObjectHideFlags: 0

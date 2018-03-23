@@ -16,10 +16,17 @@ public class PlayerSelection : MonoBehaviour
     public bool CanEdit { get { return m_CanEdit; } set { m_CanEdit = value; } }
 
     [SerializeField]private List<Sprite> m_AvailableSprites = new List<Sprite>();
+    [SerializeField] private List<Color> m_AvailableColors = new List<Color>();
     public List<Sprite> AvailableSprites
     {
         get { return m_AvailableSprites; }
         set { m_AvailableSprites = value; }
+    }
+
+    public List<Color> AvailableColors
+    {
+        get { return m_AvailableColors; }
+        set { m_AvailableColors = value; }
     }
 
     private int m_PlayersReady;

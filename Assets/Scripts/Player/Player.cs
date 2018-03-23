@@ -6,6 +6,7 @@ public struct PlayerData
 {
     public string Name;
     public string AvatarImageName;
+    public Color PlayerColor;
     public List<CardData> Cards;
 }
 
