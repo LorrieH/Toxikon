@@ -18,6 +18,21 @@
     public const string T_SPLIT_DOWN = "CARD_T-Split_Down";
     public const string T_SPLIT_LEFT = "CARD_T-Split_Left";
     public const string T_SPLIT_RIGHT = "CARD_T-Split_Right";
+
+    //Block Cards
+    public const string BLOCK_UP = "CARD_Block_Up";
+    public const string BLOCK_DOWN = "CARD_Block_Down";
+    public const string BLOCK_LEFT = "CARD_Block_Left";
+    public const string BLOCK_RIGHT = "CARD_Block_Right";
+
+    public const string BLOCK_UP_LEFT = "CARD_Block_Up_Left";
+    public const string BLOCK_UP_DOWN = "CARD_Block_Up_Down";
+    public const string BLOCK_LEFT_RIGHT = "CARD_Block_Left";
+
+
+    public const string BLOCK_UP_RIGHT_LEFT = "CARD_Block_Up_Right_Left";
+    public const string BLOCK_RIGHT_LEFT_DOWN = "CARD_Block_Left_Down";
+
     //Action cards
     public const string DESTROY_PATH = "CARD_Destroy_Path";
     public const string ROTATE_PATH = "CARD_Rotate_Path";

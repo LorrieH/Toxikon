@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1995,7 +1995,7 @@ Prefab:
     - target: {fileID: 20916473965687304, guid: ba83b46c26898554b832ddd31a35e211,
         type: 2}
       propertyPath: orthographic size
-      value: 5.4
+      value: 5.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba83b46c26898554b832ddd31a35e211, type: 2}
