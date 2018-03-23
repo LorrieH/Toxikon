@@ -56,7 +56,7 @@ public class CardPositionHolder : MonoBehaviour {
         DrawCard();
     }
 
-    IEnumerator DrawCardRoutine()
+    private void DrawCard()
     {
         if(s_OnDrawCard != null) s_OnDrawCard();
 
