@@ -136,6 +136,9 @@ public class NotificationManager : MonoBehaviour
 
     public void ClearQueue()
     {
+        if (m_ShowingNotification)
+            HideAnimation();
+
         m_NotificationQueueActive = false;
         m_ShowingNotification = false;
         m_NotificationQueue.Clear();
