@@ -65,12 +65,12 @@ public class TileClickManager : MonoBehaviour
         {
             if (TileGrid.s_Instance.CompleteRoad(TurnManager.s_Instance.CurrentPlayerIndex))
             {
-                Debug.Log("i found da wea");
+                Debug.Log("a road for " +TurnManager.s_Instance.CurrentPlayerIndex);
                 TurnManager.s_OnGameEnd(TurnManager.s_Instance.CurrentPlayer);
             }
             else
             {
-                Debug.Log("no wea");
+                Debug.Log("no road for" + TurnManager.s_Instance.CurrentPlayerIndex);
             }
             CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
         }

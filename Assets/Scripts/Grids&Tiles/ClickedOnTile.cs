@@ -8,59 +8,84 @@ public class ClickedOnTile : MonoBehaviour
     public delegate void TileClicked(Vector2 tilePosition);
     public static TileClicked s_OnTileClicked;
 
+    TestPlaceCard TestPlacer = TestPlaceCard.s_Instance;
+    TileGrid grid = TileGrid.s_Instance;
 
     public int TilePosX { get; set; }
     public int TilePosY { get; set; }
 
+
     void OnMouseDown()
     {
+        if(TestPlacer.debugModus)
+        {
+            DebugPlaceMent();
+        }
+
         if (CardSelector.s_Instance.SelectedCard == null) return;
 
-        if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));
+        if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));        
+    }
 
-        /*
-        switch (CardSelector.s_Instance.SelectedCard.CardData.Type)
+    void DebugPlaceMent()
+    {
+        if (TestPlacer.SwapCards)
         {
-
-            case CardTypes.PATH_CARD:
-                PathCardData pathData = CardSelector.s_Instance.SelectedCard.CardData.PathData;
-                if (TileGrid.s_Instance.PlaceNewCard(TilePosX, TilePosY, pathData.Up, pathData.Right, pathData.Down, pathData.Left, pathData.Middle))
+            TestPlacer.selectedCards++;
+            if (TestPlacer.selectedCards == 1)
+            {
+                Debug.Log("set one");
+                TestPlacer.selectOne.x = TilePosX;
+                TestPlacer.selectOne.y = TilePosY;
+                TestPlacer.selectedCards++;
+            }
+            else if (TestPlacer.selectedCards >= 2)
+            {
+                Debug.Log("set two");
+                TestPlacer.selectTwo.x = TilePosX;
+                TestPlacer.selectTwo.y = TilePosY;
+                if (grid.MoveNode((int)TestPlacer.selectOne.x, (int)TestPlacer.selectOne.y, (int)TestPlacer.selectTwo.x, (int)TestPlacer.selectTwo.y))
                 {
-                    if (TileGrid.s_Instance.CompleteRoad(3))
-                    {
-                        Debug.Log("i found da wea");
-                    }
-                    else
-                    {
-                        Debug.Log("no wea");
-                    }
-                    CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);                    
+                    Debug.Log("swip swap");
                 }
-                break;
-            case CardTypes.ROTATE_PATH_CARD:
-
-                break;
-            case CardTypes.MOVE_PATH_CARD:
-
-                break;
-            case CardTypes.DESTROY_PATH_CARD:
-               
-                if(TileGrid.s_Instance.DestroyNode(TilePosX, TilePosY))
+                else
                 {
-                    Debug.Log("Succesfully destroyed node");
-                    if(TileGrid.s_Instance.CompleteRoad(3))
-                    {
-                        Debug.Log("i found da wea");
-                    }
-                    else
-                    {
-                        Debug.Log("no wea");
-                    }
-                    CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+                    Debug.Log("no swap");
                 }
-                ActionFXManager.s_Instance.BreakTile(TilePosX, TilePosY);
-                break;
-        }*/
+
+                TestPlacer.selectedCards = 0;
+            }
+        }
+        else if (TestPlacer.Destroy)
+        {
+            if (grid.DestroyNode(TilePosX, TilePosY))
+            {
+                Debug.Log("Destroy D");
+            }
+            else
+            {
+                Debug.Log("YOU HAVE NO POWER HERE");
+            }
+        }
+        else
+        {
+            if (grid.PlaceNewCard(TilePosX, TilePosY, TestPlacer.Up, TestPlacer.Right, TestPlacer.Down, TestPlacer.Left, TestPlacer.Middle))
+            {
+                Debug.Log("placed");
+                if (grid.CompleteRoad(1))
+                {
+                    Debug.Log("there is a road");
+                }
+                else
+                {
+                    Debug.Log("there is no road");
+                }
+            }
+            else
+            {
+                Debug.Log("cant be placed here");
+            }
+        }
     }
 }
 

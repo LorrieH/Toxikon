@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class TileGrid : MonoBehaviour
@@ -15,6 +16,7 @@ public class TileGrid : MonoBehaviour
     private TileNode[,] m_NodeGrid;
     private Bridges[,] m_NodeBridges;
 
+    private float TileSpawnOffsetY = 0.2f;
 
     private TileNode[] m_PlayerStartNodes;
     public List<TileNode> NodeRoad { get; set; }
@@ -49,9 +51,7 @@ public class TileGrid : MonoBehaviour
     #region void functions
     public void InstantiateNewGrid()
     {
-        int amountOfPlayersPlaceholder = 4;
-        Debug.LogError("the amount of players still needs to be recieved");
-        m_PlayerStartNodes = new TileNode[amountOfPlayersPlaceholder];
+        m_PlayerStartNodes = new TileNode[PlayersManager.s_Instance.Players.Count];
         m_NodeBridges = new Bridges[m_GridXSize + 2, m_GridYSize + 2];
         m_NodeGrid = new TileNode[m_GridXSize + 2, m_GridYSize + 2];
         for (int i = 0; i < m_GridXSize + 2; i++)
@@ -62,6 +62,8 @@ public class TileGrid : MonoBehaviour
                 Bridges newbridge = new Bridges();
                 TileBools bools = new TileBools();
                 newNode.IsFilled = false;
+                Debug.LogError("debug modus is on");
+                newNode.DebugModus = true;
                 newNode.IsDestructable = true;
                 if (i == 0 || i == m_GridXSize + 1 || j == 0 || j == m_GridYSize + 1)
                 {
@@ -77,29 +79,8 @@ public class TileGrid : MonoBehaviour
                     TileClicker.TilePosY = j;
                     newNode.TileObject = tileObj;
                 }
-                if (i == 1 && j == 1)
-                {
-                    newNode.IsFilled = true;
-                    newNode.IsDestructable = false;
-                    bools.Right = true;
-                    bools.Up = true;
-                    bools.Middle = false;
-                    newNode.IsFilled = true;
-                    newNode.IsStartPoint = true;
-                    m_PlayerStartNodes[2] = newNode;
-                }
-                else if (i == m_GridXSize && j == 1)
-                {
-                    newNode.IsFilled = true;
-                    newNode.IsDestructable = false;
-                    bools.Left = true;
-                    bools.Up = true;
-                    bools.Middle = false;
-                    newNode.IsFilled = true;
-                    newNode.IsStartPoint = true;
-                    m_PlayerStartNodes[1] = newNode;
-                }
-                else if (i == 1 && j == m_GridYSize)
+                
+                if (i == 1 && j == m_GridYSize)
                 {
                     newNode.IsFilled = true;
                     newNode.IsDestructable = false;
@@ -110,7 +91,29 @@ public class TileGrid : MonoBehaviour
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[0] = newNode;
                 }
-                else if (i == m_GridXSize && j == m_GridYSize)
+                if (i == m_GridXSize && j == 1)
+                {
+                    newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
+                    bools.Left = true;
+                    bools.Up = true;
+                    bools.Middle = false;
+                    newNode.IsFilled = true;
+                    newNode.IsStartPoint = true;
+                    m_PlayerStartNodes[1] = newNode;
+                }
+                if (i == 1 && j == 1 && PlayersManager.s_Instance.Players.Count >= 3)
+                {
+                    newNode.IsFilled = true;
+                    newNode.IsDestructable = false;
+                    bools.Right = true;
+                    bools.Up = true;
+                    bools.Middle = false;
+                    newNode.IsFilled = true;
+                    newNode.IsStartPoint = true;
+                    m_PlayerStartNodes[2] = newNode;
+                }
+                if (i == m_GridXSize && j == m_GridYSize && PlayersManager.s_Instance.Players.Count >= 4)
                 {
                     newNode.IsFilled = true;
                     newNode.IsDestructable = false;
@@ -205,6 +208,17 @@ public class TileGrid : MonoBehaviour
         }
     }
 
+    public bool IsDestroyable(int x, int y)
+    {
+        if (!m_NodeGrid[x, y].IsEdgeStone && m_NodeGrid[x, y].IsFilled && m_NodeGrid[x, y].IsDestructable)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     public bool DestroyNode(int x, int y, float delay = 0)
     {
@@ -273,7 +287,9 @@ public class TileGrid : MonoBehaviour
             bools.Middle = MiddleCard;
             m_NodeGrid[x, y].Bools = bools;
             m_NodeGrid[x, y].IsFilled = true;
-            if(delay > 0)
+            m_NodeGrid[x, y].TileObject.transform.position = new Vector3(x, y+TileSpawnOffsetY, 0);
+            m_NodeGrid[x, y].TileObject.transform.DOMoveY(y, 0.4f);
+            if (delay > 0)
             {
                 StartCoroutine(UpdateArt(m_NodeGrid[x, y], delay));
             }
@@ -284,25 +300,25 @@ public class TileGrid : MonoBehaviour
             ;
             if (UpCard && m_NodeGrid[x, y].AllNeighbours.up.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeUp = Bridge;
                 m_NodeBridges[x, y+1].bridgeDown = Bridge;
             }
             if (RightCard && m_NodeGrid[x, y].AllNeighbours.right.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeRight = Bridge;
                 m_NodeBridges[x+1, y].bridgeLeft = Bridge;
             }
             if (DownCard && m_NodeGrid[x, y].AllNeighbours.down.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y- 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY - 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeDown = Bridge;
                 m_NodeBridges[x, y - 1].bridgeUp = Bridge;
             }
             if (LeftCard && m_NodeGrid[x, y].AllNeighbours.left.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeLeft = Bridge;
                 m_NodeBridges[x - 1, y].bridgeRight = Bridge;
             }

@@ -190,7 +190,6 @@ public class TileNode
         else if (!CardUp && !AllNeighbours.up.Bools.Down)
         {
             canConnectUp = true;
-            hasFilledNeighbour = true;
         }
 
         //is right compatible
@@ -206,7 +205,6 @@ public class TileNode
         else if (!CardRight && !AllNeighbours.right.Bools.Left)
         {
             canConnectRight = true;
-            hasFilledNeighbour = true;
         }
 
         //is down compatible
@@ -222,7 +220,6 @@ public class TileNode
         else if (!CardDown && !AllNeighbours.down.Bools.Up)
         {
             canConnectDown = true;
-            hasFilledNeighbour = true;
         }
 
         //is left compatible
@@ -238,7 +235,6 @@ public class TileNode
         else if (!CardLeft && !AllNeighbours.left.Bools.Right)
         {
             canConnectLeft = true;
-            hasFilledNeighbour = true;
         }
         return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft && hasFilledNeighbour);
     }

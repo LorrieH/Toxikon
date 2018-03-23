@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class TestPlaceCard : MonoBehaviour
 {
+#region instance
+    public static TestPlaceCard s_Instance;
 
+    private void Awake()
+    {
+        Init();
+    }
+
+    //make instance
+    private void Init()
+    {
+        if (s_Instance == null)
+            s_Instance = this;
+        else
+            Destroy(gameObject);
+    }
     //debug class
+    #endregion
+
+    public bool debugModus;
 
     public Vector2 selectOne;
     public Vector2 selectTwo;
