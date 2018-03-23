@@ -10,7 +10,6 @@ public class PlayerSelection : MonoBehaviour
     [SerializeField] private List<PlayerPanel> m_PlayerPanels = new List<PlayerPanel>();
     [SerializeField] private Button m_StartButton;
     public static PlayerSelection s_Instance;
-    private Sequence m_ScalePlayerPanel;
 
     private bool m_CanEdit;
     public bool CanEdit { get { return m_CanEdit; } set { m_CanEdit = value; } }
@@ -71,38 +70,6 @@ public class PlayerSelection : MonoBehaviour
     {
         if (m_PlayersReady == PlayersManager.s_Instance.Players.Count -1){ return true; }
         else { return false; }
-    }
-
-    private void TransitionInPlayerPanels()
-    {
-        //m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
-
-        /*m_ScalePlayerPanel = DOTween.Sequence();
-
-        RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
-
-        rt.anchoredPosition = new Vector2(1920, 0);
-
-        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
-
-        m_CanEdit = true;
-        m_ScalePlayerPanel.AppendInterval(0.1f);
-        m_ScalePlayerPanel.Append(rt.DOAnchorPosX(0, 1f).SetEase(Ease.OutExpo));*/
-    }
-
-    public void TransitionOutPlayerPanels()
-    {
-        //m_PlayerPanels[m_PlayersReady].gameObject.SetActive(false);
-
-        /*m_CanEdit = false;
-
-        if (!PlayersReady())
-        {
-            m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
-            RectTransform rt = m_PlayerPanels[m_PlayersReady].GetComponent<RectTransform>();
-
-            rt.DOAnchorPosX(-1920, 1f).SetEase(Ease.InBack).OnComplete(TransitionInPlayerPanels);
-        }*/
     }
 
     public void ChangeAmountOfChecks()

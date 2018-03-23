@@ -56,7 +56,6 @@ public class PlayerPanel : MonoBehaviour
         m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
         m_PlayerData.PlayerColor = m_PlayerColor;
         RemoveAvailableSprite();
-        PlayerSelection.s_Instance.TransitionOutPlayerPanels();
         PlayerSelection.s_Instance.ChangeAmountOfChecks();
     }
 
