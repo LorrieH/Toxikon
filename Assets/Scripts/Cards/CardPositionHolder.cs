@@ -72,9 +72,9 @@ public class CardPositionHolder : MonoBehaviour {
         drawSequence.Append(m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f));
         drawSequence.Join(m_SelectedCard.transform.DOScale(1.5f, 0.5f));
         drawSequence.AppendInterval(0.5f);
+        drawSequence.AppendCallback(() => m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition));
         drawSequence.Append(m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f));
         drawSequence.Join(m_SelectedCard.transform.DOScale(1, 0.5f));
-        drawSequence.AppendCallback(() => m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition));
         drawSequence.AppendInterval(0.2f);
         for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
         {
