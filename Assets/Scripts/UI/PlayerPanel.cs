@@ -62,7 +62,7 @@ public class PlayerPanel : MonoBehaviour
         }
         else
         {
-
+            NotificationManager.s_Instance.EnqueueNotification("Please enter a name", 1f, Color.red);       
         }
         
     }
