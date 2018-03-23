@@ -52,12 +52,19 @@ public class PlayerPanel : MonoBehaviour
 
     public void ConfirmInfo()
     {
-        m_PlayerData.Name = m_PlayerName.text;
-        m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
-        m_PlayerData.PlayerColor = m_PlayerColor;
-        RemoveAvailableSprite();
-        PlayerSelection.s_Instance.TransitionOutPlayerPanels();
-        PlayerSelection.s_Instance.ChangeAmountOfChecks();
+        if(m_PlayerName.text != string.Empty)
+        {
+            m_PlayerData.Name = m_PlayerName.text;
+            m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
+            m_PlayerData.PlayerColor = m_PlayerColor;
+            RemoveAvailableSprite();
+            PlayerSelection.s_Instance.ChangeAmountOfChecks();
+        }
+        else
+        {
+
+        }
+        
     }
 
     private void RemoveAvailableSprite()

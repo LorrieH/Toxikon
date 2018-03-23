@@ -16,6 +16,7 @@ public class CardPositionHolder : MonoBehaviour {
     [SerializeField]private List<Vector2> m_CardDefaultPositions;
     [SerializeField] private Transform m_CardDeckPosition;
     [SerializeField] private Transform m_ShowDrawnCardPosition;
+    [SerializeField] private Transform m_OutOfScreenPosition;
 
     public List<Vector2> CardDefaultPositions { get { return m_CardDefaultPositions; } }
 
@@ -25,7 +26,6 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnEnable()
     {
         s_OnDiscardCard += DiscardCard;
-        s_OnDrawCard += DrawCard;
     }
 
     private void Awake()
@@ -53,34 +53,53 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        StartCoroutine(DrawCardRoutine());
+        DrawCard();
     }
 
-    public void DrawCard()
+    private void DrawCard()
     {
-        StartCoroutine(DrawCardRoutine());
-    }
+        if(s_OnDrawCard != null) s_OnDrawCard();
 
-    IEnumerator DrawCardRoutine()
-    {
+        int CardToRemove = CardSelector.s_Instance.PlayerHandCards.Count - 1;
+        Vector3 rotationVector = new Vector3(0, 0, 20);
         CardSelector.s_Instance.CanSelectCard = false;
-        yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.gameObject.SetActive(true);
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
-        m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f);
-        m_SelectedCard.transform.DOScale(1.5f, 0.5f);
-        yield return new WaitForSeconds(1.2f);
-        m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f);
-        m_SelectedCard.transform.DOScale(1, 0.5f);
-        yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition);
-        TurnManager.s_OnTurnEnd();
+
+        Sequence drawSequence = DOTween.Sequence();
+        drawSequence.AppendInterval(0.5f);
+        drawSequence.AppendCallback(() => m_SelectedCard.gameObject.SetActive(true));
+        drawSequence.Append(m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f));
+        drawSequence.Join(m_SelectedCard.transform.DOScale(1.5f, 0.5f));
+        drawSequence.AppendInterval(0.5f);
+        drawSequence.Append(m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f));
+        drawSequence.Join(m_SelectedCard.transform.DOScale(1, 0.5f));
+        drawSequence.AppendCallback(() => m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition));
+        drawSequence.AppendInterval(0.2f);
+        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
+        {
+            drawSequence.Append(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DOMove(m_OutOfScreenPosition.position, 0.2f).SetEase(Ease.InSine));
+            drawSequence.Join(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DORotate(rotationVector, 0.2f).SetEase(Ease.InSine));
+            if (CardToRemove > 0)
+            {
+                CardToRemove--;
+            }
+        }
+        drawSequence.AppendCallback(() => TurnManager.s_OnTurnEnd());
+    }
+
+    public void ReturnCardsToScreen()
+    {
+        Sequence showHandSequence = DOTween.Sequence();
+        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
+        {
+            showHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[i].transform.DOMove(m_CardDefaultPositions[CardSelector.s_Instance.PlayerHandCards[i].IndexInHand],0.25f).SetEase(Ease.OutSine));
+            showHandSequence.Join(CardSelector.s_Instance.PlayerHandCards[i].transform.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
+        }
     }
 
     private void OnDisable()
     {
         s_OnDiscardCard -= DiscardCard;
-        s_OnDrawCard -= DrawCard;
     }
 }

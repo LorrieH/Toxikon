@@ -22,5 +22,9 @@
     public const string DESTROY_PATH = "CARD_Destroy_Path";
     public const string ROTATE_PATH = "CARD_Rotate_Path";
     public const string MOVE_PATH = "CARD_Move_Path";
+
+    //Card Backgrounds
+    public const string PATH_BACKGROUND = "CARD_Holder_Path_Cards";
+    public const string ACTION_BACKGROUND = "CARD_Holder_Action_Cards";
     #endregion
 }

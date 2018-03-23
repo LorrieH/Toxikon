@@ -7,4 +7,10 @@ public class CardImageLoader : MonoBehaviour {
         Sprite cardSprite = Resources.Load<Sprite>("Cards/" + type+ "/" + cardName);        
         return cardSprite;
     }
+
+    public static Sprite s_CardBackgroundSprite(string cardName)
+    {
+        Sprite backgroundSprite = Resources.Load<Sprite>("Cards/" + cardName);
+        return backgroundSprite;
+    }
 }

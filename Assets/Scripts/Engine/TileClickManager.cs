@@ -76,7 +76,7 @@ public class TileClickManager : MonoBehaviour
         }
         else
         {
-            NotificationManager.s_Instance.EnqueueNotification("Cannot place a tile here!", 3);
+            NotificationManager.s_Instance.EnqueueNotification("Cannot place a tile here!", 1.5f);
         }
         m_ClickedTilePositions.Clear();
     }
