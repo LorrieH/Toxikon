@@ -26,7 +26,6 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnEnable()
     {
         s_OnDiscardCard += DiscardCard;
-        s_OnDrawCard += DrawCard;
     }
 
     private void Awake()
@@ -57,13 +56,10 @@ public class CardPositionHolder : MonoBehaviour {
         StartCoroutine(DrawCardRoutine());
     }
 
-    public void DrawCard()
-    {
-        StartCoroutine(DrawCardRoutine());
-    }
-
     IEnumerator DrawCardRoutine()
-    {        
+    {
+        if(s_OnDrawCard != null) s_OnDrawCard();
+
         CardSelector.s_Instance.CanSelectCard = false;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
@@ -105,6 +101,5 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnDisable()
     {
         s_OnDiscardCard -= DiscardCard;
-        s_OnDrawCard -= DrawCard;
     }
 }
