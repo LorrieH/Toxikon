@@ -193,6 +193,18 @@ public class TileGrid : MonoBehaviour
     #endregion
 
     #region return value functions
+    public bool CanMoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode)
+    {
+        TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
+        if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     public bool MoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode, float delay = 0)
     {
