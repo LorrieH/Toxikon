@@ -53,40 +53,39 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        StartCoroutine(DrawCardRoutine());
+        DrawCard();
     }
 
     IEnumerator DrawCardRoutine()
     {
         if(s_OnDrawCard != null) s_OnDrawCard();
 
+        int CardToRemove = CardSelector.s_Instance.PlayerHandCards.Count - 1;
+        Vector3 rotationVector = new Vector3(0, 0, 20);
         CardSelector.s_Instance.CanSelectCard = false;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
-        yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.gameObject.SetActive(true);
-        
-        m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f);
-        m_SelectedCard.transform.DOScale(1.5f, 0.5f);
-        yield return new WaitForSeconds(1.2f);
-        m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f); //Moves card to the position of the card that was discarded
-        m_SelectedCard.transform.DOScale(1, 0.5f);
-        yield return new WaitForSeconds(0.5f);
-        m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition); //Sets the appropriate layer for the card and places it correctly in the players hand
-        yield return new WaitForSeconds(0.2f);
-        Sequence removeHandSequence = DOTween.Sequence();
-        //Lets the cards in the players hand drop out of the screen (Starting from the bottom)
-        int CardToRemove = CardSelector.s_Instance.PlayerHandCards.Count -1;
+
+        Sequence drawSequence = DOTween.Sequence();
+        drawSequence.AppendInterval(0.5f);
+        drawSequence.AppendCallback(() => m_SelectedCard.gameObject.SetActive(true));
+        drawSequence.Append(m_SelectedCard.transform.DOMove(m_ShowDrawnCardPosition.position, 0.5f));
+        drawSequence.Join(m_SelectedCard.transform.DOScale(1.5f, 0.5f));
+        drawSequence.AppendInterval(0.5f);
+        drawSequence.Append(m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f));
+        drawSequence.Join(m_SelectedCard.transform.DOScale(1, 0.5f));
+        drawSequence.AppendCallback(() => m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition));
+        drawSequence.AppendInterval(0.2f);
         for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
-        {            
-            removeHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DOMove(m_OutOfScreenPosition.position,0.25f));
+        {
+            drawSequence.Append(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DOMove(m_OutOfScreenPosition.position, 0.2f).SetEase(Ease.InSine));
+            drawSequence.Join(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DORotate(rotationVector, 0.2f).SetEase(Ease.InSine));
             if (CardToRemove > 0)
             {
                 CardToRemove--;
             }
         }
-        yield return new WaitForSeconds(1f);
-        TurnManager.s_OnTurnEnd();
+        drawSequence.AppendCallback(() => TurnManager.s_OnTurnEnd());
     }
 
     public void ReturnCardsToScreen()
@@ -94,7 +93,8 @@ public class CardPositionHolder : MonoBehaviour {
         Sequence showHandSequence = DOTween.Sequence();
         for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
         {
-            showHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[i].transform.DOMove(m_CardDefaultPositions[CardSelector.s_Instance.PlayerHandCards[i].IndexInHand],0.25f));
+            showHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[i].transform.DOMove(m_CardDefaultPositions[CardSelector.s_Instance.PlayerHandCards[i].IndexInHand],0.25f).SetEase(Ease.OutSine));
+            showHandSequence.Join(CardSelector.s_Instance.PlayerHandCards[i].transform.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
         }
     }
 
