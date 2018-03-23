@@ -13,7 +13,6 @@ public enum CardTypes
 [System.Serializable]
 public struct CardEditor
 {
-    public Text Name;
     public Text Description;
     public Image CardBackground;
     public Image CardImage;
@@ -41,17 +40,15 @@ public class PathCardData
 [System.Serializable]
 public class CardData
 {
-    public CardData(CardTypes Type, string Name, string Description, Sprite CardSprite, PathCardData PathData)
+    public CardData(CardTypes Type, string Description, Sprite CardSprite, PathCardData PathData)
     {
         this.Type = Type;
-        this.Name = Name;
         this.Description = Description;
         this.CardSprite = CardSprite;
         this.PathData = PathData;
     }
 
     public CardTypes Type;
-    public string Name;
     public string Description;
     public Sprite CardSprite;
     public PathCardData PathData;
@@ -75,9 +72,18 @@ public class Card : MonoBehaviour
     public void SetCardInfo()
     {
         //Shows the cards info
-        m_CardEditor.Name.text = m_CardData.Name;
+        m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
         Debug.Log(TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor);
+        //If the card is a path card, set a dark background, if its another card set a light background
+        if(m_CardData.Type == CardTypes.PATH_CARD)
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.PATH_BACKGROUND);
+        }
+        else
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.ACTION_BACKGROUND);
+        }
         m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;
     }
 
