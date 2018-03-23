@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class PlayerInfo : MonoBehaviour
         m_PlayerName.text = playerData.Name;
         m_PlayerImage.sprite = Resources.Load<Sprite>(spritePath);
         m_PlayerImage.SetNativeSize();
+    }
+
+    void AnimatePlayerInfo()
+    {
+        Sequence moveInfoSequence = DOTween.Sequence();
+
     }
 
     private void OnDisable()

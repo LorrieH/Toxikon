@@ -2101,21 +2101,6 @@ Prefab:
       propertyPath: m_Name
       value: Card (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 224928657856622742, guid: 8445a20282059da468366a411c4dd018,
-        type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224928657856622742, guid: 8445a20282059da468366a411c4dd018,
-        type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224928657856622742, guid: 8445a20282059da468366a411c4dd018,
-        type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8445a20282059da468366a411c4dd018, type: 2}
   m_IsPrefabParent: 0

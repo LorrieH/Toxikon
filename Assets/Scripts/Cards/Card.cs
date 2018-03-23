@@ -13,7 +13,6 @@ public enum CardTypes
 [System.Serializable]
 public struct CardEditor
 {
-    public Text Name;
     public Text Description;
     public Image CardBackground;
     public Image CardImage;
@@ -73,8 +72,16 @@ public class Card : MonoBehaviour
     public void SetCardInfo()
     {
         //Shows the cards info
+        m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
-        //Debug.Log(TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor);
+        if(m_CardData.Type == CardTypes.PATH_CARD)
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.PATH_BACKGROUND);
+        }
+        else
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.ACTION_BACKGROUND);
+        }
         m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;
     }
 
