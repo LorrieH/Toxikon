@@ -275,7 +275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 70}
+  m_AnchoredPosition: {x: -200, y: 70}
   m_SizeDelta: {x: 155, y: 209}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &107691921
@@ -1491,7 +1491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 15}
+  m_AnchoredPosition: {x: -350, y: 15}
   m_SizeDelta: {x: 350, y: 90}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &993763631
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jeffrey
+  m_Text: ABCDEFGHIJ
 --- !u!222 &993763632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1995,7 +1995,7 @@ Prefab:
     - target: {fileID: 20916473965687304, guid: ba83b46c26898554b832ddd31a35e211,
         type: 2}
       propertyPath: orthographic size
-      value: 5.8
+      value: 5.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba83b46c26898554b832ddd31a35e211, type: 2}

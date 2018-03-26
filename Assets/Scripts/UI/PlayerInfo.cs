@@ -11,7 +11,23 @@ public class PlayerInfo : MonoBehaviour
 
     private void OnEnable()
     {
+        TurnManager.s_OnTurnEnd += RemovePlayerInfo;
+        TurnManager.s_OnTurnStart += MovePlayerInfo;
         TurnManager.s_OnTurnStart += SetPlayerInfo;
+    }
+
+    void MovePlayerInfo()
+    {
+        Sequence playerInfoSequence = DOTween.Sequence();
+        playerInfoSequence.Append(m_PlayerName.transform.DOMoveX(40,0.25f).SetEase(Ease.OutBounce));
+        playerInfoSequence.Append(m_PlayerImage.transform.DOMoveX(40, 0.25f).SetEase(Ease.OutBounce));
+    }
+
+    void RemovePlayerInfo()
+    {
+        Sequence playerInfoSequence = DOTween.Sequence();
+        playerInfoSequence.Append(m_PlayerName.transform.DOMoveX(- 400, 0.25f).SetEase(Ease.InBounce));
+        playerInfoSequence.Append(m_PlayerImage.transform.DOMoveX(- 250, 0.25f).SetEase(Ease.InBounce));
     }
     
     void SetPlayerInfo()
