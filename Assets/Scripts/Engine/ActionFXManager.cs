@@ -97,7 +97,6 @@ public class ActionFXManager : MonoBehaviour
         tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
             if(entry.Animation.Name == TileBreakAnimation.States.animation.ToString())
             {
-                Debug.Log(entry.Animation.Name + " has ended");
             }
         };
         yield return new WaitForSeconds(.5f); // WAIT FOR EVENT
