@@ -61,15 +61,19 @@ public class CardPositionHolder : MonoBehaviour {
     {
         if(s_OnDrawCard != null) s_OnDrawCard();
 
+        //Card references
         int CardToRemove = CardSelector.s_Instance.PlayerHandCards.Count - 1;
         RectTransform drawnCard = m_SelectedCard.transform as RectTransform;
+        //Tween positions
         Vector2 cardDefaultPosition = m_SelectedCard.DefaultPosition;
         Vector2 centerOfScreen = new Vector2(Screen.width/2, Screen.height/2);
         Vector3 rotationVector = new Vector3(0, 0, 20);
+
         CardSelector.s_Instance.CanSelectCard = false;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
 
+        //Tween sequence
         Sequence drawSequence = DOTween.Sequence();
         drawSequence.AppendInterval(0.5f);
         drawSequence.AppendCallback(() => m_SelectedCard.gameObject.SetActive(true));
