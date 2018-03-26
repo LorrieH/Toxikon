@@ -25,7 +25,7 @@ public class ActionFXManager : MonoBehaviour
     [SerializeField] private List<ActionData> m_Actions = new List<ActionData>();
     public List<ActionData> Actions { get { return m_Actions; } set { m_Actions = value; } }
 
-    public static Action s_OnTileAnimationCompleted;
+    public static Action s_OnActionFXCompleted;
 
     private void Awake()
     {
@@ -69,7 +69,8 @@ public class ActionFXManager : MonoBehaviour
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #region Break Tile
@@ -94,17 +95,13 @@ public class ActionFXManager : MonoBehaviour
         TileClickManager.s_Instance.HideIndicator();
         tileBreak.gameObject.transform.position = tilePosition;
         tileBreak.SetAnimation(TileBreakAnimation.States.animation.ToString(), false);
-        tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
-            if(entry.Animation.Name == TileBreakAnimation.States.animation.ToString())
-            {
-            }
-        };
         yield return new WaitForSeconds(.5f); // WAIT FOR EVENT
         TileGrid.s_Instance.DestroyNode((int)tilePosition.x, (int)tilePosition.y);
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #endregion

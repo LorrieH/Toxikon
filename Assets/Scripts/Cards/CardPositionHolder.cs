@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class CardPositionHolder : MonoBehaviour {
 
@@ -26,6 +27,7 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnEnable()
     {
         s_OnDiscardCard += DiscardCard;
+        ActionFXManager.s_OnActionFXCompleted += HandleCards;
         //TurnManager.s_OnTurnStart += ReturnCardsToScreen;
     }
 
@@ -44,6 +46,11 @@ public class CardPositionHolder : MonoBehaviour {
         }
 	}
 
+    private void HandleCards()
+    {
+        DrawCard(true);
+    }
+
     public void DiscardCard(Card card, bool endTurn)
     {
         CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
@@ -54,7 +61,9 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        DrawCard(endTurn);
+
+        if(endTurn)
+            DrawCard(endTurn);
     }
 
     private void DrawCard(bool endTurn)
@@ -116,5 +125,6 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnDisable()
     {
         s_OnDiscardCard -= DiscardCard;
+        ActionFXManager.s_OnActionFXCompleted -= HandleCards;
     }
 }

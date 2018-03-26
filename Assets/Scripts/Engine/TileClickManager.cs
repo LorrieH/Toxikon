@@ -82,6 +82,10 @@ public class TileClickManager : MonoBehaviour
                     ActionFXManager.s_Instance.BreakTile((int)tilePosition.x, (int)tilePosition.y);
                     CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
                 }
+                else
+                {
+                    NotificationManager.s_Instance.EnqueueNotification("Cannot destroy this tile", 1.5f);
+                }
                 break;
         }
     }
