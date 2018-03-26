@@ -140,7 +140,7 @@ public class TileNode
                 AddToRoad(T);
                 T.RoadCompleted = true;
             }
-            else
+            else if(Bools.Middle)
             {
                 if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked)
                 {
