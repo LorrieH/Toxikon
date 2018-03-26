@@ -312,25 +312,25 @@ public class TileGrid : MonoBehaviour
             ;
             if (UpCard && m_NodeGrid[x, y].AllNeighbours.up.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y + TileSpawnOffsetY + 0.6f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeUp = Bridge;
                 m_NodeBridges[x, y+1].bridgeDown = Bridge;
             }
             if (RightCard && m_NodeGrid[x, y].AllNeighbours.right.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y + TileSpawnOffsetY + 0.15f , 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeRight = Bridge;
                 m_NodeBridges[x+1, y].bridgeLeft = Bridge;
             }
             if (DownCard && m_NodeGrid[x, y].AllNeighbours.down.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY - 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y + TileSpawnOffsetY - 0.4f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeDown = Bridge;
                 m_NodeBridges[x, y - 1].bridgeUp = Bridge;
             }
             if (LeftCard && m_NodeGrid[x, y].AllNeighbours.left.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y + TileSpawnOffsetY + 0.15f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeLeft = Bridge;
                 m_NodeBridges[x - 1, y].bridgeRight = Bridge;
             }
