@@ -48,7 +48,6 @@ public class TileClickManager : MonoBehaviour
                 PlacePath();
                 break;
             case CardTypes.ROTATE_PATH_CARD:
-
                 break;
             case CardTypes.MOVE_PATH_CARD:
                 if(m_ClickedTilePositions.Count >= 2)

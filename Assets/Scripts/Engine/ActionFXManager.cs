@@ -8,7 +8,8 @@ public enum AnimationType
     BREAK_TILE,
     OCTOPUS,
     ROTATE_TILE,
-    CRAB
+    CRAB,
+    PIRANHA
 }
 
 [System.Serializable]
@@ -24,7 +25,7 @@ public class ActionFXManager : MonoBehaviour
     [SerializeField] private List<ActionData> m_Actions = new List<ActionData>();
     public List<ActionData> Actions { get { return m_Actions; } set { m_Actions = value; } }
 
-    public static Action s_OnBreakTileAnimationCompleted;
+    public static Action s_OnTileAnimationCompleted;
 
     private void Awake()
     {
@@ -107,9 +108,24 @@ public class ActionFXManager : MonoBehaviour
 
     #endregion
 
-    public void RotateTile(TileNode tile)
+    public IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
     {
+        PiranhaAnimation piranha = GetAnimationByType(AnimationType.PIRANHA) as PiranhaAnimation;
 
+        piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
+        yield return new WaitForSeconds(0.4f);
+        piranha.transform.position = tilePosition;
+        piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), false);
+        yield return new WaitForSeconds(4.067f);
+        piranha.SetAnimation(PiranhaAnimation.States.Spin_Start.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_End.ToString(), false);
+        yield return new WaitForSeconds(1.3f);
+        piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
+        yield return new WaitForSeconds(0.4f);
+        piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
     }
 
     public SpineAnimation GetAnimationByType(AnimationType type)
