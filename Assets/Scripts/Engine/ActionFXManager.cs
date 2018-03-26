@@ -109,22 +109,30 @@ public class ActionFXManager : MonoBehaviour
 
     #endregion
 
-    public IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
+    public void RotateTile(TileNode tile, Vector2 tilePosition)
+    {
+        StartCoroutine(RotateTileAnimation(tile, tilePosition));
+    }
+
+    private IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
     {
         PiranhaAnimation piranha = GetAnimationByType(AnimationType.PIRANHA) as PiranhaAnimation;
+
+        Vector3 startPosition = piranha.transform.position;
 
         piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
         yield return new WaitForSeconds(0.4f);
         piranha.transform.position = tilePosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
-        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), false);
-        yield return new WaitForSeconds(4.067f);
+        yield return new WaitForSeconds(0.567f);
         piranha.SetAnimation(PiranhaAnimation.States.Spin_Start.ToString(), false);
-        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), true);
+        yield return new WaitForSeconds(1.732f);
         piranha.AddAnimation(PiranhaAnimation.States.Spin_End.ToString(), false);
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(0.5f);
         piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
         yield return new WaitForSeconds(0.4f);
+        piranha.transform.position = startPosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
         piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
     }
