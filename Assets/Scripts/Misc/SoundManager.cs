@@ -59,14 +59,12 @@ public class SoundManager : MonoBehaviour
     public void PlaySound(SoundNames soundName)
     {
         SoundData soundData = m_AudioData.Find(x => x.SoundID == soundName);
-        Debug.Log("<color=red>[SoundManager.cs]</color> Now Playing: " + soundData.SoundID.ToString());
         soundData.AudioSource.Play();
     }
 
     public void SetMixerValue(string key, float value)
     {
         float calculatedValue = CalculateVolume(value, 0, 1, -80, 0);
-        Debug.Log("key: " + key + " | value: " + value + " | calculatedValue: " + calculatedValue);
         m_AudioMixer.SetFloat(key, calculatedValue);
     }
 

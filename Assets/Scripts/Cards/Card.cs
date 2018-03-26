@@ -70,8 +70,7 @@ public class Card : MonoBehaviour
     {
         RectTransform card = transform as RectTransform;
         m_IndexInHand = transform.GetSiblingIndex(); // Sets the hierarchy layer
-        m_DefaultPosition = card.anchoredPosition;
-        Debug.Log(m_DefaultPosition + " Default position card : " + m_IndexInHand);
+        m_DefaultPosition = card.anchoredPosition; // Sets default position in UI
     }
 
     public void SetCardInfo()

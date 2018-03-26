@@ -108,7 +108,6 @@ public class CardPositionHolder : MonoBehaviour {
         {
             RectTransform cardTransform = CardSelector.s_Instance.PlayerHandCards[i].transform as RectTransform;
             Card card = CardSelector.s_Instance.PlayerHandCards[i];
-            //Vector2 newCardPos = new Vector2(card.anchoredPosition.x - 350, -300 - (i * 100));
             showHandSequence.Append(cardTransform.DOAnchorPos(card.DefaultPosition,0.25f).SetEase(Ease.OutSine));
             showHandSequence.Join(cardTransform.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
         }
