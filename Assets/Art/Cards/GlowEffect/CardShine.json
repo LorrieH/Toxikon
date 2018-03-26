@@ -1,0 +1,79 @@
+{
+"skeleton": { "hash": "YB9rQGlLT20kbXtqJBOTAwLFFFk", "spine": "3.6.52", "width": 300, "height": 500, "images": "" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "CardShine_FX0001", "bone": "root", "attachment": "CardShine_FX0001" }
+],
+"skins": {
+	"default": {
+		"CardShine_FX0001": {
+			"CardShine_FX0001": { "width": 300, "height": 500 },
+			"CardShine_FX0002": { "width": 300, "height": 500 },
+			"CardShine_FX0003": { "width": 300, "height": 500 },
+			"CardShine_FX0004": { "width": 300, "height": 500 },
+			"CardShine_FX0005": { "width": 300, "height": 500 },
+			"CardShine_FX0006": { "width": 300, "height": 500 },
+			"CardShine_FX0007": { "width": 300, "height": 500 },
+			"CardShine_FX0008": { "width": 300, "height": 500 },
+			"CardShine_FX0009": { "width": 300, "height": 500 },
+			"CardShine_FX0010": { "width": 300, "height": 500 },
+			"CardShine_FX0011": { "width": 300, "height": 500 },
+			"CardShine_FX0012": { "width": 300, "height": 500 },
+			"CardShine_FX0013": { "width": 300, "height": 500 },
+			"CardShine_FX0014": { "width": 300, "height": 500 },
+			"CardShine_FX0015": { "width": 300, "height": 500 },
+			"CardShine_FX0016": { "width": 300, "height": 500 },
+			"CardShine_FX0017": { "width": 300, "height": 500 },
+			"CardShine_FX0018": { "width": 300, "height": 500 },
+			"CardShine_FX0019": { "width": 300, "height": 500 },
+			"CardShine_FX0020": { "width": 300, "height": 500 },
+			"CardShine_FX0021": { "width": 300, "height": 500 },
+			"CardShine_FX0022": { "width": 300, "height": 500 },
+			"CardShine_FX0023": { "width": 300, "height": 500 },
+			"CardShine_FX0024": { "width": 300, "height": 500 },
+			"CardShine_FX0025": { "width": 300, "height": 500 },
+			"CardShine_FX0026": { "width": 300, "height": 500 },
+			"CardShine_FX0027": { "width": 300, "height": 500 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"CardShine_FX0001": {
+				"attachment": [
+					{ "time": 0, "name": "CardShine_FX0001" },
+					{ "time": 0.0333, "name": "CardShine_FX0002" },
+					{ "time": 0.0667, "name": "CardShine_FX0003" },
+					{ "time": 0.1, "name": "CardShine_FX0004" },
+					{ "time": 0.1333, "name": "CardShine_FX0005" },
+					{ "time": 0.1667, "name": "CardShine_FX0006" },
+					{ "time": 0.2, "name": "CardShine_FX0007" },
+					{ "time": 0.2333, "name": "CardShine_FX0008" },
+					{ "time": 0.2667, "name": "CardShine_FX0009" },
+					{ "time": 0.3, "name": "CardShine_FX0010" },
+					{ "time": 0.3333, "name": "CardShine_FX0011" },
+					{ "time": 0.3667, "name": "CardShine_FX0012" },
+					{ "time": 0.4, "name": "CardShine_FX0013" },
+					{ "time": 0.4333, "name": "CardShine_FX0014" },
+					{ "time": 0.4667, "name": "CardShine_FX0015" },
+					{ "time": 0.5, "name": "CardShine_FX0016" },
+					{ "time": 0.5333, "name": "CardShine_FX0017" },
+					{ "time": 0.5667, "name": "CardShine_FX0018" },
+					{ "time": 0.6, "name": "CardShine_FX0019" },
+					{ "time": 0.6333, "name": "CardShine_FX0020" },
+					{ "time": 0.6667, "name": "CardShine_FX0021" },
+					{ "time": 0.7, "name": "CardShine_FX0022" },
+					{ "time": 0.7333, "name": "CardShine_FX0023" },
+					{ "time": 0.7667, "name": "CardShine_FX0024" },
+					{ "time": 0.8, "name": "CardShine_FX0025" },
+					{ "time": 0.8333, "name": "CardShine_FX0026" },
+					{ "time": 0.8667, "name": "CardShine_FX0027" }
+				]
+			}
+		}
+	}
+}
+}

@@ -804,7 +804,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!33 &377057608
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1947,7 +1947,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!33 &1135705248
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2114,11 +2114,6 @@ Prefab:
       propertyPath: m_Name
       value: Card (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 224928657856622742, guid: 8445a20282059da468366a411c4dd018,
-        type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8445a20282059da468366a411c4dd018, type: 2}
   m_IsPrefabParent: 0
@@ -2161,9 +2156,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugModus: 0
+  ignoreRules: 0
+  ignoreConnection: 0
+  playAnim: 0
+  checkPlayer: 0
+  delayValue: 0
   selectOne: {x: 0, y: 0}
   selectTwo: {x: 0, y: 0}
   selectedCards: 0
+  Rotate: 0
   Destroy: 0
   SwapCards: 0
   Up: 0
@@ -3207,7 +3208,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!33 &1869593398
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3390,7 +3391,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!33 &1993477780
 MeshFilter:
   m_ObjectHideFlags: 0

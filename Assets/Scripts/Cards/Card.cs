@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Spine.Unity;
 
 public enum CardTypes
 {
@@ -61,6 +62,9 @@ public class Card : MonoBehaviour
     [SerializeField]protected CardEditor m_CardEditor;
     public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
+    [SerializeField] private SkeletonGraphic m_Shine;
+    [SerializeField] private SkeletonGraphic m_Burn;
+
     private int m_IndexInHand;
     private Vector2 m_DefaultPosition;
     public int IndexInHand { get { return m_IndexInHand; } }
@@ -94,8 +98,15 @@ public class Card : MonoBehaviour
         CardSelector.s_OnToggleCardSelect(this,m_IndexInHand);
     }
 
-    public void UseCard()
+    public void Shine()
     {
-        //what should happen when a card gets used.
+        Debug.Log("Shine Card");
+        m_Shine.AnimationState.SetAnimation(0, "animation", false);
+    }
+
+    public void Burn()
+    {
+        Debug.Log("Burn Card");
+        m_Burn.AnimationState.SetAnimation(0, "animation", false);
     }
 }

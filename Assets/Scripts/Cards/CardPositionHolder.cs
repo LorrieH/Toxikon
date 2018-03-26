@@ -88,7 +88,8 @@ public class CardPositionHolder : MonoBehaviour {
         drawSequence.AppendCallback(() => m_SelectedCard.gameObject.SetActive(true));
         drawSequence.Append(drawnCard.DOMove(centerOfScreen, 0.5f));
         drawSequence.Join(drawnCard.DOScale(1.5f, 0.5f));
-        drawSequence.AppendInterval(0.5f);
+        drawSequence.AppendCallback(() => m_SelectedCard.Shine());
+        drawSequence.AppendInterval(1f);
         drawSequence.AppendCallback(() => drawnCard.SetSiblingIndex(m_IndexInHandPosition));
         drawSequence.Append(drawnCard.DOAnchorPos(cardDefaultPosition, 0.5f));
         drawSequence.Join(drawnCard.DOScale(1, 0.5f));

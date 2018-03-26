@@ -19,15 +19,15 @@ public class PlayerInfo : MonoBehaviour
     void MovePlayerInfo()
     {
         Sequence playerInfoSequence = DOTween.Sequence();
-        playerInfoSequence.Append(m_PlayerImage.transform.DOMoveX(40, 0.25f).SetEase(Ease.OutBack));
-        playerInfoSequence.Join(m_PlayerName.transform.DOMoveX(40,0.25f).SetEase(Ease.OutBack).SetDelay(0.025f));
+        playerInfoSequence.Append(m_PlayerImage.rectTransform.DOAnchorPosX(15, 0.5f).SetEase(Ease.OutExpo));
+        playerInfoSequence.Join(m_PlayerName.rectTransform.DOAnchorPosX(15, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.025f));
     }
 
     void RemovePlayerInfo()
     {
         Sequence playerInfoSequence = DOTween.Sequence();
-        playerInfoSequence.Append(m_PlayerName.transform.DOMoveX(-400, 0.25f).SetEase(Ease.InBack));
-        playerInfoSequence.Join(m_PlayerImage.transform.DOMoveX(-250, 0.25f).SetEase(Ease.InBack).SetDelay(0.025f));
+        playerInfoSequence.Append(m_PlayerName.rectTransform.DOAnchorPosX(-400, 0.5f).SetEase(Ease.InBack));
+        playerInfoSequence.Join(m_PlayerImage.rectTransform.DOAnchorPosX(-400, 0.5f).SetEase(Ease.InBack).SetDelay(0.025f));
 
     }
     
