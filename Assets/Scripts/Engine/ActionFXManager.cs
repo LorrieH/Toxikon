@@ -8,7 +8,8 @@ public enum AnimationType
     BREAK_TILE,
     OCTOPUS,
     ROTATE_TILE,
-    CRAB
+    CRAB,
+    PIRANHA
 }
 
 [System.Serializable]
@@ -24,7 +25,7 @@ public class ActionFXManager : MonoBehaviour
     [SerializeField] private List<ActionData> m_Actions = new List<ActionData>();
     public List<ActionData> Actions { get { return m_Actions; } set { m_Actions = value; } }
 
-    public static Action s_OnBreakTileAnimationCompleted;
+    public static Action s_OnTileAnimationCompleted;
 
     private void Awake()
     {
@@ -37,14 +38,6 @@ public class ActionFXManager : MonoBehaviour
             s_Instance = this;
         else
             Destroy(gameObject);
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            MoveTile(RandomGridPos(), RandomGridPos(), RandomGridPos(), RandomGridPos());
-        }
     }
 
     private int RandomGridPos()
@@ -60,18 +53,23 @@ public class ActionFXManager : MonoBehaviour
     private IEnumerator MoveTileAnimation(Vector2 movingTilePosition, Vector2 targetTilePosition)
     {
         CrabAnimation crab = GetAnimationByType(AnimationType.CRAB) as CrabAnimation;
+        TileBools bools = TileGrid.s_Instance.GetTileNode((int)movingTilePosition.x, (int)movingTilePosition.y).Bools;
 
         crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
         yield return new WaitForSeconds(2f);
         crab.transform.position = movingTilePosition;
         crab.SetAnimation(CrabAnimation.States.TileTop.ToString(), false);
+        CameraScreenShake.s_Instance.ShakeScreen(1f);
+        TileGrid.s_Instance.DestroyNode((int)movingTilePosition.x, (int)movingTilePosition.y);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
         yield return new WaitForSeconds(1.3f);
         crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
         yield return new WaitForSeconds(2f);
+        TileGrid.s_Instance.PlaceNewCard((int)targetTilePosition.x, (int)targetTilePosition.y, bools.Up, bools.Right, bools.Down, bools.Left, bools.Middle);
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
+        TurnManager.s_OnTurnEnd();
     }
 
     #region Break Tile
@@ -93,6 +91,7 @@ public class ActionFXManager : MonoBehaviour
 
         octopus.SetAnimation(OctopusAnimation.States.Down.ToString(), false);
         yield return new WaitForSeconds(2f);
+        TileClickManager.s_Instance.HideIndicator();
         tileBreak.gameObject.transform.position = tilePosition;
         tileBreak.SetAnimation(TileBreakAnimation.States.animation.ToString(), false);
         tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
@@ -106,14 +105,29 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        if(s_OnBreakTileAnimationCompleted != null) s_OnBreakTileAnimationCompleted();
+        TurnManager.s_OnTurnEnd();
     }
 
     #endregion
 
-    public void RotateTile(TileNode tile)
+    public IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
     {
+        PiranhaAnimation piranha = GetAnimationByType(AnimationType.PIRANHA) as PiranhaAnimation;
 
+        piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
+        yield return new WaitForSeconds(0.4f);
+        piranha.transform.position = tilePosition;
+        piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), false);
+        yield return new WaitForSeconds(4.067f);
+        piranha.SetAnimation(PiranhaAnimation.States.Spin_Start.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_End.ToString(), false);
+        yield return new WaitForSeconds(1.3f);
+        piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
+        yield return new WaitForSeconds(0.4f);
+        piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
+        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
     }
 
     public SpineAnimation GetAnimationByType(AnimationType type)

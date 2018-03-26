@@ -1,0 +1,265 @@
+
+CREATURES_Piranha.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Basic/Body
+  rotate: false
+  xy: 96, 37
+  size: 91, 63
+  orig: 91, 63
+  offset: 0, 0
+  index: -1
+Basic/Body 1,2
+  rotate: false
+  xy: 794, 182
+  size: 91, 67
+  orig: 91, 67
+  offset: 0, 0
+  index: -1
+Basic/Body 1,3
+  rotate: false
+  xy: 2, 33
+  size: 92, 67
+  orig: 92, 67
+  offset: 0, 0
+  index: -1
+Basic/Eye_L
+  rotate: false
+  xy: 611, 74
+  size: 28, 26
+  orig: 28, 26
+  offset: 0, 0
+  index: -1
+Basic/Eye_R
+  rotate: false
+  xy: 363, 56
+  size: 48, 44
+  orig: 48, 44
+  offset: 0, 0
+  index: -1
+Basic/Jaw
+  rotate: false
+  xy: 794, 127
+  size: 88, 53
+  orig: 88, 53
+  offset: 0, 0
+  index: -1
+Basic/Left_fin
+  rotate: false
+  xy: 794, 104
+  size: 24, 21
+  orig: 24, 21
+  offset: 0, 0
+  index: -1
+Basic/Right_Fin
+  rotate: false
+  xy: 448, 70
+  size: 37, 30
+  orig: 37, 30
+  offset: 0, 0
+  index: -1
+Basic/Tail
+  rotate: false
+  xy: 413, 63
+  size: 33, 37
+  orig: 33, 37
+  offset: 0, 0
+  index: -1
+Basic/Tail 1
+  rotate: false
+  xy: 54, 6
+  size: 33, 25
+  orig: 33, 25
+  offset: 0, 0
+  index: -1
+Basic/Upperfin
+  rotate: false
+  xy: 2, 2
+  size: 50, 29
+  orig: 50, 29
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0001
+  rotate: false
+  xy: 487, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0009
+  rotate: false
+  xy: 487, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0002
+  rotate: false
+  xy: 518, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0008
+  rotate: false
+  xy: 518, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0003
+  rotate: false
+  xy: 549, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0007
+  rotate: false
+  xy: 549, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0004
+  rotate: false
+  xy: 580, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0005
+  rotate: false
+  xy: 580, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_L0006
+  rotate: false
+  xy: 580, 74
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0001
+  rotate: false
+  xy: 887, 207
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0009
+  rotate: false
+  xy: 887, 207
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0002
+  rotate: false
+  xy: 189, 58
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0003
+  rotate: false
+  xy: 945, 207
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0007
+  rotate: false
+  xy: 945, 207
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0004
+  rotate: false
+  xy: 247, 58
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0005
+  rotate: false
+  xy: 247, 58
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0006
+  rotate: false
+  xy: 247, 58
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Eye_Blink/Eye_R0008
+  rotate: false
+  xy: 305, 58
+  size: 56, 42
+  orig: 56, 42
+  offset: 0, 0
+  index: -1
+Interact/Spin0001
+  rotate: false
+  xy: 2, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0005
+  rotate: false
+  xy: 2, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0002
+  rotate: false
+  xy: 200, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0006
+  rotate: false
+  xy: 200, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0003
+  rotate: false
+  xy: 398, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0007
+  rotate: false
+  xy: 398, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0004
+  rotate: false
+  xy: 596, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1
+Interact/Spin0008
+  rotate: false
+  xy: 596, 102
+  size: 196, 147
+  orig: 196, 147
+  offset: 0, 0
+  index: -1

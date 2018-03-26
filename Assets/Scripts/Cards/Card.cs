@@ -13,7 +13,6 @@ public enum CardTypes
 [System.Serializable]
 public struct CardEditor
 {
-    public Text Name;
     public Text Description;
     public Image CardBackground;
     public Image CardImage;
@@ -63,18 +62,31 @@ public class Card : MonoBehaviour
     public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
     private int m_IndexInHand;
+    private Vector2 m_DefaultPosition;
     public int IndexInHand { get { return m_IndexInHand; } }
+    public Vector2 DefaultPosition { get { return m_DefaultPosition; }}
 
     private void Awake()
     {
+        RectTransform card = transform as RectTransform;
         m_IndexInHand = transform.GetSiblingIndex(); // Sets the hierarchy layer
+        m_DefaultPosition = card.anchoredPosition;
+        Debug.Log(m_DefaultPosition + " Default position card : " + m_IndexInHand);
     }
 
     public void SetCardInfo()
     {
         //Shows the cards info
+        m_CardEditor.Description.text = m_CardData.Description;
         m_CardEditor.CardImage.sprite = m_CardData.CardSprite;
-        //Debug.Log(TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor);
+        if(m_CardData.Type == CardTypes.PATH_CARD)
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.PATH_BACKGROUND);
+        }
+        else
+        {
+            m_CardEditor.CardBackground.sprite = CardImageLoader.s_CardBackgroundSprite(CardStrings.ACTION_BACKGROUND);
+        }
         m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;
     }
 

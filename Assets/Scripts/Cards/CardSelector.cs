@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using DG.Tweening;
 
 public class CardSelector : MonoBehaviour
@@ -8,6 +9,8 @@ public class CardSelector : MonoBehaviour
 
     public delegate void ToggleCardSelectEvent(Card selectedCard, int cardInHandIndex);
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
+
+    public static Action s_OnSelectCard;
 
     public static CardSelector s_Instance;
 
@@ -59,7 +62,6 @@ public class CardSelector : MonoBehaviour
     private void ToggleCardSelect(Card selectedCard, int cardInHandIndex)
     {
         SelectCard(selectedCard, cardInHandIndex);
-        return;
     }
 
     private void SelectCard(Card selectedCard, int cardInHandIndex)
@@ -69,9 +71,10 @@ public class CardSelector : MonoBehaviour
             //Returns all cards back to the hand first
             for (int i = 0; i < m_PlayerHandCards.Count; i++)
             {
-                m_PlayerHandCards[i].transform.DOMove(CardPositionHolder.s_Instance.CardDefaultPositions[m_PlayerHandCards[i].IndexInHand], 0.2f).SetEase(Ease.OutExpo);
-                m_PlayerHandCards[i].transform.SetSiblingIndex(m_PlayerHandCards[i].IndexInHand);
-                m_PlayerHandCards[i].transform.DOScale(1, 0.2f);
+                RectTransform card = m_PlayerHandCards[i].transform as RectTransform;
+                card.DOAnchorPos(m_PlayerHandCards[i].DefaultPosition, 0.2f).SetEase(Ease.OutExpo);
+                card.SetSiblingIndex(m_PlayerHandCards[i].IndexInHand);
+                card.DOScale(1, 0.2f);
             }
 
             StartCoroutine(CardSelectDelay(0.2f));
@@ -92,6 +95,8 @@ public class CardSelector : MonoBehaviour
                 selectedCard.transform.SetSiblingIndex(6); //Puts the selected card on top of the layering hierarchy
                 m_SelectedCard = selectedCard;
             }
+
+            if (s_OnSelectCard != null) s_OnSelectCard();
         }
     }
 

@@ -182,11 +182,13 @@ public class TileGrid : MonoBehaviour
                 {
                     if (!m_NodeGrid[i, j].IsEdgeStone)
                     {
-                        Neighbours neighbours = new Neighbours();
-                        neighbours.up = m_NodeGrid[i, j + 1];
-                        neighbours.down = m_NodeGrid[i, j - 1];
-                        neighbours.right = m_NodeGrid[i + 1, j];
-                        neighbours.left = m_NodeGrid[i - 1, j];
+                        Neighbours neighbours = new Neighbours
+                        {
+                            up = m_NodeGrid[i, j + 1],
+                            down = m_NodeGrid[i, j - 1],
+                            right = m_NodeGrid[i + 1, j],
+                            left = m_NodeGrid[i - 1, j]
+                        };
                         m_NodeGrid[i, j].AllNeighbours = neighbours;
                     }
                 }
@@ -220,7 +222,8 @@ public class TileGrid : MonoBehaviour
     public bool CanMoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode)
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
-        if (m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false))
+
+        if (m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false) && !m_NodeGrid[xTargetNode, yTargetNode].IsFilled)
         {
             return true;
         }
@@ -228,6 +231,11 @@ public class TileGrid : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public TileNode GetTileNode(int x, int y)
+    {
+        return m_NodeGrid[x, y];
     }
 
     public bool MoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode, float delay = 0)
@@ -328,11 +336,11 @@ public class TileGrid : MonoBehaviour
             {
                 m_NodeGrid[x, y].TileObject.transform.position = new Vector3(x, y + TileSpawnOffsetY, 0);
                 m_NodeGrid[x, y].TileObject.transform.DOMoveY(y, 0.4f);
-                offset = TileSpawnOffsetY;
+                offset = TileSpawnOffsetY + 0.12f;
             }
             else
             {
-                offset = 0;
+                offset = 0.12f;
             }
             if (delay > 0)
             {
