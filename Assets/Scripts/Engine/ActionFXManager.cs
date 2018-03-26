@@ -59,6 +59,7 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         crab.transform.position = movingTilePosition;
         crab.SetAnimation(CrabAnimation.States.TileTop.ToString(), false);
+        CameraScreenShake.s_Instance.ShakeScreen(1f);
         TileGrid.s_Instance.DestroyNode((int)movingTilePosition.x, (int)movingTilePosition.y);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
         yield return new WaitForSeconds(1.3f);
@@ -90,6 +91,7 @@ public class ActionFXManager : MonoBehaviour
 
         octopus.SetAnimation(OctopusAnimation.States.Down.ToString(), false);
         yield return new WaitForSeconds(2f);
+        TileClickManager.s_Instance.HideIndicator();
         tileBreak.gameObject.transform.position = tilePosition;
         tileBreak.SetAnimation(TileBreakAnimation.States.animation.ToString(), false);
         tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
