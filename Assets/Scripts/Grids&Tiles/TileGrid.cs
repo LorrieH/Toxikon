@@ -222,7 +222,7 @@ public class TileGrid : MonoBehaviour
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
 
-        if (m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false) && !m_NodeGrid[xTargetNode, yTargetNode].IsFilled)
+        if (!MovingNode.IsEndpoint && !MovingNode.IsStartPoint && m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false) && !m_NodeGrid[xTargetNode, yTargetNode].IsFilled)
         {
             return true;
         }
@@ -240,10 +240,17 @@ public class TileGrid : MonoBehaviour
     public bool MoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode, float delay = 0)
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
-        if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle, true))
+        if (!MovingNode.IsEndpoint && !MovingNode.IsStartPoint)
         {
-            DestroyNode(xMovingNode, yMovingNode, delay);
-            return true;
+            if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle, true))
+            {
+                DestroyNode(xMovingNode, yMovingNode, delay);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         else
         {
