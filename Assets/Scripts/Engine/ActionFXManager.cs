@@ -123,15 +123,21 @@ public class ActionFXManager : MonoBehaviour
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
         yield return new WaitForSeconds(0.567f);
         piranha.SetAnimation(PiranhaAnimation.States.Spin_Start.ToString(), false);
+        yield return new WaitForSeconds(0.3f);
+        TileGrid.s_Instance.GetTileNode((int)tilePosition.x, (int)tilePosition.y).TileObject.SetActive(false);
+        yield return new WaitForSeconds(0.267f);
         piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), true);
-        yield return new WaitForSeconds(1.732f);
+        yield return new WaitForSeconds(1.165f);
         piranha.AddAnimation(PiranhaAnimation.States.Spin_End.ToString(), false);
+        TileGrid.s_Instance.GetTileNode((int)tilePosition.x, (int)tilePosition.y).TileObject.SetActive(true);
+        TileGrid.s_Instance.RotateCard((int)tilePosition.x, (int)tilePosition.y);
         yield return new WaitForSeconds(0.5f);
         piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
         yield return new WaitForSeconds(0.4f);
         piranha.transform.position = startPosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
         piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
+        TurnManager.s_OnTurnEnd();
     }
 
     public SpineAnimation GetAnimationByType(AnimationType type)
