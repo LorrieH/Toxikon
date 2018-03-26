@@ -25,7 +25,7 @@ public class CardConfig
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP_DOWN), new PathCardData(true,true,false,false,false)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_RIGHT_LEFT_DOWN), new PathCardData(false,true,true,true,false)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP_RIGHT_LEFT), new PathCardData(true,false,true,true,false)),
-        new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP_LEFT_DOWN), new PathCardData(true,false,true,false,false)),
+        new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP_LEFT_DOWN), new PathCardData(true,true,true,false,false)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP_RIGHT_DOWN), new PathCardData(true,true,false,true,false))
     };
 

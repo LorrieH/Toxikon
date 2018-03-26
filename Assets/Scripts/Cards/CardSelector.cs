@@ -71,9 +71,10 @@ public class CardSelector : MonoBehaviour
             //Returns all cards back to the hand first
             for (int i = 0; i < m_PlayerHandCards.Count; i++)
             {
-                m_PlayerHandCards[i].transform.DOMove(CardPositionHolder.s_Instance.CardDefaultPositions[m_PlayerHandCards[i].IndexInHand], 0.2f).SetEase(Ease.OutExpo);
-                m_PlayerHandCards[i].transform.SetSiblingIndex(m_PlayerHandCards[i].IndexInHand);
-                m_PlayerHandCards[i].transform.DOScale(1, 0.2f);
+                RectTransform card = m_PlayerHandCards[i].transform as RectTransform;
+                card.DOAnchorPos(m_PlayerHandCards[i].DefaultPosition, 0.2f).SetEase(Ease.OutExpo);
+                card.SetSiblingIndex(m_PlayerHandCards[i].IndexInHand);
+                card.DOScale(1, 0.2f);
             }
 
             StartCoroutine(CardSelectDelay(0.2f));

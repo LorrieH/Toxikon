@@ -62,11 +62,16 @@ public class Card : MonoBehaviour
     public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
     private int m_IndexInHand;
+    private Vector2 m_DefaultPosition;
     public int IndexInHand { get { return m_IndexInHand; } }
+    public Vector2 DefaultPosition { get { return m_DefaultPosition; }}
 
     private void Awake()
     {
+        RectTransform card = transform as RectTransform;
         m_IndexInHand = transform.GetSiblingIndex(); // Sets the hierarchy layer
+        m_DefaultPosition = card.anchoredPosition;
+        Debug.Log(m_DefaultPosition + " Default position card : " + m_IndexInHand);
     }
 
     public void SetCardInfo()
