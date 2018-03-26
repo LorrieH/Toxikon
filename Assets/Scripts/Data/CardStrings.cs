@@ -24,14 +24,14 @@
     public const string BLOCK_DOWN = "CARD_Block_Down";
     public const string BLOCK_LEFT = "CARD_Block_Left";
     public const string BLOCK_RIGHT = "CARD_Block_Right";
-
-    public const string BLOCK_UP_LEFT = "CARD_Block_Up_Left";
+    
     public const string BLOCK_UP_DOWN = "CARD_Block_Up_Down";
-    public const string BLOCK_LEFT_RIGHT = "CARD_Block_Left";
-
+    public const string BLOCK_LEFT_RIGHT = "CARD_Block_Left_Right";
 
     public const string BLOCK_UP_RIGHT_LEFT = "CARD_Block_Up_Right_Left";
-    public const string BLOCK_RIGHT_LEFT_DOWN = "CARD_Block_Left_Down";
+    public const string BLOCK_RIGHT_LEFT_DOWN = "CARD_Block_Right_Left_Down";
+    public const string BLOCK_UP_LEFT_DOWN = "CARD_Block_Up_Left_Down";
+    public const string BLOCK_UP_RIGHT_DOWN = "CARD_Block_Up_Right_Down";
 
     //Action cards
     public const string DESTROY_PATH = "CARD_Destroy_Path";
