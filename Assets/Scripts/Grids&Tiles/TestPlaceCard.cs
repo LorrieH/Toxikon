@@ -24,12 +24,19 @@ public class TestPlaceCard : MonoBehaviour
     #endregion
 
     public bool debugModus;
+    public bool ignoreRules;
+    public bool ignoreConnection;
+    public bool playAnim;
+
+    public int checkPlayer;
+    public float delayValue;
 
     public Vector2 selectOne;
     public Vector2 selectTwo;
 
     public int selectedCards = 0;
 
+    public bool Rotate;
     public bool Destroy;
     public bool SwapCards;
 

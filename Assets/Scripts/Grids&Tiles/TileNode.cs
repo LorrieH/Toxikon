@@ -63,7 +63,7 @@ public class TileNode
         }
         if (Bools.Left)
         {
-            if (AllNeighbours.left.IsFilled && AllNeighbours.left.Bools.Right && !AllNeighbours.right.IsEdgeStone)
+            if (AllNeighbours.left.IsFilled && AllNeighbours.left.Bools.Right && !AllNeighbours.left.IsEdgeStone)
             {
                 tempNeighbour.left = AllNeighbours.left;
             }
@@ -119,7 +119,7 @@ public class TileNode
         if(!IsStartPoint)
         {
             IsInRoad = true;
-            T.NodeRoad.Add(RoadParent);
+            T.NodeRoad.Add(RoadParent.TileObject.transform.position);
             RoadParent.AddToRoad(T);
             UpdateArt();
         }
@@ -135,7 +135,7 @@ public class TileNode
         {
             if (IsEndpoint)
             {
-                T.NodeRoad.Add(this);
+                T.NodeRoad.Add(this.TileObject.transform.position);
                 IsInRoad = true;
                 AddToRoad(T);
                 T.RoadCompleted = true;
@@ -169,7 +169,7 @@ public class TileNode
     /// this returns a true or false according to if the tile will connect to its neighbours
     /// </summary>
     /// <returns></returns>
-    public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft)
+    public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft, bool ignoreConnect, bool ignoreAll)
     {
         bool canConnectUp = false;
         bool canConnectRight = false;
@@ -236,7 +236,18 @@ public class TileNode
         {
             canConnectLeft = true;
         }
-        return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft && hasFilledNeighbour);
+        if (ignoreConnect)
+        {
+            hasFilledNeighbour = true;
+        }
+        if (ignoreAll)
+        {
+            return true;
+        }
+        else
+        {
+            return (canConnectUp && canConnectRight && canConnectDown && canConnectLeft && hasFilledNeighbour);
+        }
     }
     #endregion
 }

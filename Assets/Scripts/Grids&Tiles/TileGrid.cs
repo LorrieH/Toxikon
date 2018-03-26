@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TileGrid : MonoBehaviour
 {
+    public GameObject[] Players;
 
     public static TileGrid s_Instance;
 
@@ -19,7 +20,7 @@ public class TileGrid : MonoBehaviour
     private float TileSpawnOffsetY = 0.2f;
 
     private TileNode[] m_PlayerStartNodes;
-    public List<TileNode> NodeRoad { get; set; }
+    public List<Vector3> NodeRoad { get; set; }
 
     public List<TileNode> CheckedNodes { get; set; }
     public bool RoadCompleted { get; set; }
@@ -112,6 +113,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[2] = newNode;
+                    Players[2].SetActive(true);
                 }
                 if (i == m_GridXSize && j == m_GridYSize && PlayersManager.s_Instance.Players.Count >= 4)
                 {
@@ -123,6 +125,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[3] = newNode;
+                    Players[3].SetActive(true);
                 }
                 else if (i == (m_GridXSize+1)/2 && j == (m_GridYSize+1)/2)
                 {
@@ -190,13 +193,34 @@ public class TileGrid : MonoBehaviour
             }
         }
     }
+
+    public void MoveWinningPlayer(int winningPlayer)
+    {
+        NodeRoad.Reverse();
+        MovePlayer.Move(NodeRoad.ToArray(), Players[winningPlayer]);
+        //StartCoroutine(MovePlayer.MoveEnumerator(NodeRoad.ToArray(), Players[winningPlayer]));
+    }
+
+    public void RotateCard(int x, int y)
+    {
+        TileNode RotatingNode = m_NodeGrid[x, y];
+        TileBools tempBools = new TileBools();
+        tempBools.Up = RotatingNode.Bools.Left;
+        tempBools.Right = RotatingNode.Bools.Up;
+        tempBools.Down = RotatingNode.Bools.Right;
+        tempBools.Left = RotatingNode.Bools.Down;
+        tempBools.Middle = RotatingNode.Bools.Middle;
+        DestroyNode(x, y);
+        PlaceNewCard(x, y, tempBools.Up, tempBools.Right, tempBools.Down, tempBools.Left,tempBools.Middle, true,true,false);
+    }
+
     #endregion
 
     #region return value functions
     public bool CanMoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode)
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
-        if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle))
+        if (m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false))
         {
             return true;
         }
@@ -209,7 +233,7 @@ public class TileGrid : MonoBehaviour
     public bool MoveNode(int xMovingNode, int yMovingNode, int xTargetNode, int yTargetNode, float delay = 0)
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
-        if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle))
+        if (PlaceNewCard(xTargetNode, yTargetNode, MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left, MovingNode.Bools.Middle, true))
         {
             DestroyNode(xMovingNode, yMovingNode, delay);
             return true;
@@ -287,10 +311,11 @@ public class TileGrid : MonoBehaviour
         }
     }
 
-    public bool PlaceNewCard(int x, int y, bool UpCard, bool RightCard, bool DownCard, bool LeftCard, bool MiddleCard, float delay = 0)
+    public bool PlaceNewCard(int x, int y, bool UpCard, bool RightCard, bool DownCard, bool LeftCard, bool MiddleCard, bool ignoreConnect = false, bool ignoreRules = false, bool playAnim = true, float delay = 0)
     {
-        if (m_NodeGrid[x, y].CheckPlacement(UpCard, RightCard, DownCard, LeftCard) && !m_NodeGrid[x, y].IsFilled)
+        if (m_NodeGrid[x, y].CheckPlacement(UpCard, RightCard, DownCard, LeftCard,ignoreConnect,ignoreRules) && !m_NodeGrid[x, y].IsFilled)
         {
+            float offset;
             TileBools bools = new TileBools();
             bools.Up = UpCard;
             bools.Right = RightCard;
@@ -299,8 +324,16 @@ public class TileGrid : MonoBehaviour
             bools.Middle = MiddleCard;
             m_NodeGrid[x, y].Bools = bools;
             m_NodeGrid[x, y].IsFilled = true;
-            m_NodeGrid[x, y].TileObject.transform.position = new Vector3(x, y+TileSpawnOffsetY, 0);
-            m_NodeGrid[x, y].TileObject.transform.DOMoveY(y, 0.4f);
+            if (playAnim)
+            {
+                m_NodeGrid[x, y].TileObject.transform.position = new Vector3(x, y + TileSpawnOffsetY, 0);
+                m_NodeGrid[x, y].TileObject.transform.DOMoveY(y, 0.4f);
+                offset = TileSpawnOffsetY;
+            }
+            else
+            {
+                offset = 0;
+            }
             if (delay > 0)
             {
                 StartCoroutine(UpdateArt(m_NodeGrid[x, y], delay));
@@ -309,28 +342,28 @@ public class TileGrid : MonoBehaviour
             {
                 m_NodeGrid[x, y].UpdateArt();
             }
-            ;
+            
             if (UpCard && m_NodeGrid[x, y].AllNeighbours.up.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ offset + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeUp = Bridge;
                 m_NodeBridges[x, y+1].bridgeDown = Bridge;
             }
             if (RightCard && m_NodeGrid[x, y].AllNeighbours.right.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y+ offset, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeRight = Bridge;
                 m_NodeBridges[x+1, y].bridgeLeft = Bridge;
             }
             if (DownCard && m_NodeGrid[x, y].AllNeighbours.down.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ TileSpawnOffsetY - 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ offset - 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeDown = Bridge;
                 m_NodeBridges[x, y - 1].bridgeUp = Bridge;
             }
             if (LeftCard && m_NodeGrid[x, y].AllNeighbours.left.IsFilled)
             {
-                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y+ TileSpawnOffsetY, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
+                GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y+ offset, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeLeft = Bridge;
                 m_NodeBridges[x - 1, y].bridgeRight = Bridge;
             }
@@ -344,7 +377,7 @@ public class TileGrid : MonoBehaviour
 
     public bool CompleteRoad(int startPlayer)
     {
-        NodeRoad = new List<TileNode>();
+        NodeRoad = new List<Vector3>();
         CheckedNodes = new List<TileNode>();
         m_PlayerStartNodes[startPlayer].GetChecked(this, null);
         
@@ -352,6 +385,10 @@ public class TileGrid : MonoBehaviour
         {
             CheckedNodes[i].IsChecked = false;
             CheckedNodes[i].UpdateArt();
+        }
+        if(RoadCompleted)
+        {
+            MoveWinningPlayer(startPlayer);
         }
 
         return RoadCompleted;

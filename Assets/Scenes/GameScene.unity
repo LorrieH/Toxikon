@@ -496,7 +496,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 13
 --- !u!33 &144059605
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -965,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &726814208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1029,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 13
 --- !u!33 &726814210
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1067,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &743526001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,7 +1131,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 13
 --- !u!33 &743526003
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2583,7 +2583,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 13
 --- !u!33 &1645656665
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3108,6 +3108,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: Players.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4781943033727606, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3140,6 +3145,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: Players.Array.data[0]
+      value: 
+      objectReference: {fileID: 1645656662}
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: Players.Array.data[1]
+      value: 
+      objectReference: {fileID: 144059602}
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: Players.Array.data[2]
+      value: 
+      objectReference: {fileID: 726814207}
+    - target: {fileID: 114839125573747034, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a,
+        type: 2}
+      propertyPath: Players.Array.data[3]
+      value: 
+      objectReference: {fileID: 743526000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ead7485e26c19c4b9cf7fd3f0bb2f9a, type: 2}
   m_IsPrefabParent: 0

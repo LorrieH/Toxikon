@@ -29,7 +29,19 @@ public class ClickedOnTile : MonoBehaviour
 
     void DebugPlaceMent()
     {
-        if (TestPlacer.SwapCards)
+        if(TestPlacer.Rotate)
+        {
+            grid.RotateCard(TilePosX, TilePosY);
+            if (grid.CompleteRoad(TestPlacer.checkPlayer))
+            {
+                Debug.Log("there is a road for player" + TestPlacer.checkPlayer);
+            }
+            else
+            {
+                Debug.Log("there is no road");
+            }
+        }
+        else if (TestPlacer.SwapCards)
         {
             TestPlacer.selectedCards++;
             if (TestPlacer.selectedCards == 1)
@@ -47,6 +59,14 @@ public class ClickedOnTile : MonoBehaviour
                 if (grid.MoveNode((int)TestPlacer.selectOne.x, (int)TestPlacer.selectOne.y, (int)TestPlacer.selectTwo.x, (int)TestPlacer.selectTwo.y))
                 {
                     Debug.Log("swip swap");
+                    if (grid.CompleteRoad(TestPlacer.checkPlayer))
+                    {
+                        Debug.Log("there is a road for player" + TestPlacer.checkPlayer);
+                    }
+                    else
+                    {
+                        Debug.Log("there is no road");
+                    }
                 }
                 else
                 {
@@ -69,12 +89,12 @@ public class ClickedOnTile : MonoBehaviour
         }
         else
         {
-            if (grid.PlaceNewCard(TilePosX, TilePosY, TestPlacer.Up, TestPlacer.Right, TestPlacer.Down, TestPlacer.Left, TestPlacer.Middle))
+            if (grid.PlaceNewCard(TilePosX, TilePosY, TestPlacer.Up, TestPlacer.Right, TestPlacer.Down, TestPlacer.Left, TestPlacer.Middle,TestPlacer.ignoreConnection,TestPlacer.ignoreRules,TestPlacer.playAnim,TestPlacer.delayValue))
             {
                 Debug.Log("placed");
-                if (grid.CompleteRoad(1))
+                if (grid.CompleteRoad(TestPlacer.checkPlayer))
                 {
-                    Debug.Log("there is a road");
+                    Debug.Log("there is a road for player"+ TestPlacer.checkPlayer);
                 }
                 else
                 {
