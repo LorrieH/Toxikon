@@ -81,7 +81,7 @@ public class TurnManager : MonoBehaviour
             m_CurrentPlayerIndex++;
             m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
         }
-        CardPositionHolder.s_Instance.ReturnCardsToScreen();
+        //CardPositionHolder.s_Instance.ReturnCardsToScreen();
         s_OnTurnStart();
         CardSelector.s_Instance.CanSelectCard = true;
     }

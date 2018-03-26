@@ -26,6 +26,7 @@ public class CardPositionHolder : MonoBehaviour {
     private void OnEnable()
     {
         s_OnDiscardCard += DiscardCard;
+        TurnManager.s_OnTurnStart += ReturnCardsToScreen;
     }
 
     private void Awake()
@@ -75,11 +76,13 @@ public class CardPositionHolder : MonoBehaviour {
         drawSequence.AppendCallback(() => m_SelectedCard.transform.SetSiblingIndex(m_IndexInHandPosition));
         drawSequence.Append(m_SelectedCard.transform.DOMove(m_CardDefaultPositions[m_IndexInHandPosition], 0.5f));
         drawSequence.Join(m_SelectedCard.transform.DOScale(1, 0.5f));
-        drawSequence.AppendInterval(0.2f);
+        drawSequence.AppendInterval(1.2f);
         for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
         {
-            drawSequence.Append(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DOMove(m_OutOfScreenPosition.position, 0.2f).SetEase(Ease.InSine));
-            drawSequence.Join(CardSelector.s_Instance.PlayerHandCards[CardToRemove].transform.DORotate(rotationVector, 0.2f).SetEase(Ease.InSine));
+            RectTransform card = CardSelector.s_Instance.PlayerHandCards[i].transform as RectTransform;
+            Vector2 newCardPos = new Vector2(card.anchoredPosition.x + 350, -800);
+            drawSequence.Append(card.DOAnchorPos(newCardPos, 0.2f).SetEase(Ease.InSine));
+            drawSequence.Join(card.DORotate(rotationVector, 0.2f).SetEase(Ease.InSine));
             if (CardToRemove > 0)
             {
                 CardToRemove--;
@@ -95,8 +98,10 @@ public class CardPositionHolder : MonoBehaviour {
         Sequence showHandSequence = DOTween.Sequence();
         for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
         {
-            showHandSequence.Append(CardSelector.s_Instance.PlayerHandCards[i].transform.DOMove(m_CardDefaultPositions[CardSelector.s_Instance.PlayerHandCards[i].IndexInHand],0.25f).SetEase(Ease.OutSine));
-            showHandSequence.Join(CardSelector.s_Instance.PlayerHandCards[i].transform.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
+            RectTransform card = CardSelector.s_Instance.PlayerHandCards[i].transform as RectTransform;
+            Vector2 newCardPos = new Vector2(card.anchoredPosition.x - 350, -300 - (i * 100));
+            showHandSequence.Append(card.DOAnchorPos(newCardPos,0.25f).SetEase(Ease.OutSine));
+            showHandSequence.Join(card.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
         }
     }
 
