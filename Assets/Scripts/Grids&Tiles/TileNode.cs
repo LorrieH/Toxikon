@@ -140,21 +140,21 @@ public class TileNode
                 AddToRoad(T);
                 T.RoadCompleted = true;
             }
-            else if(Bools.Middle)
+            else if(!T.RoadCompleted)
             {
-                if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked)
+                if (AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked && AccesableNeighbours.up.Bools.Middle || AccesableNeighbours.up != null && !AccesableNeighbours.up.IsChecked && AccesableNeighbours.up.IsEndpoint)
                 {
                     AccesableNeighbours.up.GetChecked(T, this);
                 }
-                if (AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked)
+                if (AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked && AccesableNeighbours.right.Bools.Middle || AccesableNeighbours.right != null && !AccesableNeighbours.right.IsChecked && AccesableNeighbours.right.IsEndpoint)
                 {
                     AccesableNeighbours.right.GetChecked(T, this);
                 }
-                if (AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked)
+                if (AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked && AccesableNeighbours.down.Bools.Middle || AccesableNeighbours.down != null && !AccesableNeighbours.down.IsChecked && AccesableNeighbours.down.IsEndpoint)
                 {
                     AccesableNeighbours.down.GetChecked(T, this);
                 }
-                if (AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked)
+                if (AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked && AccesableNeighbours.left.Bools.Middle || AccesableNeighbours.left != null && !AccesableNeighbours.left.IsChecked && AccesableNeighbours.left.IsEndpoint)
                 {
                     AccesableNeighbours.left.GetChecked(T, this);
                 }

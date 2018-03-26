@@ -63,7 +63,7 @@ public class TileGrid : MonoBehaviour
                 Bridges newbridge = new Bridges();
                 TileBools bools = new TileBools();
                 newNode.IsFilled = false;
-                newNode.DebugModus = true;
+                newNode.DebugModus = false;
                 newNode.IsDestructable = true;
                 if (i == 0 || i == m_GridXSize + 1 || j == 0 || j == m_GridYSize + 1)
                 {
