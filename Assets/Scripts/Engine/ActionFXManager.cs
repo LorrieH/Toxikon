@@ -39,14 +39,6 @@ public class ActionFXManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            MoveTile(RandomGridPos(), RandomGridPos(), RandomGridPos(), RandomGridPos());
-        }
-    }
-
     private int RandomGridPos()
     {
         return UnityEngine.Random.Range(1, 10);
@@ -60,18 +52,22 @@ public class ActionFXManager : MonoBehaviour
     private IEnumerator MoveTileAnimation(Vector2 movingTilePosition, Vector2 targetTilePosition)
     {
         CrabAnimation crab = GetAnimationByType(AnimationType.CRAB) as CrabAnimation;
+        TileBools bools = TileGrid.s_Instance.GetTileNode((int)movingTilePosition.x, (int)movingTilePosition.y).Bools;
 
         crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
         yield return new WaitForSeconds(2f);
         crab.transform.position = movingTilePosition;
         crab.SetAnimation(CrabAnimation.States.TileTop.ToString(), false);
+        TileGrid.s_Instance.DestroyNode((int)movingTilePosition.x, (int)movingTilePosition.y);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
         yield return new WaitForSeconds(1.3f);
         crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
         yield return new WaitForSeconds(2f);
+        TileGrid.s_Instance.PlaceNewCard((int)targetTilePosition.x, (int)targetTilePosition.y, bools.Up, bools.Right, bools.Down, bools.Left, bools.Middle);
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
+        TurnManager.s_OnTurnEnd();
     }
 
     #region Break Tile
@@ -106,7 +102,7 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        if(s_OnBreakTileAnimationCompleted != null) s_OnBreakTileAnimationCompleted();
+        TurnManager.s_OnTurnEnd();
     }
 
     #endregion

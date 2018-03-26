@@ -15,12 +15,14 @@ public class TileClickManager : MonoBehaviour
         Init();
         ClickedOnTile.s_OnTileClicked += TileClicked;
         TurnManager.s_OnTurnStart += ResetClicks;
+        CardSelector.s_OnSelectCard += ResetClicks;
     }
 
     private void OnDestroy()
     {
         ClickedOnTile.s_OnTileClicked -= TileClicked;
         TurnManager.s_OnTurnStart -= ResetClicks;
+        CardSelector.s_OnSelectCard -= ResetClicks;
     }
 
     private void Init()
@@ -49,11 +51,26 @@ public class TileClickManager : MonoBehaviour
 
                 break;
             case CardTypes.MOVE_PATH_CARD:
-
+                if(m_ClickedTilePositions.Count >= 2)
+                {
+                    if (TileGrid.s_Instance.CanMoveNode((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y, (int)m_ClickedTilePositions[1].x, (int)m_ClickedTilePositions[1].y))
+                    {
+                        ActionFXManager.s_Instance.MoveTile((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y, (int)m_ClickedTilePositions[1].x, (int)m_ClickedTilePositions[1].y);
+                        CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
+                    }
+                    else
+                    {
+                        ResetClicks();
+                        NotificationManager.s_Instance.EnqueueNotification("Cannot move tile to this position", 1.5f);
+                    }
+                }
                 break;
             case CardTypes.DESTROY_PATH_CARD:
-                ActionFXManager.s_Instance.BreakTile((int)tilePosition.x, (int)tilePosition.y);
-                CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+                if (TileGrid.s_Instance.IsDestroyable((int)tilePosition.x, (int)tilePosition.y))
+                {
+                    ActionFXManager.s_Instance.BreakTile((int)tilePosition.x, (int)tilePosition.y);
+                    CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
+                }
                 break;
         }
     }
@@ -66,13 +83,13 @@ public class TileClickManager : MonoBehaviour
             if (TileGrid.s_Instance.CompleteRoad(TurnManager.s_Instance.CurrentPlayerIndex))
             {
                 Debug.Log("a road for " +TurnManager.s_Instance.CurrentPlayerIndex);
-                TurnManager.s_OnGameEnd(TurnManager.s_Instance.CurrentPlayer);
+                //TurnManager.s_OnGameEnd(TurnManager.s_Instance.CurrentPlayer);
             }
             else
             {
                 Debug.Log("no road for" + TurnManager.s_Instance.CurrentPlayerIndex);
             }
-            CardPositionHolder.s_OnDiscardCard(CardSelector.s_Instance.SelectedCard);
+            CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, true);
         }
         else
         {

@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class CardPositionHolder : MonoBehaviour {
 
-    public delegate void DiscardCardEvent(Card card);
+    public delegate void DiscardCardEvent(Card card, bool endTurn);
     public delegate void DrawCardEvent();
     public static DiscardCardEvent s_OnDiscardCard;
     public static DrawCardEvent s_OnDrawCard;
@@ -43,7 +43,7 @@ public class CardPositionHolder : MonoBehaviour {
         }
 	}
 
-    public void DiscardCard(Card card)
+    public void DiscardCard(Card card, bool endTurn)
     {
         CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
         card.gameObject.SetActive(false);
@@ -53,10 +53,10 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOScale(0.7f, 0.1f);
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-        DrawCard();
+        DrawCard(endTurn);
     }
 
-    private void DrawCard()
+    private void DrawCard(bool endTurn)
     {
         if(s_OnDrawCard != null) s_OnDrawCard();
 
@@ -85,7 +85,9 @@ public class CardPositionHolder : MonoBehaviour {
                 CardToRemove--;
             }
         }
-        drawSequence.AppendCallback(() => TurnManager.s_OnTurnEnd());
+
+        if(endTurn)
+            drawSequence.AppendCallback(() => TurnManager.s_OnTurnEnd());
     }
 
     public void ReturnCardsToScreen()
