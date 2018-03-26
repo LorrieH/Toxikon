@@ -25,7 +25,7 @@ public class ActionFXManager : MonoBehaviour
     [SerializeField] private List<ActionData> m_Actions = new List<ActionData>();
     public List<ActionData> Actions { get { return m_Actions; } set { m_Actions = value; } }
 
-    public static Action s_OnTileAnimationCompleted;
+    public static Action s_OnActionFXCompleted;
 
     private void Awake()
     {
@@ -69,7 +69,8 @@ public class ActionFXManager : MonoBehaviour
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #region Break Tile
@@ -94,39 +95,49 @@ public class ActionFXManager : MonoBehaviour
         TileClickManager.s_Instance.HideIndicator();
         tileBreak.gameObject.transform.position = tilePosition;
         tileBreak.SetAnimation(TileBreakAnimation.States.animation.ToString(), false);
-        tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
-            if(entry.Animation.Name == TileBreakAnimation.States.animation.ToString())
-            {
-            }
-        };
         yield return new WaitForSeconds(.5f); // WAIT FOR EVENT
         TileGrid.s_Instance.DestroyNode((int)tilePosition.x, (int)tilePosition.y);
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #endregion
 
-    public IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
+    public void RotateTile(TileNode tile, Vector2 tilePosition)
+    {
+        StartCoroutine(RotateTileAnimation(tile, tilePosition));
+    }
+
+    private IEnumerator RotateTileAnimation(TileNode tile, Vector2 tilePosition)
     {
         PiranhaAnimation piranha = GetAnimationByType(AnimationType.PIRANHA) as PiranhaAnimation;
+
+        Vector3 startPosition = piranha.transform.position;
 
         piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
         yield return new WaitForSeconds(0.4f);
         piranha.transform.position = tilePosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
-        piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), false);
-        yield return new WaitForSeconds(4.067f);
+        yield return new WaitForSeconds(0.567f);
         piranha.SetAnimation(PiranhaAnimation.States.Spin_Start.ToString(), false);
-        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), false);
+        yield return new WaitForSeconds(0.3f);
+        TileGrid.s_Instance.GetTileNode((int)tilePosition.x, (int)tilePosition.y).TileObject.SetActive(false);
+        yield return new WaitForSeconds(0.267f);
+        piranha.AddAnimation(PiranhaAnimation.States.Spin_Repeatable.ToString(), true);
+        yield return new WaitForSeconds(1.165f);
         piranha.AddAnimation(PiranhaAnimation.States.Spin_End.ToString(), false);
-        yield return new WaitForSeconds(1.3f);
+        TileGrid.s_Instance.GetTileNode((int)tilePosition.x, (int)tilePosition.y).TileObject.SetActive(true);
+        TileGrid.s_Instance.RotateCard((int)tilePosition.x, (int)tilePosition.y);
+        yield return new WaitForSeconds(0.5f);
         piranha.SetAnimation(PiranhaAnimation.States.Submerge.ToString(), false);
         yield return new WaitForSeconds(0.4f);
+        piranha.transform.position = startPosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
         piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
+        TurnManager.s_OnTurnEnd();
     }
 
     public SpineAnimation GetAnimationByType(AnimationType type)

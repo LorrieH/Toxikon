@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Piranha_SkeletonData
+  m_Name: CREATURES_Piranha_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: a3c3fccc94a9cd848a5d1f26bd56884c, type: 2}
@@ -18,5 +18,5 @@ MonoBehaviour:
   fromAnimation: []
   toAnimation: []
   duration: []
-  defaultMix: 0
+  defaultMix: 0.2
   controller: {fileID: 0}

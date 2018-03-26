@@ -51,6 +51,8 @@ public class TileClickManager : MonoBehaviour
                 PlacePath();
                 break;
             case CardTypes.ROTATE_PATH_CARD:
+                ActionFXManager.s_Instance.RotateTile(TileGrid.s_Instance.GetTileNode((int)tilePosition.x, (int)tilePosition.y), tilePosition);
+                CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
                 break;
             case CardTypes.MOVE_PATH_CARD:
                 switch(m_ClickedTilePositions.Count)
@@ -79,6 +81,10 @@ public class TileClickManager : MonoBehaviour
                     ShowIndicator(tilePosition);
                     ActionFXManager.s_Instance.BreakTile((int)tilePosition.x, (int)tilePosition.y);
                     CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
+                }
+                else
+                {
+                    NotificationManager.s_Instance.EnqueueNotification("Cannot destroy this tile", 1.5f);
                 }
                 break;
         }
