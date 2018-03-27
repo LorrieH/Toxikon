@@ -80,7 +80,6 @@ public class TurnManager : MonoBehaviour
         }
         CardPositionHolder.s_Instance.ReturnCardsToScreen();
         s_OnTurnStart();
-        CardSelector.s_Instance.CanSelectCard = true;
     }
 
     private void OnDisable()

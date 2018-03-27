@@ -53,6 +53,7 @@ public class CardPositionHolder : MonoBehaviour {
 
     public void DiscardCard(Card card, bool endTurn)
     {
+        CardSelector.s_Instance.CanSelectCard = false;
         StartCoroutine(DiscardCardAnimated(card, endTurn));
         return;
         CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
@@ -141,6 +142,7 @@ public class CardPositionHolder : MonoBehaviour {
             showHandSequence.Append(cardTransform.DOAnchorPos(card.DefaultPosition,0.25f).SetEase(Ease.OutSine));
             showHandSequence.Join(cardTransform.DORotate(Vector3.zero, 0.25f).SetEase(Ease.OutSine));
         }
+        showHandSequence.OnComplete(() => CardSelector.s_Instance.CanSelectCard = true);
     }
 
     private void OnDisable()
