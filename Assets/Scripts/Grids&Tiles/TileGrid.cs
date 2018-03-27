@@ -397,6 +397,8 @@ public class TileGrid : MonoBehaviour
         {
             NodeRoad = new List<Vector3>();
             CheckedNodes = new List<TileNode>();
+            Debug.Log(start);
+
             m_PlayerStartNodes[start].GetChecked(this, null);
 
             for (int i = 0; i < CheckedNodes.Count; i++)
@@ -409,7 +411,7 @@ public class TileGrid : MonoBehaviour
                 MoveWinningPlayer(start);
                 break;
             }
-            if(start == PlayersManager.s_Instance.Players.Count)
+            if(start == PlayersManager.s_Instance.Players.Count-1)
             {
                 start = 0;
             }
@@ -418,12 +420,4 @@ public class TileGrid : MonoBehaviour
         return RoadCompleted;
     }
     #endregion
-}
-
-public struct Bridges
-{
-    public GameObject bridgeUp;
-    public GameObject bridgeRight;
-    public GameObject bridgeDown;
-    public GameObject bridgeLeft;
 }
