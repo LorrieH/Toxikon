@@ -62,8 +62,8 @@ public class Card : MonoBehaviour
     [SerializeField]protected CardEditor m_CardEditor;
     public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
-    [SerializeField] private SkeletonGraphic m_Shine;
-    [SerializeField] private SkeletonGraphic m_Burn;
+    [SerializeField] private SkeletonGraphic m_CardEffect;
+    [SerializeField] private CanvasGroup m_CanvasGroup;
 
     private int m_IndexInHand;
     private Vector2 m_DefaultPosition;
@@ -101,12 +101,17 @@ public class Card : MonoBehaviour
     public void Shine()
     {
         Debug.Log("Shine Card");
-        m_Shine.AnimationState.SetAnimation(0, "animation", false);
+        m_CardEffect.AnimationState.SetAnimation(0, "CardShine", false);
     }
 
     public void Burn()
     {
         Debug.Log("Burn Card");
-        m_Burn.AnimationState.SetAnimation(0, "animation", false);
+        m_CardEffect.AnimationState.SetAnimation(0, "CardBurn", false);
+    }
+
+    public void SetAlpha(float alpha)
+    {
+        m_CanvasGroup.alpha = alpha;
     }
 }

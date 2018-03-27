@@ -1,0 +1,164 @@
+{
+"skeleton": { "hash": "JzD9r09kbyvgkIjplqYvnSFucwg", "spine": "3.6.52", "width": 304.15, "height": 504.15, "images": "../" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "CardBurn", "parent": "root" },
+	{ "name": "CardShine", "parent": "root", "x": 4.15, "y": 4.15 }
+],
+"slots": [
+	{ "name": "CardShine/CardShine_FX0001", "bone": "CardShine", "attachment": "CardShine/CardShine_FX0027" },
+	{ "name": "CardBurn/CardBurn0001", "bone": "CardBurn", "attachment": "CardBurn/CardBurn0029" }
+],
+"skins": {
+	"default": {
+		"CardBurn/CardBurn0001": {
+			"CardBurn/CardBurn0001": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0002": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0003": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0004": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0005": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0006": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0007": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0008": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0009": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0010": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0011": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0012": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0013": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0014": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0015": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0016": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0017": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0018": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0019": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0020": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0021": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0022": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0023": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0024": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0025": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0026": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0027": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0028": { "width": 300, "height": 500 },
+			"CardBurn/CardBurn0029": { "width": 300, "height": 500 }
+		},
+		"CardShine/CardShine_FX0001": {
+			"CardShine/CardShine_FX0001": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0002": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0003": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0004": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0005": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0006": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0007": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0008": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0009": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0010": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0011": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0012": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0013": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0014": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0015": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0016": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0017": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0018": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0019": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0020": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0021": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0022": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0023": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0024": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0025": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0026": { "width": 300, "height": 500 },
+			"CardShine/CardShine_FX0027": { "width": 300, "height": 500 }
+		}
+	}
+},
+"animations": {
+	"CardBurn": {
+		"slots": {
+			"CardBurn/CardBurn0001": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0333, "name": "CardBurn/CardBurn0001" },
+					{ "time": 0.0667, "name": "CardBurn/CardBurn0002" },
+					{ "time": 0.1, "name": "CardBurn/CardBurn0003" },
+					{ "time": 0.1333, "name": "CardBurn/CardBurn0004" },
+					{ "time": 0.1667, "name": "CardBurn/CardBurn0005" },
+					{ "time": 0.2, "name": "CardBurn/CardBurn0006" },
+					{ "time": 0.2333, "name": "CardBurn/CardBurn0007" },
+					{ "time": 0.2667, "name": "CardBurn/CardBurn0008" },
+					{ "time": 0.3, "name": "CardBurn/CardBurn0009" },
+					{ "time": 0.3333, "name": "CardBurn/CardBurn0010" },
+					{ "time": 0.3667, "name": "CardBurn/CardBurn0011" },
+					{ "time": 0.4, "name": "CardBurn/CardBurn0012" },
+					{ "time": 0.4333, "name": "CardBurn/CardBurn0013" },
+					{ "time": 0.4667, "name": "CardBurn/CardBurn0014" },
+					{ "time": 0.5, "name": "CardBurn/CardBurn0015" },
+					{ "time": 0.5333, "name": "CardBurn/CardBurn0016" },
+					{ "time": 0.5667, "name": "CardBurn/CardBurn0017" },
+					{ "time": 0.6, "name": "CardBurn/CardBurn0018" },
+					{ "time": 0.6333, "name": "CardBurn/CardBurn0019" },
+					{ "time": 0.6667, "name": "CardBurn/CardBurn0020" },
+					{ "time": 0.7, "name": "CardBurn/CardBurn0021" },
+					{ "time": 0.7333, "name": "CardBurn/CardBurn0022" },
+					{ "time": 0.7667, "name": "CardBurn/CardBurn0023" },
+					{ "time": 0.8, "name": "CardBurn/CardBurn0024" },
+					{ "time": 0.8333, "name": "CardBurn/CardBurn0025" },
+					{ "time": 0.8667, "name": "CardBurn/CardBurn0026" },
+					{ "time": 0.9, "name": "CardBurn/CardBurn0027" },
+					{ "time": 0.9333, "name": "CardBurn/CardBurn0028" },
+					{ "time": 0.9667, "name": "CardBurn/CardBurn0029" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"CardShine/CardShine_FX0001": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		}
+	},
+	"CardShine": {
+		"slots": {
+			"CardBurn/CardBurn0001": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"CardShine/CardShine_FX0001": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0333, "name": "CardShine/CardShine_FX0001" },
+					{ "time": 0.0667, "name": "CardShine/CardShine_FX0002" },
+					{ "time": 0.1, "name": "CardShine/CardShine_FX0003" },
+					{ "time": 0.1333, "name": "CardShine/CardShine_FX0004" },
+					{ "time": 0.1667, "name": "CardShine/CardShine_FX0005" },
+					{ "time": 0.2, "name": "CardShine/CardShine_FX0006" },
+					{ "time": 0.2333, "name": "CardShine/CardShine_FX0007" },
+					{ "time": 0.2667, "name": "CardShine/CardShine_FX0008" },
+					{ "time": 0.3, "name": "CardShine/CardShine_FX0009" },
+					{ "time": 0.3333, "name": "CardShine/CardShine_FX0010" },
+					{ "time": 0.3667, "name": "CardShine/CardShine_FX0011" },
+					{ "time": 0.4, "name": "CardShine/CardShine_FX0012" },
+					{ "time": 0.4333, "name": "CardShine/CardShine_FX0013" },
+					{ "time": 0.4667, "name": "CardShine/CardShine_FX0014" },
+					{ "time": 0.5, "name": "CardShine/CardShine_FX0015" },
+					{ "time": 0.5333, "name": "CardShine/CardShine_FX0016" },
+					{ "time": 0.5667, "name": "CardShine/CardShine_FX0017" },
+					{ "time": 0.6, "name": "CardShine/CardShine_FX0018" },
+					{ "time": 0.6333, "name": "CardShine/CardShine_FX0019" },
+					{ "time": 0.6667, "name": "CardShine/CardShine_FX0020" },
+					{ "time": 0.7, "name": "CardShine/CardShine_FX0021" },
+					{ "time": 0.7333, "name": "CardShine/CardShine_FX0022" },
+					{ "time": 0.7667, "name": "CardShine/CardShine_FX0023" },
+					{ "time": 0.8, "name": "CardShine/CardShine_FX0024" },
+					{ "time": 0.8333, "name": "CardShine/CardShine_FX0025" },
+					{ "time": 0.8667, "name": "CardShine/CardShine_FX0026" },
+					{ "time": 0.9, "name": "CardShine/CardShine_FX0027" },
+					{ "time": 0.9333, "name": null }
+				]
+			}
+		}
+	}
+}
+}

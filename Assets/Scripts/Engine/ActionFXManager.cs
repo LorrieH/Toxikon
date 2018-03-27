@@ -69,7 +69,7 @@ public class ActionFXManager : MonoBehaviour
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+        if(s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #region Break Tile
@@ -104,7 +104,7 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         octopus.SetAnimation(OctopusAnimation.States.Up.ToString(), false);
         octopus.AddAnimation(OctopusAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     #endregion
@@ -140,7 +140,7 @@ public class ActionFXManager : MonoBehaviour
         piranha.transform.position = startPosition;
         piranha.SetAnimation(PiranhaAnimation.States.Emerge.ToString(), false);
         piranha.AddAnimation(PiranhaAnimation.States.Idle.ToString(), true);
-        TurnManager.s_OnTurnEnd();
+        if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
     public SpineAnimation GetAnimationByType(AnimationType type)

@@ -53,6 +53,8 @@ public class CardPositionHolder : MonoBehaviour {
 
     public void DiscardCard(Card card, bool endTurn)
     {
+        StartCoroutine(DiscardCardAnimated(card, endTurn));
+        return;
         CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
         card.gameObject.SetActive(false);
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
@@ -63,6 +65,24 @@ public class CardPositionHolder : MonoBehaviour {
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
 
         if(endTurn)
+            DrawCard(endTurn);
+    }
+
+    private IEnumerator DiscardCardAnimated(Card card, bool endTurn)
+    {
+        card.Burn();
+        yield return new WaitForSeconds(0.5f);
+        card.SetAlpha(0);
+        yield return new WaitForSeconds(0.7f);
+        CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
+        TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
+        card.SetCardInfo();
+        card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
+        card.transform.DOScale(0.7f, 0.1f);
+        m_SelectedCard = card;
+        m_IndexInHandPosition = m_SelectedCard.IndexInHand;
+
+        if (endTurn)
             DrawCard(endTurn);
     }
 
@@ -85,7 +105,7 @@ public class CardPositionHolder : MonoBehaviour {
         //Tween sequence
         Sequence drawSequence = DOTween.Sequence();
         drawSequence.AppendInterval(0.5f);
-        drawSequence.AppendCallback(() => m_SelectedCard.gameObject.SetActive(true));
+        drawSequence.AppendCallback(() => m_SelectedCard.SetAlpha(1));
         drawSequence.Append(drawnCard.DOMove(centerOfScreen, 0.5f));
         drawSequence.Join(drawnCard.DOScale(1.5f, 0.5f));
         drawSequence.AppendCallback(() => m_SelectedCard.Shine());
