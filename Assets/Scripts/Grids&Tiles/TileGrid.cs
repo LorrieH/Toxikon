@@ -357,25 +357,25 @@ public class TileGrid : MonoBehaviour
                 m_NodeGrid[x, y].UpdateArt();
             }
             
-            if (UpCard && m_NodeGrid[x, y].AllNeighbours.up.IsFilled)
+            if (UpCard && m_NodeGrid[x, y].AllNeighbours.up.IsFilled && m_NodeGrid[x, y].AllNeighbours.up.Bools.Down)
             {
                 GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ offset + 0.5f, 0), Quaternion.identity, m_NodeGrid[x,y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeUp = Bridge;
                 m_NodeBridges[x, y+1].bridgeDown = Bridge;
             }
-            if (RightCard && m_NodeGrid[x, y].AllNeighbours.right.IsFilled)
+            if (RightCard && m_NodeGrid[x, y].AllNeighbours.right.IsFilled && m_NodeGrid[x, y].AllNeighbours.right.Bools.Left)
             {
                 GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x +0.5f, y+ offset, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeRight = Bridge;
                 m_NodeBridges[x+1, y].bridgeLeft = Bridge;
             }
-            if (DownCard && m_NodeGrid[x, y].AllNeighbours.down.IsFilled)
+            if (DownCard && m_NodeGrid[x, y].AllNeighbours.down.IsFilled && m_NodeGrid[x, y].AllNeighbours.down.Bools.Up)
             {
                 GameObject Bridge = Instantiate(TileArtLib.s_Bridges[0], new Vector3(x , y+ offset - 0.5f, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeDown = Bridge;
                 m_NodeBridges[x, y - 1].bridgeUp = Bridge;
             }
-            if (LeftCard && m_NodeGrid[x, y].AllNeighbours.left.IsFilled)
+            if (LeftCard && m_NodeGrid[x, y].AllNeighbours.left.IsFilled && m_NodeGrid[x, y].AllNeighbours.left.Bools.Right)
             {
                 GameObject Bridge = Instantiate(TileArtLib.s_Bridges[1], new Vector3(x - 0.5f, y+ offset, 0), Quaternion.identity, m_NodeGrid[x, y].TileObject.transform);
                 m_NodeBridges[x, y].bridgeLeft = Bridge;
