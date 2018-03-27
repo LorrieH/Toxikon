@@ -6,6 +6,7 @@ using UnityEngine;
 public class TileGrid : MonoBehaviour
 {
     public GameObject[] Players;
+    public int TheWinningPlayer;
 
     public static TileGrid s_Instance;
 
@@ -391,20 +392,29 @@ public class TileGrid : MonoBehaviour
 
     public bool CompleteRoad(int startPlayer)
     {
-        NodeRoad = new List<Vector3>();
-        CheckedNodes = new List<TileNode>();
-        m_PlayerStartNodes[startPlayer].GetChecked(this, null);
-        
-        for (int i = 0; i < CheckedNodes.Count; i++)
+        int start = startPlayer;
+        for (int j = 0; j < PlayersManager.s_Instance.Players.Count; j++)
         {
-            CheckedNodes[i].IsChecked = false;
-            CheckedNodes[i].UpdateArt();
-        }
-        if(RoadCompleted)
-        {
-            MoveWinningPlayer(startPlayer);
-        }
+            NodeRoad = new List<Vector3>();
+            CheckedNodes = new List<TileNode>();
+            m_PlayerStartNodes[start].GetChecked(this, null);
 
+            for (int i = 0; i < CheckedNodes.Count; i++)
+            {
+                CheckedNodes[i].IsChecked = false;
+                CheckedNodes[i].UpdateArt();
+            }
+            if (RoadCompleted)
+            {
+                MoveWinningPlayer(start);
+                break;
+            }
+            if(start == PlayersManager.s_Instance.Players.Count)
+            {
+                start = 0;
+            }
+            start++;
+        }
         return RoadCompleted;
     }
     #endregion
