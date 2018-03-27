@@ -20,7 +20,7 @@ public class PlayerInfo : MonoBehaviour
     {
         Sequence playerInfoSequence = DOTween.Sequence();
         playerInfoSequence.Append(m_PlayerImage.rectTransform.DOAnchorPosX(15, 0.5f).SetEase(Ease.OutExpo));
-        playerInfoSequence.Join(m_PlayerName.rectTransform.DOAnchorPosX(15, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.025f));
+        playerInfoSequence.Join(m_PlayerName.rectTransform.DOAnchorPosX(25, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.025f));
     }
 
     void RemovePlayerInfo()

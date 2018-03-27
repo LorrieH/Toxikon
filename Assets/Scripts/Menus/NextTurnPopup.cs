@@ -33,7 +33,11 @@ public class NextTurnPopup : Menu
             m_CharacterHands[i].rectTransform.anchoredPosition = new Vector2(m_CharacterHands[i].rectTransform.anchoredPosition.x, 0);
 
         for (int i = 0; i < m_Rays.Length; i++)
+        {
             m_Rays[i].color = new Color(m_Rays[i].color.r, m_Rays[i].color.g, m_Rays[i].color.b, 0);
+            m_Rays[i].transform.localScale = Vector2.one;
+        }
+
 
         m_Info.color = new Color(m_Info.color.r, m_Info.color.g, m_Info.color.b, 0);
         m_Info.rectTransform.anchoredPosition = new Vector2(0, -350);

@@ -24,6 +24,8 @@ public class ClickedOnTile : MonoBehaviour
 
         if (CardSelector.s_Instance.SelectedCard == null) return;
 
+        if (!CardSelector.s_Instance.CanSelectCard) return;
+
         if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));        
     }
 
