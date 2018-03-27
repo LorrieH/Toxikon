@@ -1,0 +1,398 @@
+
+CardEffects.png
+size: 5524,1210
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CardBurn/CardBurn0001
+  rotate: true
+  xy: 2, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0002
+  rotate: true
+  xy: 2, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0003
+  rotate: true
+  xy: 504, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0004
+  rotate: true
+  xy: 504, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0005
+  rotate: true
+  xy: 1006, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0006
+  rotate: true
+  xy: 1508, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0007
+  rotate: true
+  xy: 2010, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0008
+  rotate: true
+  xy: 2512, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0009
+  rotate: true
+  xy: 3014, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0010
+  rotate: true
+  xy: 3516, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0011
+  rotate: true
+  xy: 3516, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0012
+  rotate: true
+  xy: 3516, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0013
+  rotate: true
+  xy: 4018, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0014
+  rotate: true
+  xy: 4520, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0015
+  rotate: true
+  xy: 4520, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0016
+  rotate: true
+  xy: 5022, 908
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0017
+  rotate: true
+  xy: 2, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0018
+  rotate: true
+  xy: 504, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0019
+  rotate: true
+  xy: 1006, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0020
+  rotate: true
+  xy: 1006, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0021
+  rotate: true
+  xy: 1508, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0022
+  rotate: true
+  xy: 1508, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0023
+  rotate: true
+  xy: 1508, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0024
+  rotate: true
+  xy: 2010, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0025
+  rotate: true
+  xy: 2010, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0026
+  rotate: true
+  xy: 2010, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0027
+  rotate: true
+  xy: 2512, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0028
+  rotate: true
+  xy: 2512, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardBurn/CardBurn0029
+  rotate: true
+  xy: 2512, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0001
+  rotate: true
+  xy: 3014, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0002
+  rotate: true
+  xy: 3516, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0003
+  rotate: true
+  xy: 4018, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0004
+  rotate: true
+  xy: 4520, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0005
+  rotate: true
+  xy: 5022, 606
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0006
+  rotate: true
+  xy: 2, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0007
+  rotate: true
+  xy: 504, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0008
+  rotate: true
+  xy: 1006, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0009
+  rotate: true
+  xy: 1508, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0010
+  rotate: true
+  xy: 2010, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0011
+  rotate: true
+  xy: 2512, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0012
+  rotate: true
+  xy: 3014, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0013
+  rotate: true
+  xy: 3516, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0014
+  rotate: true
+  xy: 4018, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0015
+  rotate: true
+  xy: 4520, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0016
+  rotate: true
+  xy: 5022, 304
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0017
+  rotate: true
+  xy: 2, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0018
+  rotate: true
+  xy: 504, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0019
+  rotate: true
+  xy: 1006, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0020
+  rotate: true
+  xy: 1508, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0021
+  rotate: true
+  xy: 2010, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0022
+  rotate: true
+  xy: 2512, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0023
+  rotate: true
+  xy: 3014, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0024
+  rotate: true
+  xy: 3516, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0025
+  rotate: true
+  xy: 4018, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0026
+  rotate: true
+  xy: 4520, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+CardShine/CardShine_FX0027
+  rotate: true
+  xy: 5022, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1

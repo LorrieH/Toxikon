@@ -21,9 +21,6 @@ public class TurnManager : MonoBehaviour
     public delegate void GameEnd(Player playerThatWon);
     public static GameEnd s_OnGameEnd;
 
-
-    [SerializeField] private GameObject m_TurnEndNotification;
-
     private Player m_CurrentPlayer;
     public Player CurrentPlayer { get { return m_CurrentPlayer; } }
 
@@ -66,7 +63,7 @@ public class TurnManager : MonoBehaviour
 
     void FinishTurn()
     {
-        m_TurnEndNotification.SetActive(true);
+        MenuManager.s_Instance.ShowMenu(MenuNames.NEXT_TURN_POPUP);
     }
 
     public void NextTurn()

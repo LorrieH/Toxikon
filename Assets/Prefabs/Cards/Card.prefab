@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222447415491825212}
   - component: {fileID: 114074067638599046}
   m_Layer: 0
-  m_Name: Shine
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 224928657856622742}
   - component: {fileID: 114711619344336750}
   - component: {fileID: 114884526734032002}
+  - component: {fileID: 225172101725694272}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -115,11 +116,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  skeletonDataAsset: {fileID: 11400000, guid: de9c61324a0576947ab03836a6c18619, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 50632a61660e6454a9421f84df8d75c3, type: 2}
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: 
+  startingAnimation: CardShine
   startingLoop: 0
   timeScale: 1
   freeze: 0
@@ -202,8 +203,8 @@ MonoBehaviour:
     Description: {fileID: 114747645012396480}
     CardBackground: {fileID: 114282694028659272}
     CardImage: {fileID: 114447194774586614}
-  m_Shine: {fileID: 114074067638599046}
-  m_Burn: {fileID: 0}
+  m_CardEffect: {fileID: 114074067638599046}
+  m_CanvasGroup: {fileID: 225172101725694272}
 --- !u!114 &114747645012396480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -407,3 +408,14 @@ RectTransform:
   m_AnchoredPosition: {x: 2.8, y: -130.9}
   m_SizeDelta: {x: 179, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225172101725694272
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536309761716152}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

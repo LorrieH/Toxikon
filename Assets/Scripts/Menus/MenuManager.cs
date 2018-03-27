@@ -4,8 +4,10 @@ using UnityEngine;
 
 public struct MenuNames
 {
-    public const string SETTINGS_MENU = "Settings Menu";
-    public const string VICTORY_POPUP = "Victory Popup";
+    public const string SETTINGS_MENU = "SettingsMenu";
+    public const string VICTORY_POPUP = "VictoryPopup";
+    public const string CREDITS_MENU = "CreditsMenu";
+    public const string NEXT_TURN_POPUP = "NextTurnPopup";
 }
 
 public class MenuManager : MonoBehaviour

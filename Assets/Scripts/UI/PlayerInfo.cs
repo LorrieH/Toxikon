@@ -35,7 +35,7 @@ public class PlayerInfo : MonoBehaviour
     {
         PlayerData playerData = TurnManager.s_Instance.CurrentPlayer.PlayerData;
 
-        string spritePath = "Characters/" + playerData.AvatarImageName;
+        string spritePath = "Characters/" + playerData.AvatarImageName + "/" + playerData.AvatarImageName;
 
         m_PlayerName.text = playerData.Name;
         m_PlayerImage.sprite = Resources.Load<Sprite>(spritePath);
