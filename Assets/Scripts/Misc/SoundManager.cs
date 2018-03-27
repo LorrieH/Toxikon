@@ -35,7 +35,6 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         Init();
-        PlaySound(SoundNames.BACKGROUND_MUSIC);
     }
 
     private void Init()
@@ -59,7 +58,8 @@ public class SoundManager : MonoBehaviour
     public void PlaySound(SoundNames soundName)
     {
         SoundData soundData = m_AudioData.Find(x => x.SoundID == soundName);
-        soundData.AudioSource.Play();
+        if(soundData.AudioSource != null)
+            soundData.AudioSource.Play();
     }
 
     public void SetMixerValue(string key, float value)
