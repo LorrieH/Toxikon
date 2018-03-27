@@ -5,17 +5,19 @@ using Spine.Unity;
 
 public static class MovePlayer
 {
-
     public static void Move(Vector3[] path, GameObject player)
     {
         SkeletonAnimation anim = player.GetComponent<SkeletonAnimation>();
         anim.state.SetAnimation(0, "Walk", true);
-        player.transform.DOPath(path, path.Length * 0.2f).OnComplete(()=> setState(anim));
+        player.transform.DOPath(path, path.Length * 0.2f).SetEase(Ease.Linear).OnComplete(()=> setState(anim));
     }
 
     private static void setState(SkeletonAnimation anim)
-    {
-        anim.state.SetAnimation(0, "Win", false);
+    { 
+        anim.state.SetAnimation(0, "Win", false).Complete += delegate
+        {
+            MenuManager.s_Instance.ShowMenu(MenuNames.VICTORY_POPUP);
+        };
     }
 
     public static IEnumerator MoveEnumerator(Vector3[] path, GameObject player)
