@@ -169,7 +169,7 @@ public class TileNode
     /// this returns a true or false according to if the tile will connect to its neighbours
     /// </summary>
     /// <returns></returns>
-    public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft, bool ignoreConnect, bool ignoreAll)
+    public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft, bool ignoreConnect, bool ignoreAll = false)
     {
         bool canConnectUp = false;
         bool canConnectRight = false;

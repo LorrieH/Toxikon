@@ -223,7 +223,7 @@ public class TileGrid : MonoBehaviour
     {
         TileNode MovingNode = m_NodeGrid[xMovingNode, yMovingNode];
 
-        if (!MovingNode.IsEndpoint && !MovingNode.IsStartPoint && m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,false,false) && !m_NodeGrid[xTargetNode, yTargetNode].IsFilled)
+        if (!MovingNode.IsEndpoint && !MovingNode.IsStartPoint && m_NodeGrid[xTargetNode, yTargetNode].CheckPlacement(MovingNode.Bools.Up, MovingNode.Bools.Right, MovingNode.Bools.Down, MovingNode.Bools.Left,true,false) && !m_NodeGrid[xTargetNode, yTargetNode].IsFilled)
         {
             return true;
         }
