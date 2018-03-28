@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -37,6 +36,9 @@ public class SoundManager : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -50,6 +52,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays a sound by name
+    /// </summary>
+    /// <param name="soundName">Name of the sound to play</param>
     public void PlaySound(string soundName)
     {
         PlaySound((SoundNames)System.Enum.Parse(typeof(SoundNames), soundName));
@@ -62,6 +68,11 @@ public class SoundManager : MonoBehaviour
             soundData.AudioSource.Play();
     }
 
+    /// <summary>
+    /// Sets a mixer groups volume
+    /// </summary>
+    /// <param name="key">Key of the volume to set</param>
+    /// <param name="value">Value to set the volume to</param>
     public void SetMixerValue(string key, float value)
     {
         float calculatedValue = CalculateVolume(value, 0, 1, -80, 0);

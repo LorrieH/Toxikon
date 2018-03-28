@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using System;
 
 public class CardPositionHolder : MonoBehaviour {
 
@@ -14,7 +13,7 @@ public class CardPositionHolder : MonoBehaviour {
     public static CardPositionHolder s_Instance;
 
     [SerializeField] private List<Transform> m_CardPositions;
-    [SerializeField]private List<Vector2> m_CardDefaultPositions;
+    [SerializeField] private List<Vector2> m_CardDefaultPositions;
     [SerializeField] private Transform m_CardDeckPosition;
     [SerializeField] private Transform m_ShowDrawnCardPosition;
     [SerializeField] private Transform m_OutOfScreenPosition;
@@ -28,7 +27,6 @@ public class CardPositionHolder : MonoBehaviour {
     {
         s_OnDiscardCard += DiscardCard;
         ActionFXManager.s_OnActionFXCompleted += HandleCards;
-        //TurnManager.s_OnTurnStart += ReturnCardsToScreen;
     }
 
     private void Awake()
@@ -51,22 +49,16 @@ public class CardPositionHolder : MonoBehaviour {
         DrawCard(true);
     }
 
+    /// <summary>
+    /// Moves card to the card deck, then it deactivates the card for a brief time and changes the data on the card
+    /// </summary>
+    /// <param name="card">The card that has to be discarded</param>
+    /// <param name="endTurn">Checks if the turn has ended</param>
     public void DiscardCard(Card card, bool endTurn)
     {
         CardSelector.s_Instance.CanSelectCard = false;
         StartCoroutine(DiscardCardAnimated(card, endTurn));
         return;
-        CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
-        card.gameObject.SetActive(false);
-        TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
-        card.SetCardInfo();
-        card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
-        card.transform.DOScale(0.7f, 0.1f);
-        m_SelectedCard = card;
-        m_IndexInHandPosition = m_SelectedCard.IndexInHand;
-
-        if(endTurn)
-            DrawCard(endTurn);
     }
 
     private IEnumerator DiscardCardAnimated(Card card, bool endTurn)
@@ -87,6 +79,10 @@ public class CardPositionHolder : MonoBehaviour {
             DrawCard(endTurn);
     }
 
+    /// <summary>
+    /// Draws a card and plays the draw animation
+    /// </summary>
+    /// <param name="endTurn"></param>
     private void DrawCard(bool endTurn)
     {
         if(s_OnDrawCard != null) s_OnDrawCard();
@@ -132,6 +128,9 @@ public class CardPositionHolder : MonoBehaviour {
             drawSequence.AppendCallback(() => TurnManager.s_OnTurnEnd());
     }
 
+    /// <summary>
+    /// Returns all cards to the screen
+    /// </summary>
     public void ReturnCardsToScreen()
     {
         Sequence showHandSequence = DOTween.Sequence();

@@ -29,6 +29,9 @@ public class PlayerPanel : MonoBehaviour
         m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
     }
 
+    /// <summary>
+    /// Shows the next sprite in the available sprites list
+    /// </summary>
     public void NextSprite()
     {
         m_ColorNumber++;
@@ -40,6 +43,9 @@ public class PlayerPanel : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Shows the previous sprite in the available sprites list
+    /// </summary>
     public void PreviousSprite()
     {
         m_ColorNumber--;
@@ -50,6 +56,9 @@ public class PlayerPanel : MonoBehaviour
         m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
     }
 
+    /// <summary>
+    /// Confirms the players choices
+    /// </summary>
     public void ConfirmInfo()
     {
         if(m_PlayerName.text != string.Empty)
@@ -67,12 +76,18 @@ public class PlayerPanel : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Remove a chosen sprite from the available sprites list
+    /// </summary>
     private void RemoveAvailableSprite()
     {
         PlayerSelection.s_Instance.AvailableSprites.RemoveAt(m_ColorNumber);
         PlayerSelection.s_Instance.AvailableColors.RemoveAt(m_ColorNumber);
     }
 
+    /// <summary>
+    /// Shows the entered name if it has been changed
+    /// </summary>
     private void OnInputFieldValueChanged()
     {
         if(m_InputField.text != string.Empty)

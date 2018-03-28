@@ -88,6 +88,10 @@ public class NextTurnPopup : Menu
         base.Hide();
     }
 
+    /// <summary>
+    /// Shows who is up next
+    /// </summary>
+    /// <param name="nextPlayer">The next </param>
     private void ShowNextPlayer(PlayerData nextPlayer)
     {
         m_CharacterBody.sprite = Resources.Load<Sprite>("Characters/" + nextPlayer.AvatarImageName + "/" + "Chara");

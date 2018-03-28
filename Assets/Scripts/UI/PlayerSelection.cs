@@ -35,6 +35,9 @@ public class PlayerSelection : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -43,6 +46,11 @@ public class PlayerSelection : MonoBehaviour
             Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Creates gameobjects and attaches the "Player" behaviour to them.
+    /// Then they get added to the player manager's player list
+    /// </summary>
+    /// <param name="amountOfPlayers"></param>
     public void AddPlayers(int amountOfPlayers)
     {
         for (int i = 0; i < amountOfPlayers; i++)
@@ -56,22 +64,12 @@ public class PlayerSelection : MonoBehaviour
 
             PlayersManager.s_Instance.AddPlayer(player);
         }
-
-        ResetReadyPlayerCount();
         m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
     }
 
-    private void ResetReadyPlayerCount()
-    {
-        m_PlayersReady = 0;
-    }
-
-    private bool PlayersReady()
-    {
-        if (m_PlayersReady == PlayersManager.s_Instance.Players.Count -1){ return true; }
-        else { return false; }
-    }
-
+    /// <summary>
+    /// Checks the amount of ready players
+    /// </summary>
     public void ChangeAmountOfChecks()
     {
         m_PlayersReady++;
@@ -88,12 +86,18 @@ public class PlayerSelection : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts the game
+    /// </summary>
     public void OnClickStartGame()
     {
         UpdatePlayerDataFromPanels();
         Sceneloader.s_Instance.LoadScene("GameScene");
     }
 
+    /// <summary>
+    /// Transfers the data of created players to players in the PlayerManager
+    /// </summary>
     private void UpdatePlayerDataFromPanels()
     {
         for (int i = 0; i < PlayersManager.s_Instance.Players.Count; i++)

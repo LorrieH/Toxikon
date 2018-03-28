@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
         TurnManager.s_OnFirstTurnStart -= GetStartingHand;
     }
 
+    /// <summary>
+    /// Gives the player a hand of cards
+    /// </summary>
     private void GetStartingHand()
     {
         m_PlayerData.Cards = CardManager.s_Instance.GetRandomHand();

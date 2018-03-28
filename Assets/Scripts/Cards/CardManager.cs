@@ -6,23 +6,20 @@ using System;
 
 public class CardManager : MonoBehaviour
 {
-    public static CardManager s_Instance;
-
+    public  static CardManager s_Instance;
     private readonly int m_MaxCardsInHand = 5;
-    public int MaxCardsInHand{ get { return m_MaxCardsInHand; } }
+    public  int MaxCardsInHand{ get { return m_MaxCardsInHand; } }
     private List<CardData> m_CardDatas = new List<CardData>();
-    
-
-    public List<CardData> CardDatas
-    {
-        get { return m_CardDatas; }
-    }
+    public List<CardData> CardDatas { get { return m_CardDatas; } }
 
     private void Awake()
     {
         Init();
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -39,6 +36,10 @@ public class CardManager : MonoBehaviour
         ShuffleCards();
     }
 
+    /// <summary>
+    /// Gets all the cards from the card config script
+    /// </summary>
+    /// <returns></returns>
     private List<CardData> GetAllCardsFromConfig()
     {
         List<CardData> cards = new List<CardData>();
@@ -48,28 +49,27 @@ public class CardManager : MonoBehaviour
         return cards;
     }
 
+    /// <summary>
+    /// Shuffles the cards
+    /// </summary>
     private void ShuffleCards()
     {
         m_CardDatas.OrderBy(a => Guid.NewGuid()).ToList();
     }
 
-    public CardData GetRandomPathCard()
-    {
-        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_PathCards.Count);
-        return CardConfig.s_PathCards[randomIndex];
-    }
-
-    public CardData GetRandomActionCard()
-    {
-        int randomIndex = UnityEngine.Random.Range(0, CardConfig.s_ActionCards.Count);
-        return CardConfig.s_ActionCards[randomIndex];
-    }
-
+    /// <summary>
+    /// Returns a random card from the card config
+    /// </summary>
+    /// <returns></returns>
     public CardData GetRandomCard()
     {
         return m_CardDatas[GetRandomCardIndex()];
     }
 
+    /// <summary>
+    /// Returns a random hand of cards
+    /// </summary>
+    /// <returns></returns>
     public List<CardData> GetRandomHand()
     {
         List<CardData> tempCardData = new List<CardData>();
@@ -80,6 +80,10 @@ public class CardManager : MonoBehaviour
         return tempCardData;
     }
 
+    /// <summary>
+    /// Returns a random number between 0 and the max amount of card datas
+    /// </summary>
+    /// <returns></returns>
     public int GetRandomCardIndex()
     {
         return UnityEngine.Random.Range(0, m_CardDatas.Count);

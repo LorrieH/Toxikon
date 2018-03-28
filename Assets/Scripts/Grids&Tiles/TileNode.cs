@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TileNode
 {
@@ -166,8 +164,14 @@ public class TileNode
 
     #region return functions
     /// <summary>
-    /// this returns a true or false according to if the tile will connect to its neighbours
+    /// This returns true or false according to if the tile will connect to its neighbours
     /// </summary>
+    /// <param name="CardUp">Checks if there is a opening up</param>
+    /// <param name="CardRight">Checks if there is a opening right</param>
+    /// <param name="CardDown">Checks if there is a opening down</param>
+    /// <param name="CardLeft">Checks if there is a opening left</param>
+    /// <param name="ignoreConnect">Checks if tile can connect to neighbours</param>
+    /// <param name="ignoreAll">Lets the tile ignore all rules</param>
     /// <returns></returns>
     public bool CheckPlacement(bool CardUp, bool CardRight, bool CardDown, bool CardLeft, bool ignoreConnect, bool ignoreAll = false)
     {
