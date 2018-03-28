@@ -67,6 +67,9 @@ public class PlayerSelection : MonoBehaviour
         m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Checks the amount of ready players
+    /// </summary>
     public void ChangeAmountOfChecks()
     {
         m_PlayersReady++;
