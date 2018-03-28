@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public struct MenuNames
@@ -55,6 +54,10 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Shows a menu, component has to inherit from Menu
+    /// </summary>
+    /// <param name="menu">The menu to open</param>
     public void ShowMenu(Menu menu)
     {
         if (IsAnyMenuOpen)

@@ -6,21 +6,16 @@ using DG.Tweening;
 
 public class CardSelector : MonoBehaviour
 {
-
+    [SerializeField] private Transform m_SelectedCardHolder;
+    [Space(20f)] 
+    [Header("Cards")]
+    [SerializeField] private List<Card> m_PlayerHandCards = new List<Card>();
     public delegate void ToggleCardSelectEvent(Card selectedCard, int cardInHandIndex);
     public static ToggleCardSelectEvent s_OnToggleCardSelect;
 
     public static Action s_OnSelectCard;
 
     public static CardSelector s_Instance;
-
-    [SerializeField] private Transform m_SelectedCardHolder;
-
-    [Space(20f)]
-    [Header("Cards")]
-    [SerializeField]
-    private List<Card> m_PlayerHandCards = new List<Card>();
-
     private Card m_SelectedCard;
     private bool m_CanSelectCard = true;
 
@@ -100,7 +95,7 @@ public class CardSelector : MonoBehaviour
         }
     }
 
-    IEnumerator CardSelectDelay(float countDown)
+    private IEnumerator CardSelectDelay(float countDown)
     {
         m_CanSelectCard = false;
         yield return new WaitForSeconds(countDown);

@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 public class CardConfig
 {
     public static List<CardData> s_PathCards = new List<CardData>
     {
+        // List of all the path cards
         new CardData(CardTypes.PATH_CARD, "",CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.CROSSROAD), new PathCardData(true,true,true,true,true)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.STRAIGHT_HORIZONTAL), new PathCardData(false, false, true, true, true)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.STRAIGHT_VERTICAL), new PathCardData(true, true, false, false, true)),
@@ -31,10 +30,9 @@ public class CardConfig
 
     public static List<CardData> s_ActionCards = new List<CardData>
     {
+        // List of all the action cards
         new CardData(CardTypes.DESTROY_PATH_CARD, "Destroy", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.DESTROY_PATH), null),
         new CardData(CardTypes.MOVE_PATH_CARD, "Move", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.MOVE_PATH), null),
         new CardData(CardTypes.ROTATE_PATH_CARD, "Rotate", CardImageLoader.s_CardSprite(CardStrings.ACTION, CardStrings.ROTATE_PATH), null)
-        //new CardData(CardTypes.SWAP_PATH_CARD, "Swap", "Swap the position of 2 paths that are next to each other", null, null, null),
-        //new CardData(CardTypes.ROADBLOCK_CARD, "Roadblock", "Block off a single path", null, null, null)
     };
 }

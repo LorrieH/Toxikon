@@ -57,18 +57,17 @@ public class CardData
 
 public class Card : MonoBehaviour
 {
-    protected CardData m_CardData;
-    public CardData CardData { get { return m_CardData; } set { m_CardData = value; } }
-    [SerializeField]protected CardEditor m_CardEditor;
-    public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
-
+    [SerializeField] protected CardEditor m_CardEditor;
     [SerializeField] private SkeletonGraphic m_CardEffect;
     [SerializeField] private CanvasGroup m_CanvasGroup;
 
+    protected CardData m_CardData;
+    public CardData CardData { get { return m_CardData; } set { m_CardData = value; } }
     private int m_IndexInHand;
-    private Vector2 m_DefaultPosition;
     public int IndexInHand { get { return m_IndexInHand; } }
-    public Vector2 DefaultPosition { get { return m_DefaultPosition; }}
+    private Vector2 m_DefaultPosition;    
+    public Vector2 DefaultPosition { get { return m_DefaultPosition; }}    
+    public CardEditor CardEditor { get { return m_CardEditor; } set { m_CardEditor = value; } }
 
     private void Awake()
     {
@@ -77,6 +76,9 @@ public class Card : MonoBehaviour
         m_DefaultPosition = card.anchoredPosition; // Sets default position in UI
     }
 
+    /// <summary>
+    /// Sets the cards information (Description and image)
+    /// </summary>
     public void SetCardInfo()
     {
         //Shows the cards info
@@ -93,23 +95,36 @@ public class Card : MonoBehaviour
         m_CardEditor.CardBackground.color = TurnManager.s_Instance.CurrentPlayer.PlayerData.PlayerColor;
     }
 
+    /// <summary>
+    /// Toggles the select state of this card
+    /// </summary>
     public void ToggleCardSelect()
     {
         CardSelector.s_OnToggleCardSelect(this,m_IndexInHand);
     }
 
+    /// <summary>
+    /// Shows a shine animation on this card
+    /// </summary>
     public void Shine()
     {
         Debug.Log("Shine Card");
         m_CardEffect.AnimationState.SetAnimation(0, "CardShine", false);
     }
 
+    /// <summary>
+    /// Shows a burn animation for this card
+    /// </summary>
     public void Burn()
     {
         Debug.Log("Burn Card");
         m_CardEffect.AnimationState.SetAnimation(0, "CardBurn", false);
     }
 
+    /// <summary>
+    /// Changes this cards alpha value
+    /// </summary>
+    /// <param name="alpha"></param>
     public void SetAlpha(float alpha)
     {
         m_CanvasGroup.alpha = alpha;

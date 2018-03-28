@@ -51,6 +51,9 @@ public class TileGrid : MonoBehaviour
     #endregion
 
     #region void functions
+    /// <summary>
+    /// Creates a new grid
+    /// </summary>
     public void InstantiateNewGrid()
     {
         m_PlayerStartNodes = new TileNode[PlayersManager.s_Instance.Players.Count];
@@ -147,6 +150,9 @@ public class TileGrid : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the nodes openings & closed directions
+    /// </summary>
     public void SetAccesableNeighboursOfNodes()
     {
         if (m_NodeGrid == null)
@@ -168,6 +174,9 @@ public class TileGrid : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks the nodes nieghbours
+    /// </summary>
     public void SetNeighboursOfNodes()
     {
         if (m_NodeGrid == null)
@@ -196,13 +205,21 @@ public class TileGrid : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Moves the winning player to the objective
+    /// </summary>
+    /// <param name="winningPlayer"></param>
     public void MoveWinningPlayer(int winningPlayer)
     {
         NodeRoad.Reverse();
         MovePlayer.Move(NodeRoad.ToArray(), Players[winningPlayer]);
-        //StartCoroutine(MovePlayer.MoveEnumerator(NodeRoad.ToArray(), Players[winningPlayer]));
     }
 
+    /// <summary>
+    /// Rotates a card/node in the grid
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
     public void RotateCard(int x, int y)
     {
         TileNode RotatingNode = m_NodeGrid[x, y];
