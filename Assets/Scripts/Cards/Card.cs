@@ -108,7 +108,6 @@ public class Card : MonoBehaviour
     /// </summary>
     public void Shine()
     {
-        Debug.Log("Shine Card");
         m_CardEffect.AnimationState.SetAnimation(0, "CardShine", false);
     }
 
@@ -117,7 +116,6 @@ public class Card : MonoBehaviour
     /// </summary>
     public void Burn()
     {
-        Debug.Log("Burn Card");
         m_CardEffect.AnimationState.SetAnimation(0, "CardBurn", false);
     }
 

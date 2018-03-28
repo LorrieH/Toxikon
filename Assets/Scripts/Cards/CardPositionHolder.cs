@@ -64,16 +64,23 @@ public class CardPositionHolder : MonoBehaviour {
     private IEnumerator DiscardCardAnimated(Card card, bool endTurn)
     {
         card.Burn();
+        
         yield return new WaitForSeconds(0.5f);
         card.SetAlpha(0);
         yield return new WaitForSeconds(0.7f);
-        CardSelector.s_Instance.SelectedCard.CardData = CardManager.s_Instance.GetRandomCard();
-        TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
-        card.SetCardInfo();
-        card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
-        card.transform.DOScale(0.7f, 0.1f);
+        card.CardData = CardManager.s_Instance.GetRandomCard();
         m_SelectedCard = card;
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
+        TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = card.CardData;
+        card.SetCardInfo();
+        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
+        {
+            CardSelector.s_Instance.PlayerHandCards[i].SetCardInfo();
+            Debug.Log(CardSelector.s_Instance.PlayerHandCards[i].CardData.CardSprite.name);
+        }
+        card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
+        card.transform.DOScale(0.7f, 0.1f);
+        
 
         if (endTurn)
             DrawCard(endTurn);
@@ -96,7 +103,6 @@ public class CardPositionHolder : MonoBehaviour {
         Vector3 rotationVector = new Vector3(0, 0, 20);
 
         CardSelector.s_Instance.CanSelectCard = false;
-        TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = CardSelector.s_Instance.SelectedCard.CardData;
         CardSelector.s_Instance.SelectedCard = null;
 
         //Tween sequence

@@ -414,7 +414,6 @@ public class TileGrid : MonoBehaviour
         {
             NodeRoad = new List<Vector3>();
             CheckedNodes = new List<TileNode>();
-            Debug.Log(start);
 
             m_PlayerStartNodes[start].GetChecked(this, null);
 

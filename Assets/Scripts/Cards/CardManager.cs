@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
@@ -104,13 +103,4 @@ public class CardManager : MonoBehaviour
 
         return tempCardData;
     }
-
-    /// <summary>
-    /// Returns a random number between 0 and the max amount of card datas
-    /// </summary>
-    /// <returns></returns>
-    /*public int GetRandomCardIndex()
-    {
-        return UnityEngine.Random.Range(0, m_CardDatas.Count);
-    }*/
 }
