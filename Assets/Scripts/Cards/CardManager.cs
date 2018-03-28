@@ -45,6 +45,8 @@ public class CardManager : MonoBehaviour
         List<CardData> cards = new List<CardData>();
         cards.AddRange(CardConfig.s_PathCards);
         cards.AddRange(CardConfig.s_ActionCards);
+        cards.AddRange(CardConfig.s_BlockCards);
+
 
         return cards;
     }
@@ -58,12 +60,35 @@ public class CardManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Return a random card from the list given as parameter
+    /// </summary>
+    /// <param name="cardList">The list that has to return a card</param>
+    /// <returns></returns>
+    public CardData GetRandomCardFromList(List<CardData> cardList)
+    {
+        int randomCard = UnityEngine.Random.Range(0, cardList.Count);
+        return cardList[randomCard];
+    }
+
+    /// <summary>
     /// Returns a random card from the card config
     /// </summary>
     /// <returns></returns>
     public CardData GetRandomCard()
     {
-        return m_CardDatas[GetRandomCardIndex()];
+        int chanceCalculator = UnityEngine.Random.Range(0, 101);
+        if (chanceCalculator < 50)
+        {
+            return GetRandomCardFromList(CardConfig.s_PathCards);
+        }
+        else if (chanceCalculator >= 50 && chanceCalculator < 75)
+        {
+            return GetRandomCardFromList(CardConfig.s_BlockCards);
+        }
+        else
+        {
+            return GetRandomCardFromList(CardConfig.s_ActionCards);
+        }
     }
 
     /// <summary>
@@ -84,8 +109,8 @@ public class CardManager : MonoBehaviour
     /// Returns a random number between 0 and the max amount of card datas
     /// </summary>
     /// <returns></returns>
-    public int GetRandomCardIndex()
+    /*public int GetRandomCardIndex()
     {
         return UnityEngine.Random.Range(0, m_CardDatas.Count);
-    }
+    }*/
 }

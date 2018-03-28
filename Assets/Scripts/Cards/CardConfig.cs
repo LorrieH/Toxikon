@@ -15,7 +15,11 @@ public class CardConfig
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_UP), new PathCardData(true,false,true,true,true)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_DOWN), new PathCardData(false,true,true,true,true)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_LEFT), new PathCardData(true,true,true,false,true)),
-        new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_RIGHT), new PathCardData(true,true,false,true,true)),
+        new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.T_SPLIT_RIGHT), new PathCardData(true,true,false,true,true))     
+    };
+
+    public static List<CardData> s_BlockCards = new List<CardData>
+    {
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_UP), new PathCardData(true,false,false,false,false)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_DOWN), new PathCardData(false,true,false,false,false)),
         new CardData(CardTypes.PATH_CARD, "", CardImageLoader.s_CardSprite(CardStrings.PATH,CardStrings.BLOCK_LEFT), new PathCardData(false,false,true,false,false)),
