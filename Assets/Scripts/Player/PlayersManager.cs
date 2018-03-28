@@ -20,6 +20,10 @@ public class PlayersManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Adds a player to the player list
+    /// </summary>
+    /// <param name="player">Player to add</param>
     public void AddPlayer(Player player)
     {
         m_Players.Add(player);

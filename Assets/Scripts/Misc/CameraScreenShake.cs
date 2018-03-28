@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 
 public class CameraScreenShake : MonoBehaviour
@@ -12,6 +10,9 @@ public class CameraScreenShake : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -19,6 +20,11 @@ public class CameraScreenShake : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
+    /// <summary>
+    /// Creates a screen shake effect
+    /// </summary>
+    /// <param name="duration">Duration of the shake, default is set to 1 second</param>
     public void ShakeScreen(float duration = 1f)
     {
         Camera.main.transform.DOShakeRotation(duration, 0.2f, 25);

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,6 +42,9 @@ public class NotificationManager : MonoBehaviour
         TurnManager.s_OnTurnEnd -= ClearQueue;
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -54,6 +56,11 @@ public class NotificationManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Places a notification in the notification queue
+    /// </summary>
+    /// <param name="text">Notification text to show</param>
+    /// <param name="duration">The duration of how long the notification is shown</param>
     public void EnqueueNotification(string text, float duration)
     {
         if (NotificationAlreadyExists(text)) return;
@@ -62,6 +69,12 @@ public class NotificationManager : MonoBehaviour
         StartQueue();
     }
 
+    /// <summary>
+    /// Places a notification in the notification queue and gives the text a color
+    /// </summary>
+    /// <param name="text">Notification text to show</param>
+    /// <param name="duration">The duration of how long the notification is shown</param>
+    /// <param name="color">Color of the notification text</param>
     public void EnqueueNotification(string text, float duration, Color color)
     {
         if (NotificationAlreadyExists(text)) return;
@@ -70,6 +83,9 @@ public class NotificationManager : MonoBehaviour
         StartQueue();
     }
 
+    /// <summary>
+    /// Starts playing the notifications in the queue
+    /// </summary>
     private void StartQueue()
     {
         if (!m_NotificationQueueActive)
@@ -77,12 +93,20 @@ public class NotificationManager : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Checks if the notification already exists in the queue
+    /// </summary>
+    /// <param name="text">Notification to check</param>
+    /// <returns></returns>
     private bool NotificationAlreadyExists(string text)
     {
         return m_NotificationQueue.Contains(m_NotificationQueue.Find(x => x.Text == text));
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator NotificationQueue()
     {
         if (m_NotificationQueueActive) yield break;
@@ -106,6 +130,9 @@ public class NotificationManager : MonoBehaviour
         ClearQueue();
     }
 
+    /// <summary>
+    /// Plays the animation for the notification queue
+    /// </summary>
     private void ShowAnimation()
     {
         m_ShowingNotification = true;
@@ -120,6 +147,9 @@ public class NotificationManager : MonoBehaviour
         showSequence.Join(m_NotificationText.DOFade(1, 0.2f).SetEase(Ease.OutQuad));
     }
 
+    /// <summary>
+    /// Stops and hides the animation for the notification queue
+    /// </summary>
     private void HideAnimation()
     {
         //Just to be sure
@@ -133,7 +163,9 @@ public class NotificationManager : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Removes all the messages from the notification queue
+    /// </summary>
     public void ClearQueue()
     {
         if (m_ShowingNotification)

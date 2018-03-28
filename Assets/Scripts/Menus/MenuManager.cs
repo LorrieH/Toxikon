@@ -45,6 +45,10 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Shows a menu determined by the string passed as parameter
+    /// </summary>
+    /// <param name="menuName"></param>
     public void ShowMenu(string menuName)
     {
         for (int i = 0; i < m_Menus.Count; i++)

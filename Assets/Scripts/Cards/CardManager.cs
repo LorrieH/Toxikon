@@ -17,6 +17,9 @@ public class CardManager : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// Creates a instance of this object, if there is an instance already delete the new one
+    /// </summary>
     private void Init()
     {
         if (s_Instance == null)
@@ -46,6 +49,9 @@ public class CardManager : MonoBehaviour
         return cards;
     }
 
+    /// <summary>
+    /// Shuffles the cards
+    /// </summary>
     private void ShuffleCards()
     {
         m_CardDatas.OrderBy(a => Guid.NewGuid()).ToList();
@@ -74,6 +80,10 @@ public class CardManager : MonoBehaviour
         return tempCardData;
     }
 
+    /// <summary>
+    /// Returns a random number between 0 and the max amount of card datas
+    /// </summary>
+    /// <returns></returns>
     public int GetRandomCardIndex()
     {
         return UnityEngine.Random.Range(0, m_CardDatas.Count);

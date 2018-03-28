@@ -79,6 +79,10 @@ public class CardPositionHolder : MonoBehaviour {
             DrawCard(endTurn);
     }
 
+    /// <summary>
+    /// Draws a card and plays the draw animation
+    /// </summary>
+    /// <param name="endTurn"></param>
     private void DrawCard(bool endTurn)
     {
         if(s_OnDrawCard != null) s_OnDrawCard();

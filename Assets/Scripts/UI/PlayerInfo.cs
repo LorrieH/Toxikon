@@ -16,6 +16,9 @@ public class PlayerInfo : MonoBehaviour
         TurnManager.s_OnTurnStart += SetPlayerInfo;
     }
 
+    /// <summary>
+    /// Slides player info into the screen
+    /// </summary>
     void MovePlayerInfo()
     {
         Sequence playerInfoSequence = DOTween.Sequence();
@@ -23,14 +26,21 @@ public class PlayerInfo : MonoBehaviour
         playerInfoSequence.Join(m_PlayerName.rectTransform.DOAnchorPosX(25, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.025f));
     }
 
+    /// <summary>
+    /// Slides player info out of the scene
+    /// </summary>
     void RemovePlayerInfo()
     {
+
         Sequence playerInfoSequence = DOTween.Sequence();
         playerInfoSequence.Append(m_PlayerName.rectTransform.DOAnchorPosX(-400, 0.5f).SetEase(Ease.InBack));
         playerInfoSequence.Join(m_PlayerImage.rectTransform.DOAnchorPosX(-400, 0.5f).SetEase(Ease.InBack).SetDelay(0.025f));
 
     }
     
+    /// <summary>
+    /// sets the players info
+    /// </summary>
     void SetPlayerInfo()
     {
         PlayerData playerData = TurnManager.s_Instance.CurrentPlayer.PlayerData;
