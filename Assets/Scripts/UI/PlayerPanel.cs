@@ -14,6 +14,7 @@ public class PlayerPanel : MonoBehaviour
 
     private PlayerData m_PlayerData;
     private int m_ColorNumber;
+    private string m_PlayerSkin;
 
     public PlayerData PlayerData
     {
@@ -27,6 +28,7 @@ public class PlayerPanel : MonoBehaviour
         m_ColorNumber = 0;
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
         m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
+        m_PlayerSkin = PlayerSelection.s_Instance.AvailableSkins[m_ColorNumber];
     }
 
     /// <summary>
@@ -40,6 +42,7 @@ public class PlayerPanel : MonoBehaviour
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
         m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
+        m_PlayerSkin = PlayerSelection.s_Instance.AvailableSkins[m_ColorNumber];
 
     }
 
@@ -54,6 +57,7 @@ public class PlayerPanel : MonoBehaviour
 
         m_PlayerAvatar.sprite = PlayerSelection.s_Instance.AvailableSprites[m_ColorNumber];
         m_PlayerColor = PlayerSelection.s_Instance.AvailableColors[m_ColorNumber];
+        m_PlayerSkin = PlayerSelection.s_Instance.AvailableSkins[m_ColorNumber];
     }
 
     /// <summary>
@@ -66,6 +70,7 @@ public class PlayerPanel : MonoBehaviour
             m_PlayerData.Name = m_PlayerName.text;
             m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
             m_PlayerData.PlayerColor = m_PlayerColor;
+            m_PlayerData.SkinName = m_PlayerSkin;
             RemoveAvailableSprite();
             PlayerSelection.s_Instance.ChangeAmountOfChecks();
         }
@@ -83,6 +88,7 @@ public class PlayerPanel : MonoBehaviour
     {
         PlayerSelection.s_Instance.AvailableSprites.RemoveAt(m_ColorNumber);
         PlayerSelection.s_Instance.AvailableColors.RemoveAt(m_ColorNumber);
+        PlayerSelection.s_Instance.AvailableSkins.RemoveAt(m_ColorNumber);
     }
 
     /// <summary>

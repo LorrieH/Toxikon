@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Spine.Unity;
 
 [System.Serializable]
 public struct PlayerData
@@ -7,6 +8,7 @@ public struct PlayerData
     public string Name;
     public string AvatarImageName;
     public Color PlayerColor;
+    public string SkinName;
     public List<CardData> Cards;
 }
 

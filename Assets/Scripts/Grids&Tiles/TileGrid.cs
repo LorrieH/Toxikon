@@ -7,6 +7,7 @@ public class TileGrid : MonoBehaviour
 {
     public GameObject[] Players;
     public int TheWinningPlayer;
+    public Player WinningPlayerData;
 
     public static TileGrid s_Instance;
 
@@ -105,6 +106,7 @@ public class TileGrid : MonoBehaviour
                     newNode.IsFilled = true;
                     newNode.IsStartPoint = true;
                     m_PlayerStartNodes[1] = newNode;
+
                 }
                 if (i == 1 && j == 1 && PlayersManager.s_Instance.Players.Count >= 3)
                 {
@@ -212,6 +214,7 @@ public class TileGrid : MonoBehaviour
     public void MoveWinningPlayer(int winningPlayer)
     {
         NodeRoad.Reverse();
+        WinningPlayerData = PlayersManager.s_Instance.Players[winningPlayer];
         MovePlayer.Move(NodeRoad.ToArray(), Players[winningPlayer]);
     }
 

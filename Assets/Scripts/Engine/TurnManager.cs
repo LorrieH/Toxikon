@@ -68,18 +68,21 @@ public class TurnManager : MonoBehaviour
 
     public void NextTurn()
     {
-        if (m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
+        if (TileGrid.s_Instance.WinningPlayerData == null) // Checks if there is no winner yet, if there is no winner then give the next player their turn
         {
-            m_CurrentPlayerIndex = 0;
-            m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
+            if (m_CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
+            {
+                m_CurrentPlayerIndex = 0;
+                m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
+            }
+            else
+            {
+                m_CurrentPlayerIndex++;
+                m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
+            }
+            CardPositionHolder.s_Instance.ReturnCardsToScreen();
+            s_OnTurnStart();
         }
-        else
-        {
-            m_CurrentPlayerIndex++;
-            m_CurrentPlayer = PlayersManager.s_Instance.Players[m_CurrentPlayerIndex];
-        }
-        CardPositionHolder.s_Instance.ReturnCardsToScreen();
-        s_OnTurnStart();
     }
 
     private void OnDisable()

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
+using Spine.Unity;
 
 public class PlayerSelection : MonoBehaviour
 {
@@ -16,6 +15,8 @@ public class PlayerSelection : MonoBehaviour
 
     [SerializeField]private List<Sprite> m_AvailableSprites = new List<Sprite>();
     [SerializeField] private List<Color> m_AvailableColors = new List<Color>();
+    [SerializeField] private List<string> m_AvailableSkins = new List<string>();
+
     public List<Sprite> AvailableSprites
     {
         get { return m_AvailableSprites; }
@@ -26,6 +27,12 @@ public class PlayerSelection : MonoBehaviour
     {
         get { return m_AvailableColors; }
         set { m_AvailableColors = value; }
+    }
+
+    public List<string> AvailableSkins
+    {
+        get { return m_AvailableSkins; }
+        set { m_AvailableSkins = value; }
     }
 
     private int m_PlayersReady;

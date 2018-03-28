@@ -22,6 +22,7 @@ public static class MovePlayer
         anim.state.SetAnimation(0, "Win", false).Complete += delegate
         {
             MenuManager.s_Instance.ShowMenu(MenuNames.VICTORY_POPUP);
+            TileGrid.s_Instance.WinningPlayerData = null;
         };
     }
 

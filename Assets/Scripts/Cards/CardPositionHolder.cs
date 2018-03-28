@@ -69,20 +69,15 @@ public class CardPositionHolder : MonoBehaviour {
         card.SetAlpha(0);
         yield return new WaitForSeconds(0.7f);
         card.CardData = CardManager.s_Instance.GetRandomCard();
-        m_SelectedCard = card;
+        m_SelectedCard = card; // sets the card object
         m_IndexInHandPosition = m_SelectedCard.IndexInHand;
         TurnManager.s_Instance.CurrentPlayer.PlayerData.Cards[m_IndexInHandPosition] = card.CardData;
         card.SetCardInfo();
-        for (int i = 0; i < CardSelector.s_Instance.PlayerHandCards.Count; i++)
-        {
-            CardSelector.s_Instance.PlayerHandCards[i].SetCardInfo();
-            Debug.Log(CardSelector.s_Instance.PlayerHandCards[i].CardData.CardSprite.name);
-        }
         card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
         card.transform.DOScale(0.7f, 0.1f);
         
 
-        if (endTurn)
+        if (endTurn && TileGrid.s_Instance.WinningPlayerData == null) // Checks if there is no winner yet
             DrawCard(endTurn);
     }
 
