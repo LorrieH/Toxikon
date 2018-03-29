@@ -10,10 +10,10 @@ public class Sceneloader : MonoBehaviour
         if (s_Instance == null)
         {
             s_Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
-        else
-            Destroy(gameObject);
+        //else
+            //Destroy(gameObject);
     }
 
     /// <summary>

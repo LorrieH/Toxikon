@@ -69,7 +69,11 @@ public class TileClickManager : MonoBehaviour
                         if (TileGrid.s_Instance.CanMoveNode((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y, (int)m_ClickedTilePositions[1].x, (int)m_ClickedTilePositions[1].y))
                         {
                             ActionFXManager.s_Instance.MoveTile((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y, (int)m_ClickedTilePositions[1].x, (int)m_ClickedTilePositions[1].y);
-                            CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
+                            
+                            if (TileGrid.s_Instance.WinningPlayerData == null)
+                            {
+                                CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, false);
+                            }
                         }
                         else
                         {
@@ -102,12 +106,11 @@ public class TileClickManager : MonoBehaviour
         {
             if (TileGrid.s_Instance.CompleteRoad(TurnManager.s_Instance.CurrentPlayerIndex))
             {
-                Debug.Log("a road for " +TurnManager.s_Instance.CurrentPlayerIndex);
                 //TurnManager.s_OnGameEnd(TurnManager.s_Instance.CurrentPlayer);
             }
             else
             {
-                Debug.Log("no road for" + TurnManager.s_Instance.CurrentPlayerIndex);
+
             }
             CardPositionHolder.s_Instance.DiscardCard(CardSelector.s_Instance.SelectedCard, true);
         }
