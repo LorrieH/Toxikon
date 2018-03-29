@@ -86,7 +86,7 @@ public class PlayerPanel : MonoBehaviour
 
     void SetDefaultName()
     {
-        m_PlayerName.text = "Player: " + PlayerSelection.s_Instance.PlayersReady + 1;
+        m_PlayerName.text = "Player " + (PlayerSelection.s_Instance.PlayersReady + 1);
     }
 
     /// <summary>
