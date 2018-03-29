@@ -9,10 +9,6 @@ public class SetCharacterSkin : MonoBehaviour {
 
     private void Start()
     {
-        /*for (int i = 0; i < PlayersManager.s_Instance.Players.Count; i++)
-        {
-            m_characterSkeletons[i].skeleton.SetSkin(PlayersManager.s_Instance.Players[i].PlayerData.SkinName);
-        }*/
         StartCoroutine(LateStart());
     }
 
@@ -28,10 +24,5 @@ public class SetCharacterSkin : MonoBehaviour {
         {
             m_characterSkeletons[i].skeleton.SetSkin(PlayersManager.s_Instance.Players[i].PlayerData.SkinName);
         }
-    }
-
-    private void Update()
-    {
-        
     }
 }
