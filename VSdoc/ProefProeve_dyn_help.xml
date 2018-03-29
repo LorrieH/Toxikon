@@ -1,0 +1,5419 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="ProefProeve" Title="ProefProeve Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023F.html" LinkGroup="ProefProeve"><default> Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.ACTION" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008F.html" LinkGroup="ProefProeve">ACTION Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.ACTION_BACKGROUND" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A9.html" LinkGroup="ProefProeve">ACTION_BACKGROUND Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.AccesableNeighbours" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000144.html" LinkGroup="ProefProeve">AccesableNeighbours Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B0.html" LinkGroup="ProefProeve">ActionData Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B3.html" LinkGroup="ProefProeve">ActionFXManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.Actions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B6.html" LinkGroup="ProefProeve">Actions Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation.AddAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001F.html" LinkGroup="ProefProeve">AddAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager.AddPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001EB.html" LinkGroup="ProefProeve">AddPlayer Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.AddPlayers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023A.html" LinkGroup="ProefProeve">AddPlayers Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.AddToRoad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000147.html" LinkGroup="ProefProeve">AddToRoad Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.AllNeighbours" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000143.html" LinkGroup="ProefProeve">AllNeighbours Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionData.Animation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B2.html" LinkGroup="ProefProeve">Animation Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AnimationStrings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000000.html" LinkGroup="ProefProeve">AnimationStrings Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AnimationType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000AA.html" LinkGroup="ProefProeve">AnimationType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionData.AnimationType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B1.html" LinkGroup="ProefProeve">AnimationType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScaleAspect.Aspect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000190.html" LinkGroup="ProefProeve">Aspect Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScaleAspect.AspectValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000191.html" LinkGroup="ProefProeve">AspectValue Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Aspects" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000186.html" LinkGroup="ProefProeve">Aspects Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundData.AudioSource" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C2.html" LinkGroup="ProefProeve">AudioSource Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.AvailableColors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000235.html" LinkGroup="ProefProeve">AvailableColors Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.AvailableSkins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000236.html" LinkGroup="ProefProeve">AvailableSkins Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.AvailableSprites" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000234.html" LinkGroup="ProefProeve">AvailableSprites Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AvatarImageLoader" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000088.html" LinkGroup="ProefProeve">AvatarImageLoader Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData.AvatarImageName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D7.html" LinkGroup="ProefProeve">AvatarImageName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B8.html" LinkGroup="ProefProeve">Awake Method {ActionFXManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000197.html" LinkGroup="ProefProeve">Awake Method {CameraScalerByAspect}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScreenShake.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019D.html" LinkGroup="ProefProeve">Awake Method {CameraScreenShake}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000055.html" LinkGroup="ProefProeve">Awake Method {CardManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006B.html" LinkGroup="ProefProeve">Awake Method {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000080.html" LinkGroup="ProefProeve">Awake Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000045.html" LinkGroup="ProefProeve">Awake Method {Card}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000161.html" LinkGroup="ProefProeve">Awake Method {MenuManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AC.html" LinkGroup="ProefProeve">Awake Method {NotificationManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000224.html" LinkGroup="ProefProeve">Awake Method {PlayerPanel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000238.html" LinkGroup="ProefProeve">Awake Method {PlayerSelection}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001EA.html" LinkGroup="ProefProeve">Awake Method {PlayersManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DE.html" LinkGroup="ProefProeve">Awake Method {Player}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Sceneloader.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001BB.html" LinkGroup="ProefProeve">Awake Method {Sceneloader}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetTileArt.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F6.html" LinkGroup="ProefProeve">Awake Method {SetTileArt}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017A.html" LinkGroup="ProefProeve">Awake Method {SettingsMenu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CB.html" LinkGroup="ProefProeve">Awake Method {SoundManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001D.html" LinkGroup="ProefProeve">Awake Method {SpineAnimation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F9.html" LinkGroup="ProefProeve">Awake Method {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C7.html" LinkGroup="ProefProeve">Awake Method {TileClickManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000122.html" LinkGroup="ProefProeve">Awake Method {TileGrid}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E4.html" LinkGroup="ProefProeve">Awake Method {TurnManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009C.html" LinkGroup="ProefProeve">BLOCK_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_LEFT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009D.html" LinkGroup="ProefProeve">BLOCK_LEFT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_LEFT_RIGHT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A0.html" LinkGroup="ProefProeve">BLOCK_LEFT_RIGHT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_RIGHT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009E.html" LinkGroup="ProefProeve">BLOCK_RIGHT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_RIGHT_LEFT_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A2.html" LinkGroup="ProefProeve">BLOCK_RIGHT_LEFT_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_UP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009B.html" LinkGroup="ProefProeve">BLOCK_UP Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_UP_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009F.html" LinkGroup="ProefProeve">BLOCK_UP_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_UP_LEFT_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A3.html" LinkGroup="ProefProeve">BLOCK_UP_LEFT_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_UP_RIGHT_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A4.html" LinkGroup="ProefProeve">BLOCK_UP_RIGHT_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.BLOCK_UP_RIGHT_LEFT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A1.html" LinkGroup="ProefProeve">BLOCK_UP_RIGHT_LEFT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.Bools" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000134.html" LinkGroup="ProefProeve">Bools Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.BreakTile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BD_overloads--.html" LinkGroup="ProefProeve">BreakTile Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.BreakTile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BC_overloads--.html" LinkGroup="ProefProeve">BreakTile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.BreakTileAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BE.html" LinkGroup="ProefProeve">BreakTileAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.Bridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F6.html" LinkGroup="ProefProeve">Bridges Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F1.html" LinkGroup="ProefProeve">Bridges Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.Burn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000049.html" LinkGroup="ProefProeve">Burn Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.CORNER_DOWN_LEFT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000090.html" LinkGroup="ProefProeve">CORNER_DOWN_LEFT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.CORNER_DOWN_RIGHT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000091.html" LinkGroup="ProefProeve">CORNER_DOWN_RIGHT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.CORNER_UP_LEFT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000092.html" LinkGroup="ProefProeve">CORNER_UP_LEFT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.CORNER_UP_RIGHT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000093.html" LinkGroup="ProefProeve">CORNER_UP_RIGHT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuNames.CREDITS_MENU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000155.html" LinkGroup="ProefProeve">CREDITS_MENU Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.CROSSROAD" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000094.html" LinkGroup="ProefProeve">CROSSROAD Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.CalculateVolume" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D0.html" LinkGroup="ProefProeve">CalculateVolume Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScaleAspect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000018F.html" LinkGroup="ProefProeve">CameraScaleAspect Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000193.html" LinkGroup="ProefProeve">CameraScalerByAspect Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScreenShake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019B.html" LinkGroup="ProefProeve">CameraScreenShake Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.CanBeFilled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000136.html" LinkGroup="ProefProeve">CanBeFilled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.CanEdit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022F.html" LinkGroup="ProefProeve">CanEdit Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.CanMoveNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012A.html" LinkGroup="ProefProeve">CanMoveNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.CanSelectCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007E.html" LinkGroup="ProefProeve">CanSelectCard Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003A.html" LinkGroup="ProefProeve">Card Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardEditor.CardBackground" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002B.html" LinkGroup="ProefProeve">CardBackground Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004B.html" LinkGroup="ProefProeve">CardConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000034.html" LinkGroup="ProefProeve">CardData Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData.CardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000035.html" LinkGroup="ProefProeve">CardData Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.CardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003F.html" LinkGroup="ProefProeve">CardData Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.CardDatas" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000054.html" LinkGroup="ProefProeve">CardDatas Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.CardDefaultPositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000067.html" LinkGroup="ProefProeve">CardDefaultPositions Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.CardEditor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000044.html" LinkGroup="ProefProeve">CardEditor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardEditor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000029.html" LinkGroup="ProefProeve">CardEditor Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardEditor.CardImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002C.html" LinkGroup="ProefProeve">CardImage Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardImageLoader" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008A.html" LinkGroup="ProefProeve">CardImageLoader Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004F.html" LinkGroup="ProefProeve">CardManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005C.html" LinkGroup="ProefProeve">CardPositionHolder Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.CardSelectDelay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000085.html" LinkGroup="ProefProeve">CardSelectDelay Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000073.html" LinkGroup="ProefProeve">CardSelector Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData.CardSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000038.html" LinkGroup="ProefProeve">CardSprite Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008D.html" LinkGroup="ProefProeve">CardStrings Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardTypes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000023.html" LinkGroup="ProefProeve">CardTypes Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData.Cards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DA.html" LinkGroup="ProefProeve">Cards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.ChangeAmountOfChecks" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023B.html" LinkGroup="ProefProeve">ChangeAmountOfChecks Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerCharacter.CharacterName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E5.html" LinkGroup="ProefProeve">CharacterName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerCharacter.CharacterSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E3.html" LinkGroup="ProefProeve">CharacterSprite Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.CheckPlacement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000149.html" LinkGroup="ProefProeve">CheckPlacement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.CheckedNodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000120.html" LinkGroup="ProefProeve">CheckedNodes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.ClearQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B6.html" LinkGroup="ProefProeve">ClearQueue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000EA.html" LinkGroup="ProefProeve">ClickedOnTile Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.ClickedTilePositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C6.html" LinkGroup="ProefProeve">ClickedTilePositions Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Notification.Color" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A4.html" LinkGroup="ProefProeve">Color Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.CompleteRoad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000132.html" LinkGroup="ProefProeve">CompleteRoad Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.ConfirmInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000227.html" LinkGroup="ProefProeve">ConfirmInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CrabAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000004.html" LinkGroup="ProefProeve">CrabAnimation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CreditsMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014A.html" LinkGroup="ProefProeve">CreditsMenu Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.CurrentPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E0.html" LinkGroup="ProefProeve">CurrentPlayer Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.CurrentPlayerIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E2.html" LinkGroup="ProefProeve">CurrentPlayerIndex Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.DESTROY_PATH" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A5.html" LinkGroup="ProefProeve">DESTROY_PATH Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.DebugModus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013D.html" LinkGroup="ProefProeve">DebugModus Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.DefaultPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000043.html" LinkGroup="ProefProeve">DefaultPosition Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData.Description" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000037.html" LinkGroup="ProefProeve">Description Field {CardData}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardEditor.Description" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002A.html" LinkGroup="ProefProeve">Description Field {CardEditor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Destroy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000105.html" LinkGroup="ProefProeve">Destroy Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.DestroyBridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000130.html" LinkGroup="ProefProeve">DestroyBridges Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.DestroyNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012E.html" LinkGroup="ProefProeve">DestroyNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.DiscardCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006E.html" LinkGroup="ProefProeve">DiscardCard Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.DiscardCardAnimated" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006F.html" LinkGroup="ProefProeve">DiscardCardAnimated Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.DiscardCardEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005D.html" LinkGroup="ProefProeve">DiscardCardEvent Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000109.html" LinkGroup="ProefProeve">Down Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020A.html" LinkGroup="ProefProeve">Down Field {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000030.html" LinkGroup="ProefProeve">Down Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.DrawCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000070.html" LinkGroup="ProefProeve">DrawCard Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.DrawCardEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005E.html" LinkGroup="ProefProeve">DrawCardEvent Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Notification.Duration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A3.html" LinkGroup="ProefProeve">Duration Field</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.EnqueueNotification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AF_overloads--.html" LinkGroup="ProefProeve">EnqueueNotification Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.EnqueueNotification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B0_overloads--.html" LinkGroup="ProefProeve">EnqueueNotification Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.Equality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FA.html" LinkGroup="ProefProeve">Equality Operator {Bridges}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.Equality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000205.html" LinkGroup="ProefProeve">Equality Operator {Neighbours}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Equality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000211.html" LinkGroup="ProefProeve">Equality Operator {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.Equals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F7.html" LinkGroup="ProefProeve">Equals Method {Bridges}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.Equals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000202.html" LinkGroup="ProefProeve">Equals Method {Neighbours}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Equals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020E.html" LinkGroup="ProefProeve">Equals Method {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.FinishTurn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E7.html" LinkGroup="ProefProeve">FinishTurn Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.FirstTurnStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D5.html" LinkGroup="ProefProeve">FirstTurnStart Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.GameEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DD.html" LinkGroup="ProefProeve">GameEnd Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.GetAllCardsFromConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000057.html" LinkGroup="ProefProeve">GetAllCardsFromConfig Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.GetAnimationByType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C1.html" LinkGroup="ProefProeve">GetAnimationByType Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.GetChecked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000148.html" LinkGroup="ProefProeve">GetChecked Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.GetHashCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F8.html" LinkGroup="ProefProeve">GetHashCode Method {Bridges}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.GetHashCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000203.html" LinkGroup="ProefProeve">GetHashCode Method {Neighbours}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.GetHashCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020F.html" LinkGroup="ProefProeve">GetHashCode Method {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.GetRandomCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005A.html" LinkGroup="ProefProeve">GetRandomCard Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.GetRandomCardFromList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000059.html" LinkGroup="ProefProeve">GetRandomCardFromList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.GetRandomHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005B.html" LinkGroup="ProefProeve">GetRandomHand Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player.GetStartingHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E0.html" LinkGroup="ProefProeve">GetStartingHand Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.GetTileNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012B.html" LinkGroup="ProefProeve">GetTileNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.GridPos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013F.html" LinkGroup="ProefProeve">GridPos Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.HandleCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006D.html" LinkGroup="ProefProeve">HandleCards Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CreditsMenu.Hide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014C.html" LinkGroup="ProefProeve">Hide Method {CreditsMenu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Menu.Hide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000151.html" LinkGroup="ProefProeve">Hide Method {Menu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.Hide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000173.html" LinkGroup="ProefProeve">Hide Method {NextTurnPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.Hide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017C.html" LinkGroup="ProefProeve">Hide Method {SettingsMenu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup.Hide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000185.html" LinkGroup="ProefProeve">Hide Method {VictoryPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.HideAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B5.html" LinkGroup="ProefProeve">HideAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.HideIndicator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D2.html" LinkGroup="ProefProeve">HideIndicator Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.IndexInHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000041.html" LinkGroup="ProefProeve">IndexInHand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.Inequality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FB.html" LinkGroup="ProefProeve">Inequality Operator {Bridges}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.Inequality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000206.html" LinkGroup="ProefProeve">Inequality Operator {Neighbours}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Inequality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000212.html" LinkGroup="ProefProeve">Inequality Operator {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B9.html" LinkGroup="ProefProeve">Init Method {ActionFXManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScreenShake.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019E.html" LinkGroup="ProefProeve">Init Method {CameraScreenShake}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000056.html" LinkGroup="ProefProeve">Init Method {CardManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007F.html" LinkGroup="ProefProeve">Init Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000162.html" LinkGroup="ProefProeve">Init Method {MenuManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AE.html" LinkGroup="ProefProeve">Init Method {NotificationManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000239.html" LinkGroup="ProefProeve">Init Method {PlayerSelection}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CC.html" LinkGroup="ProefProeve">Init Method {SoundManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FA.html" LinkGroup="ProefProeve">Init Method {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C9.html" LinkGroup="ProefProeve">Init Method {TileClickManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.Init" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000123.html" LinkGroup="ProefProeve">Init Method {TileGrid}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.InstantiateNewGrid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000125.html" LinkGroup="ProefProeve">InstantiateNewGrid Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.IsAnyMenuOpen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000160.html" LinkGroup="ProefProeve">IsAnyMenuOpen Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.IsAspect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000198.html" LinkGroup="ProefProeve">IsAspect Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsChecked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000139.html" LinkGroup="ProefProeve">IsChecked Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.IsDestroyable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012D.html" LinkGroup="ProefProeve">IsDestroyable Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsDestructable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000137.html" LinkGroup="ProefProeve">IsDestructable Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsEdgeStone" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000138.html" LinkGroup="ProefProeve">IsEdgeStone Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsEndpoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013A.html" LinkGroup="ProefProeve">IsEndpoint Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsFilled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000135.html" LinkGroup="ProefProeve">IsFilled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsInRoad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013C.html" LinkGroup="ProefProeve">IsInRoad Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Menu.IsMenuOpen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014F.html" LinkGroup="ProefProeve">IsMenuOpen Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.IsStartPoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013B.html" LinkGroup="ProefProeve">IsStartPoint Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetCharacterSkin.LateStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001EF.html" LinkGroup="ProefProeve">LateStart Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010A.html" LinkGroup="ProefProeve">Left Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020B.html" LinkGroup="ProefProeve">Left Field {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000031.html" LinkGroup="ProefProeve">Left Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Sceneloader.LoadScene" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001BC.html" LinkGroup="ProefProeve">LoadScene Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundMixerKeys.MASTER" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C4.html" LinkGroup="ProefProeve">MASTER Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AnimationStrings.MONSTER_ATTACK" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000003.html" LinkGroup="ProefProeve">MONSTER_ATTACK Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.MOVE_PATH" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A7.html" LinkGroup="ProefProeve">MOVE_PATH Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundMixerKeys.MUSIC" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C5.html" LinkGroup="ProefProeve">MUSIC Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.MaxCardsInHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000052.html" LinkGroup="ProefProeve">MaxCardsInHand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Menu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014D.html" LinkGroup="ProefProeve">Menu Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.MenuClosed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015B.html" LinkGroup="ProefProeve">MenuClosed Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000157.html" LinkGroup="ProefProeve">MenuManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuNames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000152.html" LinkGroup="ProefProeve">MenuNames Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.MenuOpened" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000159.html" LinkGroup="ProefProeve">MenuOpened Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Middle" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010B.html" LinkGroup="ProefProeve">Middle Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Middle" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020C.html" LinkGroup="ProefProeve">Middle Field {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.Middle" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000033.html" LinkGroup="ProefProeve">Middle Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MovePlayer.Move" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D2.html" LinkGroup="ProefProeve">Move Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MovePlayer.MoveEnumerator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D4.html" LinkGroup="ProefProeve">MoveEnumerator Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.MoveNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012C.html" LinkGroup="ProefProeve">MoveNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MovePlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D1.html" LinkGroup="ProefProeve">MovePlayer Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.MovePlayerInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000217.html" LinkGroup="ProefProeve">MovePlayerInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.MoveTile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BA.html" LinkGroup="ProefProeve">MoveTile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.MoveTileAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BB.html" LinkGroup="ProefProeve">MoveTileAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.MoveWinningPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000128.html" LinkGroup="ProefProeve">MoveWinningPlayer Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuNames.NEXT_TURN_POPUP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000156.html" LinkGroup="ProefProeve">NEXT_TURN_POPUP Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D6.html" LinkGroup="ProefProeve">Name Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.Neighbours" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000201.html" LinkGroup="ProefProeve">Neighbours Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FC.html" LinkGroup="ProefProeve">Neighbours Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.NextSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000225.html" LinkGroup="ProefProeve">NextSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.NextTurn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E8.html" LinkGroup="ProefProeve">NextTurn Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000165.html" LinkGroup="ProefProeve">NextTurnPopup Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.NodeRoad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011F.html" LinkGroup="ProefProeve">NodeRoad Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Notification.Notification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A1.html" LinkGroup="ProefProeve">Notification Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Notification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A0.html" LinkGroup="ProefProeve">Notification Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.NotificationAlreadyExists" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B2.html" LinkGroup="ProefProeve">NotificationAlreadyExists Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A5.html" LinkGroup="ProefProeve">NotificationManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.NotificationQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B3.html" LinkGroup="ProefProeve">NotificationQueue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OctopusAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000000D.html" LinkGroup="ProefProeve">OctopusAnimation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.OnClickStartGame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023C.html" LinkGroup="ProefProeve">OnClickStartGame Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.OnDestroy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000081.html" LinkGroup="ProefProeve">OnDestroy Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.OnDestroy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AD.html" LinkGroup="ProefProeve">OnDestroy Method {NotificationManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player.OnDestroy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DF.html" LinkGroup="ProefProeve">OnDestroy Method {Player}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.OnDestroy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C8.html" LinkGroup="ProefProeve">OnDestroy Method {TileClickManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000072.html" LinkGroup="ProefProeve">OnDisable Method {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000087.html" LinkGroup="ProefProeve">OnDisable Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021A.html" LinkGroup="ProefProeve">OnDisable Method {PlayerInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E9.html" LinkGroup="ProefProeve">OnDisable Method {TurnManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006A.html" LinkGroup="ProefProeve">OnEnable Method {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000082.html" LinkGroup="ProefProeve">OnEnable Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016F.html" LinkGroup="ProefProeve">OnEnable Method {NextTurnPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000216.html" LinkGroup="ProefProeve">OnEnable Method {PlayerInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E3.html" LinkGroup="ProefProeve">OnEnable Method {TurnManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup.OnEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000183.html" LinkGroup="ProefProeve">OnEnable Method {VictoryPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.OnInputFieldValueChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000229.html" LinkGroup="ProefProeve">OnInputFieldValueChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.OnMasterVolumeChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017D.html" LinkGroup="ProefProeve">OnMasterVolumeChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.OnMouseDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F1.html" LinkGroup="ProefProeve">OnMouseDown Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.OnMusicVolumeChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017E.html" LinkGroup="ProefProeve">OnMusicVolumeChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.OnSFXVolumeChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017F.html" LinkGroup="ProefProeve">OnSFXVolumeChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScaleAspect.OrthographicSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000192.html" LinkGroup="ProefProeve">OrthographicSize Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.PATH" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008E.html" LinkGroup="ProefProeve">PATH Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.PATH_BACKGROUND" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A8.html" LinkGroup="ProefProeve">PATH_BACKGROUND Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AnimationStrings.PLAYER_VICTORY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000002.html" LinkGroup="ProefProeve">PLAYER_VICTORY Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AnimationStrings.PLAYER_WALK" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000001.html" LinkGroup="ProefProeve">PLAYER_WALK Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002D.html" LinkGroup="ProefProeve">PathCardData Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.PathCardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002E.html" LinkGroup="ProefProeve">PathCardData Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData.PathData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000039.html" LinkGroup="ProefProeve">PathData Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PiranhaAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000012.html" LinkGroup="ProefProeve">PiranhaAnimation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.PlaceNewCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000131.html" LinkGroup="ProefProeve">PlaceNewCard Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.PlaySound" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CE_overloads--.html" LinkGroup="ProefProeve">PlaySound Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.PlaySound" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CD_overloads--.html" LinkGroup="ProefProeve">PlaySound Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DB.html" LinkGroup="ProefProeve">Player Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerCharacter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E1.html" LinkGroup="ProefProeve">PlayerCharacter Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData.PlayerColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D8.html" LinkGroup="ProefProeve">PlayerColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.PlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000223.html" LinkGroup="ProefProeve">PlayerData Property {PlayerPanel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player.PlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DD.html" LinkGroup="ProefProeve">PlayerData Property {Player}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D5.html" LinkGroup="ProefProeve">PlayerData Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.PlayerHandCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007C.html" LinkGroup="ProefProeve">PlayerHandCards Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000213.html" LinkGroup="ProefProeve">PlayerInfo Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021B.html" LinkGroup="ProefProeve">PlayerPanel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022A.html" LinkGroup="ProefProeve">PlayerSelection Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.Players" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000114.html" LinkGroup="ProefProeve">Players Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager.Players" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E9.html" LinkGroup="ProefProeve">Players Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E6.html" LinkGroup="ProefProeve">PlayersManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.PreviousSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000226.html" LinkGroup="ProefProeve">PreviousSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ProefProeve Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023E.html" LinkGroup="ProefProeve">ProefProeve Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="QuitGame.Quit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B8.html" LinkGroup="ProefProeve">Quit Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="QuitGame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B7.html" LinkGroup="ProefProeve">QuitGame Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.ROTATE_PATH" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000A6.html" LinkGroup="ProefProeve">ROTATE_PATH Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CrabAnimation.RandomPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000000C.html" LinkGroup="ProefProeve">RandomPosition Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CrabAnimation.RandomPositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000000B.html" LinkGroup="ProefProeve">RandomPositions Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.RemoveAvailableSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000228.html" LinkGroup="ProefProeve">RemoveAvailableSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.RemovePlayerInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000218.html" LinkGroup="ProefProeve">RemovePlayerInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.ResetClicks" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CB.html" LinkGroup="ProefProeve">ResetClicks Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.ReturnCardsToScreen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000071.html" LinkGroup="ProefProeve">ReturnCardsToScreen Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000108.html" LinkGroup="ProefProeve">Right Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000209.html" LinkGroup="ProefProeve">Right Field {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000032.html" LinkGroup="ProefProeve">Right Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.RoadCompleted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000121.html" LinkGroup="ProefProeve">RoadCompleted Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.RoadParent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000142.html" LinkGroup="ProefProeve">RoadParent Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Rotate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000104.html" LinkGroup="ProefProeve">Rotate Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.RotateCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000129.html" LinkGroup="ProefProeve">RotateCard Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.RotateTile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000BF.html" LinkGroup="ProefProeve">RotateTile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.RotateTileAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C0.html" LinkGroup="ProefProeve">RotateTileAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuNames.SETTINGS_MENU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000153.html" LinkGroup="ProefProeve">SETTINGS_MENU Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundMixerKeys.SFX" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C6.html" LinkGroup="ProefProeve">SFX Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.STRAIGHT_HORIZONTAL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000095.html" LinkGroup="ProefProeve">STRAIGHT_HORIZONTAL Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.STRAIGHT_VERTICAL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000096.html" LinkGroup="ProefProeve">STRAIGHT_VERTICAL Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Sceneloader" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B9.html" LinkGroup="ProefProeve">Sceneloader Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.SelectCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000084.html" LinkGroup="ProefProeve">SelectCard Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.SelectedCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007D.html" LinkGroup="ProefProeve">SelectedCard Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.SetAccesableNeighbours" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000145.html" LinkGroup="ProefProeve">SetAccesableNeighbours Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.SetAccesableNeighboursOfNodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000126.html" LinkGroup="ProefProeve">SetAccesableNeighboursOfNodes Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.SetAlpha" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004A.html" LinkGroup="ProefProeve">SetAlpha Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation.SetAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001E.html" LinkGroup="ProefProeve">SetAnimation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.SetCameraSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000199.html" LinkGroup="ProefProeve">SetCameraSize Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.SetCardInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000046.html" LinkGroup="ProefProeve">SetCardInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetCharacterSkin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001EC.html" LinkGroup="ProefProeve">SetCharacterSkin Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.SetFirstTurn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E6.html" LinkGroup="ProefProeve">SetFirstTurn Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.SetMixerValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CF.html" LinkGroup="ProefProeve">SetMixerValue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.SetNeighboursOfNodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000127.html" LinkGroup="ProefProeve">SetNeighboursOfNodes Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.SetPlayerInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000219.html" LinkGroup="ProefProeve">SetPlayerInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetCharacterSkin.SetSkin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F0.html" LinkGroup="ProefProeve">SetSkin Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.SetStartingValuesOfAnimationComponents" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000170.html" LinkGroup="ProefProeve">SetStartingValuesOfAnimationComponents Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetTileArt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F2.html" LinkGroup="ProefProeve">SetTileArt Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000176.html" LinkGroup="ProefProeve">SettingsMenu Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScreenShake.ShakeScreen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019F.html" LinkGroup="ProefProeve">ShakeScreen Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.Shine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000048.html" LinkGroup="ProefProeve">Shine Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CreditsMenu.Show" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014B.html" LinkGroup="ProefProeve">Show Method {CreditsMenu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Menu.Show" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000150.html" LinkGroup="ProefProeve">Show Method {Menu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.Show" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000172.html" LinkGroup="ProefProeve">Show Method {NextTurnPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.Show" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000017B.html" LinkGroup="ProefProeve">Show Method {SettingsMenu}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup.Show" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000184.html" LinkGroup="ProefProeve">Show Method {VictoryPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.ShowAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000171.html" LinkGroup="ProefProeve">ShowAnimation Method {NextTurnPopup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.ShowAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B4.html" LinkGroup="ProefProeve">ShowAnimation Method {NotificationManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.ShowCurrentPlayerHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000086.html" LinkGroup="ProefProeve">ShowCurrentPlayerHand Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.ShowIndicator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D1_overloads--.html" LinkGroup="ProefProeve">ShowIndicator Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.ShowIndicator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D0_overloads--.html" LinkGroup="ProefProeve">ShowIndicator Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.ShowMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000164_overloads--.html" LinkGroup="ProefProeve">ShowMenu Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.ShowMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000163_overloads--.html" LinkGroup="ProefProeve">ShowMenu Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.ShowNextPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000175.html" LinkGroup="ProefProeve">ShowNextPlayer Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.ShuffleCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000058.html" LinkGroup="ProefProeve">ShuffleCards Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation.SkeletonAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001C.html" LinkGroup="ProefProeve">SkeletonAnimation Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerData.SkinName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D9.html" LinkGroup="ProefProeve">SkinName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C0.html" LinkGroup="ProefProeve">SoundData Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundData.SoundID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C1.html" LinkGroup="ProefProeve">SoundID Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C7.html" LinkGroup="ProefProeve">SoundManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundMixerKeys" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C3.html" LinkGroup="ProefProeve">SoundMixerKeys Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundNames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001BD.html" LinkGroup="ProefProeve">SoundNames Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001A.html" LinkGroup="ProefProeve">SpineAnimation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000006C.html" LinkGroup="ProefProeve">Start Method {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetCharacterSkin.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001EE.html" LinkGroup="ProefProeve">Start Method {SetCharacterSkin}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000124.html" LinkGroup="ProefProeve">Start Method {TileGrid}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E5.html" LinkGroup="ProefProeve">Start Method {TurnManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.StartNextTurn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000174.html" LinkGroup="ProefProeve">StartNextTurn Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.StartQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001B1.html" LinkGroup="ProefProeve">StartQueue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CrabAnimation.States" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000005.html" LinkGroup="ProefProeve">States Enumeration {CrabAnimation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OctopusAnimation.States" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000000E.html" LinkGroup="ProefProeve">States Enumeration {OctopusAnimation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PiranhaAnimation.States" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000013.html" LinkGroup="ProefProeve">States Enumeration {PiranhaAnimation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBreakAnimation.States" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000021.html" LinkGroup="ProefProeve">States Enumeration {TileBreakAnimation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.SwapCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000106.html" LinkGroup="ProefProeve">SwapCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.T_SPLIT_DOWN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000098.html" LinkGroup="ProefProeve">T_SPLIT_DOWN Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.T_SPLIT_LEFT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000099.html" LinkGroup="ProefProeve">T_SPLIT_LEFT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.T_SPLIT_RIGHT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000009A.html" LinkGroup="ProefProeve">T_SPLIT_RIGHT Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardStrings.T_SPLIT_UP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000097.html" LinkGroup="ProefProeve">T_SPLIT_UP Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F7.html" LinkGroup="ProefProeve">TestPlaceCard Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.TestPlacer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000ED.html" LinkGroup="ProefProeve">TestPlacer Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Notification.Text" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A2.html" LinkGroup="ProefProeve">Text Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.TheWinningPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000115.html" LinkGroup="ProefProeve">TheWinningPlayer Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtClass.TileArt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000112.html" LinkGroup="ProefProeve">TileArt Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000110.html" LinkGroup="ProefProeve">TileArtClass Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtLib" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010C.html" LinkGroup="ProefProeve">TileArtLib Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.TileBools" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000020D.html" LinkGroup="ProefProeve">TileBools Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000207.html" LinkGroup="ProefProeve">TileBools Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBreakAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000020.html" LinkGroup="ProefProeve">TileBreakAnimation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C2.html" LinkGroup="ProefProeve">TileClickManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.TileClicked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000EB.html" LinkGroup="ProefProeve">TileClicked Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.TileClicked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CA.html" LinkGroup="ProefProeve">TileClicked Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000113.html" LinkGroup="ProefProeve">TileGrid Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000133.html" LinkGroup="ProefProeve">TileNode Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.TileObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000141.html" LinkGroup="ProefProeve">TileObject Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.TilePosX" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000EF.html" LinkGroup="ProefProeve">TilePosX Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.TilePosY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F0.html" LinkGroup="ProefProeve">TilePosY Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.TileSpawnOffsetY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011D.html" LinkGroup="ProefProeve">TileSpawnOffsetY Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.TileTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000140.html" LinkGroup="ProefProeve">TileTexture Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.ToString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F9.html" LinkGroup="ProefProeve">ToString Method {Bridges}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.ToString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000204.html" LinkGroup="ProefProeve">ToString Method {Neighbours}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.ToString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000210.html" LinkGroup="ProefProeve">ToString Method {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.ToggleCardSelect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000083.html" LinkGroup="ProefProeve">ToggleCardSelect Method {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.ToggleCardSelect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000047.html" LinkGroup="ProefProeve">ToggleCardSelect Method {Card}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.ToggleCardSelectEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000076.html" LinkGroup="ProefProeve">ToggleCardSelectEvent Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.TryDestroyPath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CF.html" LinkGroup="ProefProeve">TryDestroyPath Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.TryMovePath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CE.html" LinkGroup="ProefProeve">TryMovePath Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.TryPlacePath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CC.html" LinkGroup="ProefProeve">TryPlacePath Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.TryRotatePath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000CD.html" LinkGroup="ProefProeve">TryRotatePath Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.TurnAction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DB.html" LinkGroup="ProefProeve">TurnAction Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.TurnEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D7.html" LinkGroup="ProefProeve">TurnEnd Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D3.html" LinkGroup="ProefProeve">TurnManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.TurnStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D9.html" LinkGroup="ProefProeve">TurnStart Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.TurnsRight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000013E.html" LinkGroup="ProefProeve">TurnsRight Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardData.Type" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000036.html" LinkGroup="ProefProeve">Type Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000107.html" LinkGroup="ProefProeve">Up Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileBools.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000208.html" LinkGroup="ProefProeve">Up Field {TileBools}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PathCardData.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000002F.html" LinkGroup="ProefProeve">Up Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019A.html" LinkGroup="ProefProeve">Update Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.UpdateArt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000012F.html" LinkGroup="ProefProeve">UpdateArt Method {TileGrid}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileNode.UpdateArt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000146.html" LinkGroup="ProefProeve">UpdateArt Method {TileNode}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.UpdatePlayerDataFromPanels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000023D.html" LinkGroup="ProefProeve">UpdatePlayerDataFromPanels Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuNames.VICTORY_POPUP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000154.html" LinkGroup="ProefProeve">VICTORY_POPUP Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000180.html" LinkGroup="ProefProeve">VictoryPopup Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.WinningPlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000116.html" LinkGroup="ProefProeve">WinningPlayerData Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtClass.bools" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000111.html" LinkGroup="ProefProeve">bools Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.bridgeDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F4.html" LinkGroup="ProefProeve">bridgeDown Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.bridgeLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F5.html" LinkGroup="ProefProeve">bridgeLeft Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.bridgeRight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F3.html" LinkGroup="ProefProeve">bridgeRight Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Bridges.bridgeUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001F2.html" LinkGroup="ProefProeve">bridgeUp Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.checkPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FF.html" LinkGroup="ProefProeve">checkPlayer Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.debugModus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FB.html" LinkGroup="ProefProeve">debugModus Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.delayValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000100.html" LinkGroup="ProefProeve">delayValue Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FF.html" LinkGroup="ProefProeve">down Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.grid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000EE.html" LinkGroup="ProefProeve">grid Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.ignoreConnection" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FD.html" LinkGroup="ProefProeve">ignoreConnection Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.ignoreRules" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FC.html" LinkGroup="ProefProeve">ignoreRules Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000200.html" LinkGroup="ProefProeve">left Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.m_Actions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B5.html" LinkGroup="ProefProeve">m_Actions Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.m_AudioData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001CA.html" LinkGroup="ProefProeve">m_AudioData Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.m_AudioMixer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C9.html" LinkGroup="ProefProeve">m_AudioMixer Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_AvailableColors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000232.html" LinkGroup="ProefProeve">m_AvailableColors Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_AvailableSkins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000233.html" LinkGroup="ProefProeve">m_AvailableSkins Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_AvailableSprites" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000231.html" LinkGroup="ProefProeve">m_AvailableSprites Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_BlackBackground" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016C.html" LinkGroup="ProefProeve">m_BlackBackground Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_BlackBar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016B.html" LinkGroup="ProefProeve">m_BlackBar Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetTileArt.m_Bridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F5.html" LinkGroup="ProefProeve">m_Bridges Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_Button" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016D.html" LinkGroup="ProefProeve">m_Button Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.m_CameraScaleAspects" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000195.html" LinkGroup="ProefProeve">m_CameraScaleAspects Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_CanEdit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022E.html" LinkGroup="ProefProeve">m_CanEdit Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.m_CanSelectCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007B.html" LinkGroup="ProefProeve">m_CanSelectCard Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_CanvasGroup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003D.html" LinkGroup="ProefProeve">m_CanvasGroup Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_CardData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003E.html" LinkGroup="ProefProeve">m_CardData Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.m_CardDatas" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000053.html" LinkGroup="ProefProeve">m_CardDatas Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_CardDeckPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000064.html" LinkGroup="ProefProeve">m_CardDeckPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_CardDefaultPositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000063.html" LinkGroup="ProefProeve">m_CardDefaultPositions Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_CardEditor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003B.html" LinkGroup="ProefProeve">m_CardEditor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_CardEffect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000003C.html" LinkGroup="ProefProeve">m_CardEffect Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_CardPositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000062.html" LinkGroup="ProefProeve">m_CardPositions Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_CharacterBody" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000166.html" LinkGroup="ProefProeve">m_CharacterBody Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_CharacterHands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000168.html" LinkGroup="ProefProeve">m_CharacterHands Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_CharacterHat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000167.html" LinkGroup="ProefProeve">m_CharacterHat Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerCharacter.m_CharacterName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E4.html" LinkGroup="ProefProeve">m_CharacterName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerCharacter.m_CharacterSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E2.html" LinkGroup="ProefProeve">m_CharacterSprite Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.m_ClickedTilePositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C5.html" LinkGroup="ProefProeve">m_ClickedTilePositions Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_ColorNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000221.html" LinkGroup="ProefProeve">m_ColorNumber Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.m_CurrentAspect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000196.html" LinkGroup="ProefProeve">m_CurrentAspect Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.m_CurrentOpenMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015F.html" LinkGroup="ProefProeve">m_CurrentOpenMenu Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.m_CurrentPlayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DF.html" LinkGroup="ProefProeve">m_CurrentPlayer Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.m_CurrentPlayerIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000E1.html" LinkGroup="ProefProeve">m_CurrentPlayerIndex Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_DefaultPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000042.html" LinkGroup="ProefProeve">m_DefaultPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetTileArt.m_EmptyTex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F3.html" LinkGroup="ProefProeve">m_EmptyTex Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_GridXSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000118.html" LinkGroup="ProefProeve">m_GridXSize Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_GridYSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000119.html" LinkGroup="ProefProeve">m_GridYSize Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Card.m_IndexInHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000040.html" LinkGroup="ProefProeve">m_IndexInHand Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_IndexInHandPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000069.html" LinkGroup="ProefProeve">m_IndexInHandPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.m_Indicator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C4.html" LinkGroup="ProefProeve">m_Indicator Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_Info" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016E.html" LinkGroup="ProefProeve">m_Info Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_InputField" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021F.html" LinkGroup="ProefProeve">m_InputField Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Menu.m_IsMenuOpen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000014E.html" LinkGroup="ProefProeve">m_IsMenuOpen Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.m_MasterSlider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000177.html" LinkGroup="ProefProeve">m_MasterSlider Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.m_MaxCardsInHand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000051.html" LinkGroup="ProefProeve">m_MaxCardsInHand Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.m_Menus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015E.html" LinkGroup="ProefProeve">m_Menus Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.m_MusicSlider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000178.html" LinkGroup="ProefProeve">m_MusicSlider Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_NodeBridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011C.html" LinkGroup="ProefProeve">m_NodeBridges Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_NodeGrid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011B.html" LinkGroup="ProefProeve">m_NodeGrid Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_NodeObjectPrefab" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011A.html" LinkGroup="ProefProeve">m_NodeObjectPrefab Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.m_NotificationQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A8.html" LinkGroup="ProefProeve">m_NotificationQueue Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.m_NotificationQueueActive" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A9.html" LinkGroup="ProefProeve">m_NotificationQueueActive Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.m_NotificationText" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A7.html" LinkGroup="ProefProeve">m_NotificationText Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScalerByAspect.m_Offset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000194.html" LinkGroup="ProefProeve">m_Offset Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_OutOfScreenPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000066.html" LinkGroup="ProefProeve">m_OutOfScreenPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_PlayerAvatar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021D.html" LinkGroup="ProefProeve">m_PlayerAvatar Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_PlayerColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021E.html" LinkGroup="ProefProeve">m_PlayerColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_PlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000220.html" LinkGroup="ProefProeve">m_PlayerData Field {PlayerPanel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Player.m_PlayerData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001DC.html" LinkGroup="ProefProeve">m_PlayerData Field {Player}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.m_PlayerHandCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000075.html" LinkGroup="ProefProeve">m_PlayerHandCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.m_PlayerImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000215.html" LinkGroup="ProefProeve">m_PlayerImage Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_PlayerInfoPanels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000230.html" LinkGroup="ProefProeve">m_PlayerInfoPanels Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerInfo.m_PlayerName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000214.html" LinkGroup="ProefProeve">m_PlayerName Field {PlayerInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_PlayerName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000021C.html" LinkGroup="ProefProeve">m_PlayerName Field {PlayerPanel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_PlayerPanels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022B.html" LinkGroup="ProefProeve">m_PlayerPanels Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerPanel.m_PlayerSkin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000222.html" LinkGroup="ProefProeve">m_PlayerSkin Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.m_PlayerStartNodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000011E.html" LinkGroup="ProefProeve">m_PlayerStartNodes Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager.m_Players" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E8.html" LinkGroup="ProefProeve">m_Players Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_PlayersReady" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000237.html" LinkGroup="ProefProeve">m_PlayersReady Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.m_Queue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AB.html" LinkGroup="ProefProeve">m_Queue Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CrabAnimation.m_RandomPositions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000000A.html" LinkGroup="ProefProeve">m_RandomPositions Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_Rays" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000169.html" LinkGroup="ProefProeve">m_Rays Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SettingsMenu.m_SFXSlider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000179.html" LinkGroup="ProefProeve">m_SFXSlider Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_SelectedCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000068.html" LinkGroup="ProefProeve">m_SelectedCard Field {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.m_SelectedCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000007A.html" LinkGroup="ProefProeve">m_SelectedCard Field {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.m_SelectedCardHolder" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000074.html" LinkGroup="ProefProeve">m_SelectedCardHolder Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.m_ShowDrawnCardPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000065.html" LinkGroup="ProefProeve">m_ShowDrawnCardPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.m_ShowingNotification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001AA.html" LinkGroup="ProefProeve">m_ShowingNotification Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SpineAnimation.m_SkeletonAnimation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000001B.html" LinkGroup="ProefProeve">m_SkeletonAnimation Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NextTurnPopup.m_Sparkles" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000016A.html" LinkGroup="ProefProeve">m_Sparkles Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.m_StartButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022C.html" LinkGroup="ProefProeve">m_StartButton Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetTileArt.m_TileArt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F4.html" LinkGroup="ProefProeve">m_TileArt Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup.m_characterImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000182.html" LinkGroup="ProefProeve">m_characterImage Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VictoryPopup.m_characterName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000181.html" LinkGroup="ProefProeve">m_characterName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SetCharacterSkin.m_characterSkeletons" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001ED.html" LinkGroup="ProefProeve">m_characterSkeletons Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.playAnim" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000FE.html" LinkGroup="ProefProeve">playAnim Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FE.html" LinkGroup="ProefProeve">right Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardConfig.s_ActionCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004E.html" LinkGroup="ProefProeve">s_ActionCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardConfig.s_BlockCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004D.html" LinkGroup="ProefProeve">s_BlockCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtLib.s_Bridges" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010F.html" LinkGroup="ProefProeve">s_Bridges Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardImageLoader.s_CardBackgroundSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008C.html" LinkGroup="ProefProeve">s_CardBackgroundSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardImageLoader.s_CardSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000008B.html" LinkGroup="ProefProeve">s_CardSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AvatarImageLoader.s_CharacterAvatarSprite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000089.html" LinkGroup="ProefProeve">s_CharacterAvatarSprite Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtLib.s_EmptyTex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010D.html" LinkGroup="ProefProeve">s_EmptyTex Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B4.html" LinkGroup="ProefProeve">s_Instance Field {ActionFXManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CameraScreenShake.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000019C.html" LinkGroup="ProefProeve">s_Instance Field {CameraScreenShake}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000050.html" LinkGroup="ProefProeve">s_Instance Field {CardManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000061.html" LinkGroup="ProefProeve">s_Instance Field {CardPositionHolder}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000079.html" LinkGroup="ProefProeve">s_Instance Field {CardSelector}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000158.html" LinkGroup="ProefProeve">s_Instance Field {MenuManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NotificationManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001A6.html" LinkGroup="ProefProeve">s_Instance Field {NotificationManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayerSelection.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000022D.html" LinkGroup="ProefProeve">s_Instance Field {PlayerSelection}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayersManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001E7.html" LinkGroup="ProefProeve">s_Instance Field {PlayersManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Sceneloader.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001BA.html" LinkGroup="ProefProeve">s_Instance Field {Sceneloader}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SoundManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001C8.html" LinkGroup="ProefProeve">s_Instance Field {SoundManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000F8.html" LinkGroup="ProefProeve">s_Instance Field {TestPlaceCard}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileClickManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000C3.html" LinkGroup="ProefProeve">s_Instance Field {TileClickManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileGrid.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000117.html" LinkGroup="ProefProeve">s_Instance Field {TileGrid}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D4.html" LinkGroup="ProefProeve">s_Instance Field {TurnManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.s_IsPaused" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015D.html" LinkGroup="ProefProeve">s_IsPaused Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ActionFXManager.s_OnActionFXCompleted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000B7.html" LinkGroup="ProefProeve">s_OnActionFXCompleted Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.s_OnDiscardCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000005F.html" LinkGroup="ProefProeve">s_OnDiscardCard Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardPositionHolder.s_OnDrawCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000060.html" LinkGroup="ProefProeve">s_OnDrawCard Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_OnFirstTurnStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D6.html" LinkGroup="ProefProeve">s_OnFirstTurnStart Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_OnGameEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DE.html" LinkGroup="ProefProeve">s_OnGameEnd Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.s_OnMenuClosed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015C.html" LinkGroup="ProefProeve">s_OnMenuClosed Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MenuManager.s_OnMenuOpened" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000015A.html" LinkGroup="ProefProeve">s_OnMenuOpened Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.s_OnSelectCard" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000078.html" LinkGroup="ProefProeve">s_OnSelectCard Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ClickedOnTile.s_OnTileClicked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000EC.html" LinkGroup="ProefProeve">s_OnTileClicked Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardSelector.s_OnToggleCardSelect" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000077.html" LinkGroup="ProefProeve">s_OnToggleCardSelect Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_OnTurnAction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DC.html" LinkGroup="ProefProeve">s_OnTurnAction Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_OnTurnEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000D8.html" LinkGroup="ProefProeve">s_OnTurnEnd Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TurnManager.s_OnTurnStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000000DA.html" LinkGroup="ProefProeve">s_OnTurnStart Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="CardConfig.s_PathCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000004C.html" LinkGroup="ProefProeve">s_PathCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TileArtLib.s_TileArtArray" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_000000000000010E.html" LinkGroup="ProefProeve">s_TileArtArray Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.selectOne" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000101.html" LinkGroup="ProefProeve">selectOne Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.selectTwo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000102.html" LinkGroup="ProefProeve">selectTwo Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TestPlaceCard.selectedCards" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_0000000000000103.html" LinkGroup="ProefProeve">selectedCards Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MovePlayer.setState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001D3.html" LinkGroup="ProefProeve">setState Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Neighbours.up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:ProefProeve.chm::/topic_00000000000001FD.html" LinkGroup="ProefProeve">up Field</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+
