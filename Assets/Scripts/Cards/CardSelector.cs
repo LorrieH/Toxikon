@@ -56,7 +56,10 @@ public class CardSelector : MonoBehaviour
 
     private void ToggleCardSelect(Card selectedCard, int cardInHandIndex)
     {
-        SelectCard(selectedCard, cardInHandIndex);
+        if (!MenuManager.s_IsPaused)
+        {
+            SelectCard(selectedCard, cardInHandIndex);
+        }
     }
 
     private void SelectCard(Card selectedCard, int cardInHandIndex)

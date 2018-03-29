@@ -19,6 +19,8 @@ public class MenuManager : MonoBehaviour
     public delegate void MenuClosed(Menu menu);
     public static MenuClosed s_OnMenuClosed;
 
+    public static bool s_IsPaused;
+
     [SerializeField] private List<Menu> m_Menus = new List<Menu>();
     private Menu m_CurrentOpenMenu;
 
@@ -71,7 +73,6 @@ public class MenuManager : MonoBehaviour
         }
         menu.Show();
         m_CurrentOpenMenu = menu;
-
         if (s_OnMenuOpened != null) s_OnMenuOpened(menu);
     }
 }

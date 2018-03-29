@@ -12,7 +12,7 @@ public class PlayerSelection : MonoBehaviour
 
     private bool m_CanEdit;
     public bool CanEdit { get { return m_CanEdit; } set { m_CanEdit = value; } }
-
+    [SerializeField] private GameObject m_PlayerInfoPanels;
     [SerializeField]private List<Sprite> m_AvailableSprites = new List<Sprite>();
     [SerializeField] private List<Color> m_AvailableColors = new List<Color>();
     [SerializeField] private List<string> m_AvailableSkins = new List<string>();
@@ -60,18 +60,22 @@ public class PlayerSelection : MonoBehaviour
     /// <param name="amountOfPlayers"></param>
     public void AddPlayers(int amountOfPlayers)
     {
-        for (int i = 0; i < amountOfPlayers; i++)
+        if (!MenuManager.s_IsPaused)
         {
-            GameObject playerObj = new GameObject();
+            for (int i = 0; i < amountOfPlayers; i++)
+            {
+                GameObject playerObj = new GameObject();
 
-            Player player = playerObj.AddComponent<Player>();
+                Player player = playerObj.AddComponent<Player>();
 
-            player.name = "Player " + (i + 1);
-            player.transform.SetParent(PlayersManager.s_Instance.transform);
+                player.name = "Player " + (i + 1);
+                player.transform.SetParent(PlayersManager.s_Instance.transform);
 
-            PlayersManager.s_Instance.AddPlayer(player);
+                PlayersManager.s_Instance.AddPlayer(player);
+            }
+            m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
+            m_PlayerInfoPanels.SetActive(true);
         }
-        m_PlayerPanels[m_PlayersReady].gameObject.SetActive(true);
     }
 
     /// <summary>

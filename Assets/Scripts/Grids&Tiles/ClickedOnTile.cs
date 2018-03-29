@@ -14,10 +14,13 @@ public class ClickedOnTile : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (CardSelector.s_Instance.SelectedCard == null) return;
+        if (!MenuManager.s_IsPaused)
+        {
+            if (CardSelector.s_Instance.SelectedCard == null) return;
 
-        if (!CardSelector.s_Instance.CanSelectCard) return;
+            if (!CardSelector.s_Instance.CanSelectCard) return;
 
-        if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));        
+            if (s_OnTileClicked != null) s_OnTileClicked(new Vector2(TilePosX, TilePosY));
+        }   
     }
 }

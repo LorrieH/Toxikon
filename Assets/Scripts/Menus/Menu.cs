@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
         m_IsMenuOpen = true;
         SoundManager.s_Instance.PlaySound(SoundNames.BUTTON_CLICK);
         gameObject.SetActive(true);
+        MenuManager.s_IsPaused = true;
+        Debug.Log(MenuManager.s_IsPaused);
     }
 
     public virtual void Hide()
@@ -18,5 +20,7 @@ public class Menu : MonoBehaviour
         gameObject.SetActive(false);
 
         if (MenuManager.s_OnMenuClosed != null) MenuManager.s_OnMenuClosed(this);
+        MenuManager.s_IsPaused = false;
+        Debug.Log(MenuManager.s_IsPaused);
     }
 }
