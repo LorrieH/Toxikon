@@ -65,7 +65,7 @@ public class ActionFXManager : MonoBehaviour
         yield return new WaitForSeconds(1.3f);
         crab.SetAnimation(CrabAnimation.States.Dive.ToString(), false);
         yield return new WaitForSeconds(2f);
-        TileGrid.s_Instance.PlaceNewCard((int)targetTilePosition.x, (int)targetTilePosition.y, bools.Up, bools.Right, bools.Down, bools.Left, bools.Middle);
+        TileGrid.s_Instance.PlaceNewCard((int)targetTilePosition.x, (int)targetTilePosition.y, bools.Up, bools.Right, bools.Down, bools.Left, bools.Middle, true);
         crab.transform.position = crab.RandomPosition;
         crab.SetAnimation(CrabAnimation.States.Up.ToString(), false);
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);

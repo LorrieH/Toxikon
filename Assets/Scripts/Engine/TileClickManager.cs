@@ -39,6 +39,7 @@ public class TileClickManager : MonoBehaviour
     private void ResetClicks()
     {
         m_ClickedTilePositions.Clear();
+        HideIndicator();
     }
 
     private void TileClicked(Vector2 tilePosition)
@@ -62,6 +63,7 @@ public class TileClickManager : MonoBehaviour
                 {
                     case 1:
                         ShowIndicator((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y);
+                        NotificationManager.s_Instance.EnqueueNotification("Select position to move tile to", 1.5f);
                         break;
                     case 2:
                         if (TileGrid.s_Instance.CanMoveNode((int)m_ClickedTilePositions[0].x, (int)m_ClickedTilePositions[0].y, (int)m_ClickedTilePositions[1].x, (int)m_ClickedTilePositions[1].y))
@@ -134,7 +136,7 @@ public class TileClickManager : MonoBehaviour
 
     public void HideIndicator()
     {
-        m_Indicator.transform.localScale = Vector2.one;
+        //m_Indicator.transform.localScale = Vector2.one;
         m_Indicator.transform.DOScale(0, 0.33f).SetEase(Ease.InBack);
     }
 }
