@@ -46,7 +46,8 @@ public class CardPositionHolder : MonoBehaviour {
 
     private void HandleCards()
     {
-        DrawCard(true);
+        if(!TileGrid.s_Instance.CompleteRoad(TurnManager.s_Instance.CurrentPlayerIndex))
+            DrawCard(true);
     }
 
     /// <summary>

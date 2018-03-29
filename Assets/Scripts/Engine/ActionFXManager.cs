@@ -27,6 +27,8 @@ public class ActionFXManager : MonoBehaviour
 
     public static Action s_OnActionFXCompleted;
 
+    #region Initialization
+
     private void Awake()
     {
         Init();
@@ -40,10 +42,9 @@ public class ActionFXManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private int RandomGridPos()
-    {
-        return UnityEngine.Random.Range(1, 10);
-    }
+    #endregion
+
+    #region Move Tile
 
     public void MoveTile(int movingX, int movingY, int targetX, int targetY)
     {
@@ -71,6 +72,8 @@ public class ActionFXManager : MonoBehaviour
         crab.AddAnimation(CrabAnimation.States.Idle.ToString(), true);
         if(s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
+
+    #endregion
 
     #region Break Tile
 
@@ -109,6 +112,8 @@ public class ActionFXManager : MonoBehaviour
 
     #endregion
 
+    #region Rotate Tile
+
     public void RotateTile(TileNode tile, Vector2 tilePosition)
     {
         StartCoroutine(RotateTileAnimation(tile, tilePosition));
@@ -143,6 +148,15 @@ public class ActionFXManager : MonoBehaviour
         if (s_OnActionFXCompleted != null) s_OnActionFXCompleted();
     }
 
+    #endregion
+
+    #region Returning Functions
+
+    /// <summary>
+    /// Returns the SpineAnimation by Type
+    /// </summary>
+    /// <param name="type">Type of the animation</param>
+    /// <returns>the SpineAnimation by Type</returns>
     public SpineAnimation GetAnimationByType(AnimationType type)
     {
         try
@@ -155,4 +169,6 @@ public class ActionFXManager : MonoBehaviour
         }
         
     }
+
+    #endregion
 }

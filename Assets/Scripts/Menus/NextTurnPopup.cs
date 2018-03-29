@@ -16,6 +16,16 @@ public class NextTurnPopup : Menu
 
     private void OnEnable()
     {
+        SetStartingValuesOfAnimationComponents();
+    }
+
+    #region Animation
+
+    /// <summary>
+    /// Sets the starting values of the animation components
+    /// </summary>
+    private void SetStartingValuesOfAnimationComponents()
+    {
         m_BlackBar.rectTransform.sizeDelta = Vector2.zero;
         m_CharacterHat.rectTransform.anchoredPosition = new Vector2(0, 450);
         m_CharacterBody.transform.localScale = Vector2.zero;
@@ -43,20 +53,11 @@ public class NextTurnPopup : Menu
         m_Info.rectTransform.anchoredPosition = new Vector2(0, -350);
     }
 
-    public void StartNextTurn()
+    /// <summary>
+    /// Plays the show animation
+    /// </summary>
+    private void ShowAnimation()
     {
-        TurnManager.s_Instance.NextTurn();
-    }
-
-    public override void Show()
-    {
-        if (TurnManager.s_Instance.CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
-            ShowNextPlayer(PlayersManager.s_Instance.Players[0].PlayerData);
-        else
-            ShowNextPlayer(PlayersManager.s_Instance.Players[TurnManager.s_Instance.CurrentPlayerIndex + 1].PlayerData);
-
-        base.Show();
-
         //Initial base animation
         Sequence show = DOTween.Sequence();
         show.Append(m_BlackBar.rectTransform.DOSizeDelta(new Vector2(0, 300), 0.5f).SetEase(Ease.OutExpo));
@@ -82,16 +83,43 @@ public class NextTurnPopup : Menu
             m_Rays[i].transform.DOScale(0.7f, 2f).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo).SetDelay(i).SetId("NextTurnPopupLoopAnims");
     }
 
+    #endregion
+
+    #region Override Functions of the base Menu class
+
+    public override void Show()
+    {
+        if (TurnManager.s_Instance.CurrentPlayerIndex == PlayersManager.s_Instance.Players.Count - 1)
+            ShowNextPlayer(PlayersManager.s_Instance.Players[0].PlayerData);
+        else
+            ShowNextPlayer(PlayersManager.s_Instance.Players[TurnManager.s_Instance.CurrentPlayerIndex + 1].PlayerData);
+
+        ShowAnimation();
+
+        base.Show();
+    }
+
     public override void Hide()
     {
         DOTween.Kill("NextTurnPopupLoopAnims", true);
         base.Hide();
     }
 
+    #endregion
+
+
+    /// <summary>
+    /// Calls the TurnManager to start the next turn
+    /// </summary>
+    public void StartNextTurn()
+    {
+        TurnManager.s_Instance.NextTurn();
+    }
+
     /// <summary>
     /// Shows who is up next
     /// </summary>
-    /// <param name="nextPlayer">The next </param>
+    /// <param name="nextPlayer">The next player</param>
     private void ShowNextPlayer(PlayerData nextPlayer)
     {
         m_CharacterBody.sprite = Resources.Load<Sprite>("Characters/" + nextPlayer.AvatarImageName + "/" + "Chara");
