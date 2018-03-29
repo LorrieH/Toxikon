@@ -36,6 +36,7 @@ public class PlayerSelection : MonoBehaviour
     }
 
     private int m_PlayersReady;
+    public int PlayersReady { get { return m_PlayersReady; } set { m_PlayersReady = value; } }
 
     private void Awake()
     {

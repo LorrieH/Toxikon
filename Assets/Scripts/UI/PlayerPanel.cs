@@ -65,9 +65,13 @@ public class PlayerPanel : MonoBehaviour
     /// </summary>
     public void ConfirmInfo()
     {
-        if(m_PlayerName.text != string.Empty)
+#if UNITY_WEBGL
+            SetDefaultName();
+#endif
+        if (m_PlayerName.text != string.Empty)
         {
             m_PlayerData.Name = m_PlayerName.text;
+
             m_PlayerData.AvatarImageName = m_PlayerAvatar.sprite.name;
             m_PlayerData.PlayerColor = m_PlayerColor;
             m_PlayerData.SkinName = m_PlayerSkin;
@@ -77,8 +81,12 @@ public class PlayerPanel : MonoBehaviour
         else
         {
             NotificationManager.s_Instance.EnqueueNotification("Please enter a name", 1f, Color.red);       
-        }
-        
+        }        
+    }
+
+    void SetDefaultName()
+    {
+        m_PlayerName.text = "Player: " + PlayerSelection.s_Instance.PlayersReady + 1;
     }
 
     /// <summary>
