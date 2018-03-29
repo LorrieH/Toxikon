@@ -64,7 +64,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.4
+  orthographic size: 5.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_CameraScaleAspects:
   - Aspect: 0
     AspectValue: 1.7777778
-    OrthographicSize: 5.4
+    OrthographicSize: 5.6
   - Aspect: 1
     AspectValue: 1.6
     OrthographicSize: 5.8
@@ -128,13 +128,13 @@ MonoBehaviour:
     OrthographicSize: 6.2
   - Aspect: 5
     AspectValue: 2.0555556
-    OrthographicSize: 5.4
+    OrthographicSize: 5.6
   - Aspect: 6
     AspectValue: 2.3333333
-    OrthographicSize: 5.4
+    OrthographicSize: 5.6
   - Aspect: 7
     AspectValue: 1.7
-    OrthographicSize: 5.4
+    OrthographicSize: 5.6
 --- !u!124 &124642405522867934
 Behaviour:
   m_ObjectHideFlags: 1
