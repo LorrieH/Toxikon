@@ -10,6 +10,7 @@ public class NextTurnPopup : Menu
     [SerializeField] private Image[] m_Rays;
     [SerializeField] private Image[] m_Sparkles;
     [SerializeField] private Image m_BlackBar;
+    [SerializeField] private Image m_BlackBackground;
     [SerializeField] private CanvasGroup m_Button;
     [Space]
     [SerializeField] private Text m_Info;
@@ -26,6 +27,7 @@ public class NextTurnPopup : Menu
     /// </summary>
     private void SetStartingValuesOfAnimationComponents()
     {
+        m_BlackBackground.color = new Color(m_BlackBackground.color.r, m_BlackBackground.color.g, m_BlackBackground.color.b, 0);
         m_BlackBar.rectTransform.sizeDelta = Vector2.zero;
         m_CharacterHat.rectTransform.anchoredPosition = new Vector2(0, 450);
         m_CharacterBody.transform.localScale = Vector2.zero;
@@ -60,7 +62,8 @@ public class NextTurnPopup : Menu
     {
         //Initial base animation
         Sequence show = DOTween.Sequence();
-        show.Append(m_BlackBar.rectTransform.DOSizeDelta(new Vector2(0, 300), 0.5f).SetEase(Ease.OutExpo));
+        show.Append(m_BlackBackground.DOFade(0.2f, 0.33f).SetEase(Ease.InOutQuad));
+        show.Join(m_BlackBar.rectTransform.DOSizeDelta(new Vector2(0, 300), 0.5f).SetEase(Ease.OutExpo));
         show.Join(m_Info.rectTransform.DOAnchorPosY(-100, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.15f));
         show.Join(m_Info.DOFade(1, 0.2f).SetEase(Ease.OutExpo).SetDelay(0.05f));
         show.Join(m_CharacterBody.transform.DOScale(1, 0.5f).SetEase(Ease.OutExpo).SetDelay(0.1f));

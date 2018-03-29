@@ -77,9 +77,7 @@ public class CardPositionHolder : MonoBehaviour {
         card.transform.DOMove(m_CardDeckPosition.position, 0.1f);
         card.transform.DOScale(0.7f, 0.1f);
         
-
-        if (endTurn && TileGrid.s_Instance.WinningPlayerData == null) // Checks if there is no winner yet
-            DrawCard(endTurn);
+        HandleCards();
     }
 
     /// <summary>

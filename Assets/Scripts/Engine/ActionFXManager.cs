@@ -97,11 +97,6 @@ public class ActionFXManager : MonoBehaviour
         TileClickManager.s_Instance.HideIndicator();
         tileBreak.gameObject.transform.position = tilePosition;
         tileBreak.SetAnimation(TileBreakAnimation.States.animation.ToString(), false);
-        tileBreak.SkeletonAnimation.state.End += delegate (Spine.TrackEntry entry) {
-            if(entry.Animation.Name == TileBreakAnimation.States.animation.ToString())
-            {
-            }
-        };
         yield return new WaitForSeconds(.5f); // WAIT FOR EVENT
         TileGrid.s_Instance.DestroyNode((int)tilePosition.x, (int)tilePosition.y);
         yield return new WaitForSeconds(1.5f);
